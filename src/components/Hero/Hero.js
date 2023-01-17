@@ -8,21 +8,24 @@ class Hero extends React.Component {
     }
 
     render() {
-        return (<div className="container">
-                <h1>
-                    {this.props.title}
-                </h1>
-                <p>
-                    {this.props.description}
-                </p>
-                <button>
-                    {this.props.cta}
-                </button>
+        return (<div className="hero">
+                <div className="container">
+                    <h1>
+                        {this.props.title}
+                    </h1>
+                    <p>
+                        {this.props.description}
+                    </p>
+                    <button>
+                        {this.props.cta}
+                    </button>
+                </div>
             </div>
         )
 
     }
 }
+
 
 // function Hero(props) {
 //   return (

@@ -2,9 +2,11 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Footer from '../src/components/Footer/Footer';
 import Hero from '../src/components/Hero/Hero';
-import Doctor from '../src/components/Doctor/Doctor';
+import Item from '../src/components/Item/Item';
 import './App.css';
-import './Common.scss';
+import './Common.css';
+import kaydalova from './images/kaydalova.jpeg'
+import glolvko from './images/golovko.jpeg'
 
 
 function App() {
@@ -13,21 +15,23 @@ function App() {
         <div className="App">
             <Header/>
             <main>
-                <Hero/>
-                {/*<Doctor*/}
-                {/*    name={'Ivanov Petro'}*/}
-                {/*    image={ "ivanov" }*/}
-                {/*/>*/}
-                {/*<Doctor*/}
-                {/*    name={'Kobenik Petro'}*/}
-                {/*    image={ 'kobenik' }*/}
-                {/*/>*/}
-                {/*<Doctor*/}
-                {/*    name={'Matchnuk Petro'}*/}
-                {/*    image={ 'ivanov' }*/}
-                {/*/>*/}
-                {/*<Doctor name={'Ivanov'} photo={ 'image.png' }/>*/}
-                {/*<Doctor name={'Ivanov'} photo={ 'image.png' }/>*/}
+                <Hero
+                    title='Medical hub'
+                    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa, cum delectus facere illum molestias recusandae suscipit. Aliquid deleniti ea illo libero, nulla odio quasi reiciendis sapiente velit voluptate voluptates?'
+                    cta='Contact us'
+                />
+                <div className="container">
+                    <div className="row">
+                        <Item
+                            name={'Кайдалова Наталья Сергеевна'}
+                            image={kaydalova}
+                        />
+                        <Item
+                            name={'Головко Татьяна Ивановна'}
+                            image={glolvko}
+                        />
+                    </div>
+                </div>
             </main>
             <Footer/>
         </div>
