@@ -1,0 +1,5 @@
+.header {
+  background: #ccc;
+  display: flex;
+  align-items: center;
+}
