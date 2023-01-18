@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Footer from '../src/components/Footer/Footer';
 import Hero from '../src/components/Hero/Hero';
 import Item from '../src/components/Item/Item';
+import Clock from '../src/components/Clock/Clock';
 import './App.css';
 import './Common.css';
 import kaydalova from './images/kaydalova.jpeg'
@@ -32,7 +33,9 @@ function App() {
                         />
                     </div>
                 </div>
+
             </main>
+            <Clock/>
             <Footer/>
         </div>
     );

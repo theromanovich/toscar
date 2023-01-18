@@ -9,11 +9,7 @@ function Header() {
             <div className="container">
                 <img src={logo} className="logo" alt="logo"/>
                 <nav>
-                    <ul>
-                        <li>
-                            <a href="/">home</a>
-                        </li>
-                    </ul>
+                    <a href="/">home</a>
                 </nav>
             </div>
         </header>
