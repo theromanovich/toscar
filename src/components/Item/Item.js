@@ -18,6 +18,7 @@ class Item extends React.Component {
                     <h3>
                         {this.props.name}
                     </h3>
+                    {this.props.children}
                 </div>
 
 
