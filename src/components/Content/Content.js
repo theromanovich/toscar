@@ -5,6 +5,7 @@ import Hero from '../Hero/Hero'
 import Item from '../Item/Item'
 import Form from "../Form/Form";
 import PersonList from "../PersonList/PersonList";
+import Hook from "../Hook/Hook";
 
 import kaydalova from "../../images/kaydalova.jpeg";
 import glolvko from "../../images/golovko.jpeg";
@@ -19,6 +20,7 @@ function Content() {
             />
             <div className="container">
                 <PersonList/>
+                <Hook/>
                 <Calculator/>
                 <Form/>
                 <Item
