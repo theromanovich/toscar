@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'block/footer';
+@import 'block/header';
+@import 'block/hero';
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+
+}

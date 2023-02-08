@@ -1,11 +1,33 @@
+import Image from 'next/image';
+
+import Hero from '@/components/Hero/Hero';
+
+import heroImage from './../../public/images/hero/massage.png'
+
 const Home = () => (
-    <div>
+    <div className=''>
         <h1>
-            Home page
+            Home page page
         </h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta et natus qui quos, reiciendis rerum veniam. Asperiores beatae, consequatur consequuntur culpa earum enim fugit libero, nesciunt pariatur possimus repellat vel!
-        </p>
+        <div className='hero'>
+            <div className='container'>
+                <Image
+                    src={heroImage}
+                    alt='Home page'
+                    placeholde='blur'
+                />
+
+            </div>
+
+        </div>
+        <h2>
+            Blog posts
+        </h2>
+        <Hero/>
+        <ul>
+            <li>post</li>
+        </ul>
     </div>
 );
+
 export default Home;
