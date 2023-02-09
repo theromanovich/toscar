@@ -99,7 +99,7 @@
           transition: .3s all;
           display: block;
           left: 0;
-          top: 80px;
+          top: 81px;
           background-color: white;
           width: 100vw;
           height: 350px;
@@ -107,6 +107,12 @@
           &.active &-item {
             background-color: green;
           }
+        }
+        &-item {
+          margin-top: 20px;
+          margin-left: 20px;
+          margin-bottom: 20px;
+          font-size: 30px;
         }
       }
       &__burger {
@@ -145,7 +151,32 @@
       }
     }
     &__button {
-      display: none;
+      transition: .3s all;
+      position: absolute;
+      left: -100%;
+      top: 30%;
+      z-index: 10;
+        button {
+          padding: 10px 6px;
+          width: 70px;
+        }
+      &.active {
+        left: 20px;
+        max-width: 100%;
+        button {
+          margin-top: 20px;
+          height: 44px;
+          width: 340px;
+          &::before {
+            content: "";
+            border-top: .1px solid #ccc;
+            position: absolute;
+            left: -20px;
+            width: 100vw;
+            top: 0px;
+          }
+        }
+      }
     }
   }
 }

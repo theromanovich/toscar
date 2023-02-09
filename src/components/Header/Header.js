@@ -38,7 +38,7 @@ const Header = () => {
                         <nav className='nav'>
                             <ul className={`nav__menu ${isClicked && 'active'}`}>
                                 {navigation.map(({id, title, path}) => (
-                                    <li className='nav__menu-item' key={id}><Link href={path}>{title}</Link></li>
+                                    <li className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
                                 ))}
                             </ul>
                             <div className={`nav__burger ${isClicked && 'active'}`} onClick={() => setIsClicked(!isClicked)}>
@@ -50,7 +50,7 @@ const Header = () => {
                     </div>
 
                     
-                    <div className="header__button">
+                    <div className={`header__button ${isClicked && 'active'}`}>
                         <button>Sign Up</button>
                     </div>
                     
