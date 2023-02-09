@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <>
+    <div style={{'display': 'flex', 'align-items': 'center', 'gap': '10px'}}>
         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_dd_10_69268)">
         <g clip-path="url(#clip0_10_69268)">
@@ -76,7 +76,11 @@ const Logo = () => {
         </clipPath>
         </defs>
         </svg>
-    </>
+
+        <h2>
+          Untitled UI
+        </h2>
+    </div>
   )
 }
 export default Logo;

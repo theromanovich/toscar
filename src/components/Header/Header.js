@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Logo from './Logo'
 const navigation = [
@@ -23,37 +24,42 @@ const navigation = [
     }
 ]
 
-const Header = () => (
-    <div className='header'>
-        <div className='container header__container'>
-            
-            <div className="header__info">
-                <div className="header__info-item">
+
+const Header = () => {
+    const [isClicked, setIsClicked] = useState(false)
+    
+    return (
+        <div className='header'>
+                <div className='container header__container'>
+                    
+                    <div className="header__info">
 
                         <Logo />
+                        <nav className='nav'>
+                            <ul className={`nav__menu ${isClicked && 'active'}`}>
+                                {navigation.map(({id, title, path}) => (
+                                    <li className='nav__menu-item' key={id}><Link href={path}>{title}</Link></li>
+                                ))}
+                            </ul>
+                            <div className={`nav__burger ${isClicked && 'active'}`} onClick={() => setIsClicked(!isClicked)}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </nav>
+                    </div>
 
-                    <h2>
-                        Untitled UI
-                    </h2>
+                    
+                    <div className="header__button">
+                        <button>Sign Up</button>
+                    </div>
+                    
                 </div>
-                <nav className='nav'>
-                    <ul className='nav__menu'>
-                        {navigation.map(({id, title, path}) => (
-                            <li className='nav__menu-item' key={id}><Link href={path}>{title}</Link></li>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
-
+                <hr />
             
-            <div className="header__button">
-                <button>Sign Up</button>
             </div>
-            
-        </div>
-        <hr />
+    )
     
-    </div>
-);
+};
 
 export default Header;
