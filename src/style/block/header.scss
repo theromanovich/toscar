@@ -1,3 +1,50 @@
 .header {
-  background: $colorPrimary;
+  
+  &__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #101828;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #101828;
+    }
+    .nav {
+      &__menu {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        a {
+          text-decoration: none;
+          color: #475467;
+        }
+      }
+    }
+  }
+  &__button {
+      display: flex;
+      align-items: center;
+        button {
+          padding: 10px 18px;
+          width: 95px;
+          height: 44px;
+          background: #7F56D9;
+          border: 1px solid #7F56D9;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          border-radius: 8px;
+          color: #FFFFFF;
+        }
+  }
+  hr {
+   border-top: 1px solid #ccc;
+   height: 0px;
+  }
 }
