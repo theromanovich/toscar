@@ -154,7 +154,7 @@
       transition: .3s all;
       position: absolute;
       left: -100%;
-      top: 30%;
+      top: 38%;
       z-index: 10;
         button {
           padding: 10px 6px;
@@ -162,7 +162,7 @@
         }
       &.active {
         left: 20px;
-        max-width: 100%;
+        max-width: 90%;
         button {
           margin-top: 20px;
           height: 44px;
