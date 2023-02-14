@@ -1,7 +1,6 @@
 .blog-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 384px));
-    // padding: 0 32px;
     gap: 32px;
     margin: 64px 0;
     justify-content: space-between;
@@ -50,10 +49,17 @@
     }
     &__tags {
         margin-bottom: 16px;
+        display: flex;
+        gap: 8px;
+        span {
+            padding: 2px 10px;
+            border-radius: 16px;
+            font-weight: 500;
+            font-size: 14px;
+        }
     }
-    
-  
 }
+
 
 @media (max-width: 1240px) {
     .blog-list {

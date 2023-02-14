@@ -20,9 +20,9 @@ const Blog = () => {
                         How do you create compelling presentations that wow your colleagues and impress your managers?
                     </div>
                     <div className="blog__card-tags" style={{display: 'flex'}}>
-                        <div>Design</div>
-                        <div>Research</div>
-                        <div>Presentation</div>
+                        <span className="tag design">Design</span>
+                        <span className="tag research">Research</span>
+                        <span className="tag presentation">Presentation</span>
                     </div>
                 </div>
             </div>

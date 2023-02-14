@@ -22,7 +22,7 @@ const BlogList = () => {
                       </div>
                       <div className="blog-list__tags">
                         {tags.map(item => {
-                          return <span>{item}</span>
+                          return <span className={`tag ${item.toLowerCase()}`}>{item}</span>
                         })}
                       </div>
                 </article>
