@@ -53,8 +53,9 @@ const Form = () => {
                         type="tel" 
                         id="phone" 
                         name="phone"
-                        pattern="[0]{1}[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-2]{2}"
+                        pattern="[0]{1}[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                         placeholder="068-123-23-21"
+                        required
                         />
             </div>
 
@@ -68,6 +69,7 @@ const Form = () => {
                     type="checkbox" 
                     id="privacy" 
                     name="privacy"
+                    required
                     />
                 <label htmlFor="privacy">You agree to our friendly <a href="#">privacy policy</a>.</label>
             </div>
