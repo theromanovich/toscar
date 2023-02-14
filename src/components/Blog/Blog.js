@@ -6,7 +6,7 @@ const Blog = () => {
         <div className="blog">
             <div className="container blog__container">
                 <div className="blog__card">
-                    <img src="/images/blog-main.png" alt="" />
+                    <img src="/images/blog-main.png" alt=""/>
                     <div className="blog__card-author">
                         Olivia Rhye • 20 Jan 2022
                     </div>
@@ -16,8 +16,8 @@ const Blog = () => {
                         <path d="M1 11L11 1M11 1H1M11 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div className="blog__card-description">
-                        <p>How do you create compelling presentations that wow your colleagues and impress your managers?</p>
+                    <div className="blog__card-description" style={{width: '380px', maxWidth: '100%'}}>
+                        How do you create compelling presentations that wow your colleagues and impress your managers?
                     </div>
                     <div className="blog__card-tags" style={{display: 'flex'}}>
                         <div>Design</div>
