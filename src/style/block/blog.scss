@@ -2,7 +2,9 @@
     img {
         margin-bottom: 32px;
         width: 1216px;
+        height: 418px;
         max-width: 100%;
+        object-fit: cover;
     }
     &__card {
         &-author {
