@@ -4,8 +4,8 @@ const BlogList = () => {
   return (
     <div>
       {blogData.map(blogItem => {
-        const {img, author, title, description, tags} = blogItem;
-        return <article>
+        const {img, author, title, description, tags, id} = blogItem;
+        return <article key={id}>
                     <img src={img} alt="" />
                </article>
       })}
@@ -13,3 +13,4 @@ const BlogList = () => {
   )
 }
 export default BlogList;
+
