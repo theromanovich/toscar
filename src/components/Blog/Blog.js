@@ -35,7 +35,6 @@ const Blog = () => {
                )
                     
         })}
- 
         <BlogList />
     </section>
   )

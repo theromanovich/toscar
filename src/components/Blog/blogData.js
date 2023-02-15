@@ -5,7 +5,6 @@ export const blogData = [
         title: 'Migrating to Linear 101',
         description: 'Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.',
         tags: ['Product', 'Tools', 'Sass'],
-
         id: 1
     },
     {
