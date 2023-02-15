@@ -23,6 +23,8 @@
             margin-bottom: 8px;
         }
         &-description {
+            width: 380px;
+            max-width: 100%;
             font-weight: 400;
             font-size: 16px;
             color: #475467;
@@ -30,7 +32,7 @@
         }
         &-tags {
             display: flex;
-            gap: 30px;
+            gap: 8px;
         }
     }
 }

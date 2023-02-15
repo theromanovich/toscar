@@ -49,3 +49,15 @@ export const blogData = [
         id: 6
     }
 ]
+
+
+export const blogOfTheDay = [
+    {
+        img: '/images/blog-main.png',
+        author: 'Olivia Rhye • 20 Jan 2022',
+        title: 'UX review presentations',
+        description: '  How do you create compelling presentations that wow your colleagues and impress your managers?',
+        tags: ['Design', 'Research', 'Presentation'],
+        id: 1
+    }
+]
