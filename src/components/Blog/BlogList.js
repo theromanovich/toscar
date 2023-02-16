@@ -3,7 +3,7 @@ import Link from "next/link";
 const BlogList = ({id, title, img, author, description, tags}) => {
 
   return (
-          <article className="blog-list-item" key={id}>
+        <article className="blog-list-item" key={id}>
             <Link href={id}>
                 <img src={img} alt={title}/>
                 <div className="blog-list__author">
