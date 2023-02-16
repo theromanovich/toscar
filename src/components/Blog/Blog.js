@@ -1,5 +1,5 @@
 import BlogList from "./BlogList"
-
+import { blogData } from "./blogData";
 import { blogOfTheDay } from "./blogData";
 
 const Blog = () => {
@@ -35,7 +35,15 @@ const Blog = () => {
                )
                     
         })}
-        <BlogList />
+        
+        <div className="blog-list__container">
+            <div className="blog-list">
+                {blogData.map(blog => {
+                    return <BlogList {...blog}/>
+                })}
+            </div>
+        </div>
+       
     </section>
   )
 }
