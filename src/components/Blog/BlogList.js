@@ -1,7 +1,10 @@
-
+import { useRouter } from "next/router";
+import Link from "next/link";
 const BlogList = ({id, title, img, author, description, tags}) => {
+
   return (
           <article className="blog-list-item" key={id}>
+            <Link href={id}>
                 <img src={img} alt={title}/>
                 <div className="blog-list__author">
                   {author}
@@ -20,6 +23,7 @@ const BlogList = ({id, title, img, author, description, tags}) => {
                     return <span className={`tag ${item.toLowerCase()}`}>{item}</span>
                   })}
                 </div>
+              </Link>
           </article>
   )
 }

@@ -5,7 +5,8 @@ export const blogData = [
         title: 'Migrating to Linear 101',
         description: 'Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.',
         tags: ['Product', 'Tools', 'Sass'],
-        id: 1
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '1'
     },
     {
         img: '/images/blogList/api-stack.png',
@@ -13,7 +14,8 @@ export const blogData = [
         title: 'Building your API Stack',
         description: 'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
         tags: ['Software Development', 'Tools'],
-        id: 2
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '2'
     },
     {
         img: '/images/blogList/leadership-lessons.png',
@@ -21,7 +23,8 @@ export const blogData = [
         title: 'Bill Walsh leadership lessons',
         description: 'Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?',
         tags: ['Leadership', 'Management'],
-        id: 3
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '3'
     },
     {
         img: '/images/blogList/mental-models.png',
@@ -29,7 +32,8 @@ export const blogData = [
         title: 'PM mental models',
         description: 'Mental models are simple expressions of complex processes or relationships.',
         tags: ['Product', 'Research', 'Frameworks'],
-        id: 4
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '4'
     },
     {
         img: '/images/blogList/wireframing.png',
@@ -37,7 +41,8 @@ export const blogData = [
         title: 'What is Wireframing?',
         description: 'Introduction to Wireframing and its Principles. Learn from the best in the industry.',
         tags: ['Design', 'Research'],
-        id: 5
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '5'
     },
     {
         img: '/images/blogList/design-collaboration.png',
@@ -45,7 +50,8 @@ export const blogData = [
         title: 'How collaboration makes us better designers',
         description: 'Collaboration can make our teams stronger, and our individual designs better.',
         tags: ['Design', 'Research'],
-        id: 6
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '6'
     }
 ]
 
@@ -57,6 +63,7 @@ export const blogOfTheDay = [
         title: 'UX review presentations',
         description: '  How do you create compelling presentations that wow your colleagues and impress your managers?',
         tags: ['Design', 'Research', 'Presentation'],
-        id: 1
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet voluptatem alias quidem id dolor suscipit, facilis magnam dolorum blanditiis iste dolores molestias quasi assumenda veritatis iusto. Atque ipsum sapiente ut?',
+        id: '1'
     }
 ]

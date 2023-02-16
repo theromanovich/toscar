@@ -9,13 +9,13 @@ const navigationFooter = [
     },
     {
         id: 2,
-        title: 'blog',
+        title: 'Blog',
         path: '/blog'
     },
     {
         id: 3,
         title: 'Form',
-        path: '/blog'
+        path: '/form'
     },
     {
         id: 4,
