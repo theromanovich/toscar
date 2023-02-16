@@ -1,13 +1,14 @@
-import Image from 'next/image';
+
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero';
-import heroImage from './../../public/images/hero/massage.png'
+import Form from '@/components/Form/Form';
+import Blog from '@/components/Blog/Blog';
+import Footer from '@/components/Footer/Footer';
 
-const Home = () => (
-    <div className=''>
-      
-      
-    </div>
+const Home = ({children}) => (
+    <>  
+     <Hero/>
+    </>
 );
 
 export default Home;

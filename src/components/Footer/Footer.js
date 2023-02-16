@@ -9,18 +9,18 @@ const navigationFooter = [
     },
     {
         id: 2,
-        title: 'Features',
-        path: '/master'
+        title: 'blog',
+        path: '/blog'
     },
     {
         id: 3,
-        title: 'Pricing',
+        title: 'Form',
         path: '/blog'
     },
     {
         id: 4,
         title: 'Careers',
-        path: '/about'
+        path: '/form'
     },
     {
         id: 5,

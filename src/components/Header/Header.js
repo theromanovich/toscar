@@ -9,13 +9,13 @@ const navigation = [
     },
     {
         id: 2,
-        title: 'Products',
-        path: '/master'
+        title: 'Blog',
+        path: '/blog'
     },
     {
         id: 3,
-        title: 'Resources',
-        path: '/blog'
+        title: 'Form',
+        path: '/form'
     },
     {
         id: 4,

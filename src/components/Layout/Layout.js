@@ -2,19 +2,18 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Hero from '../Hero/Hero';
 import Form from '../Form/Form';
-import Blog from '../Blog/Blog';
+import Blog from '../../../alpina-ui/src/components/Blog/Blog';
 
 
 const Layout = ({children}) => (
-    <div>
-
+    <>
         <Header/>
-        <Hero/>
+        {/* <Hero/> */}
         {children}
-        <Form/>
-        <Blog/>
+        {/* <Form/> */}
+        {/* <Blog/> */}
         <Footer/>
-    </div>
+    </>
 );
 
 export default Layout;
