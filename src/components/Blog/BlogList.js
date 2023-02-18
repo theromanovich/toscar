@@ -4,7 +4,7 @@ const BlogList = ({id, title, img, author, description, tags}) => {
 
   return (
         <article className="blog-list-item" key={id}>
-            <Link href={id}>
+            <Link href={'/blog/' + id}>
                 <img src={img} alt={title}/>
                 <div className="blog-list__author">
                   {author}
