@@ -1,12 +1,12 @@
-const Blog = (props) => {
-  const { PostName } = props.data.attributes;
+const BlogSinle = (props) => {
+  const { name } = props.data.attributes;
   return (
     <div>
-      <h1>{PostName}</h1>
+      <h1>{name}</h1>
     </div>
   );
 };
-export default Blog;
+export default BlogSinle;
 
 export async function getStaticProps(context) {
   const res = await fetch(
