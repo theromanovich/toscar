@@ -12,7 +12,6 @@ const BlogListPage = (props) => {
 
     console.log(serviceData[0].attributes);
     console.log(serviceData[1]);
-    console.log()
     // const tagsArray = serviceData[5].attributes.tags.split(' ')
     // console.log(tagsArray)
     return (
@@ -21,7 +20,7 @@ const BlogListPage = (props) => {
                 <div className="blog-list">
                     {serviceData.map(({id, attributes }) => (
                         <Link key={id} href={'/blog/' + attributes.slug}> 
-                            <BlogList id={id} title={attributes.title} description={attributes.description} img={attributes.img.data.attributes.url} tags={attributes.tags.split(' ')}/>
+                            <BlogList id={id} title={attributes.title} description={attributes.description} img={attributes.img.data.attributes.url} tags={attributes.tags.split(', ')}/>
                         </Link>
                     ))}
                 </div>
