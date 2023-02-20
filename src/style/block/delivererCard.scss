@@ -1,5 +1,6 @@
 .deliverer-card {
     margin-bottom: 30px;
+    padding: 0 20px;
     &__container {
         width: 1184px;
         max-width: 100%;
@@ -52,6 +53,8 @@
     &__company {
         color: #8A8A89;
         font-size: 16px;
+        display: flex;
+        align-items: center;
     }
     &__details {
         display: flex;
@@ -141,4 +144,44 @@
 }
 
 
+@media (max-width: 962px) {
+    .deliverer-card {
+        &__container {
+            gap: 20px;
+        }
+        &__info {
+           width: 446px;
+        }
+    }
+    
+}
 
+@media (max-width: 720px) {
+    .deliverer-card {
+        &__container {
+            flex-direction: column;
+        }
+        &__img {
+            img {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__name {
+            margin-top: 10px;
+            text-align: center;
+        }
+        &__specialization {
+            text-align: center;
+        }
+        &__data {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__tags {
+            justify-content: center;
+        }
+    }
+}
