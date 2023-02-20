@@ -6,6 +6,9 @@
         margin: 0 auto;
         display: flex;
         gap: 56px;
+        border-bottom: 1px solid rgba(43, 43, 42, 0.1);
+        border-radius: 2px;
+        padding-bottom: 40px;
     }
     &__img {
             position: relative;
