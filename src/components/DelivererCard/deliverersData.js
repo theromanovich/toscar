@@ -10,7 +10,10 @@ export const deliverersData = [
         rating: '8692',
         price: '500$',
         status: 'Вільний',
-        tags: ''
+        tags: [
+            'tag',
+            'tag1'
+        ]
     },
     {
         thumbnail: '/images/delivererCard/deliverer-man.png',
@@ -22,7 +25,10 @@ export const deliverersData = [
         rating: '8692',
         price: '550$',
         status: 'Вільний',
-        tags: ''
+        tags: [
+            'tag',
+            'tag1'
+        ]
 
     }
 ]
