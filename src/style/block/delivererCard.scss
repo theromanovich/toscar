@@ -48,6 +48,7 @@
     &__info {
         display: flex;
         width: 516px;
+        max-width: 100%;
         justify-content: space-between;
     }
     &__company {
@@ -182,6 +183,27 @@
         }
         &__tags {
             justify-content: center;
+        }
+        &__info {
+            display: block;
+        }
+        &__details {
+            justify-content: center;
+            margin-top: 10px;
+        }
+        &__status {
+            margin: 10px auto 0px;
+        }
+    }
+}
+
+@media (max-width: 355px) {
+    .deliverer-card {
+        &__details {
+            flex-direction: column;
+            .divider {
+                display: none;
+            }
         }
     }
 }
