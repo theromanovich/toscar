@@ -7,6 +7,7 @@
         min-height: 284px;
         background: #EFF0F4;
         border-radius: 24px;
+        position: relative;
     }
     &__search {
         position: relative;
@@ -29,8 +30,65 @@
             background: url('/search.svg') no-repeat 20px;
             background-color: #FFFFFF;
         }
-        svg {
-
+    }
+    &__btn {
+        position: absolute;
+        top: 72px;
+        right: 40px;
+        button {
+            padding: 16px 18px;
+            gap: 14px;
+            width: 158px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: #3470FF;
+            border-radius: 18px;
+            font-size: 16px;
+            color: #FFFFFF;
         }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 28px;
+        gap: 29px;
+        .region {
+            select {
+                width: 242px;
+            }
+        }
+        .model {
+            select {
+                width: 245px;
+            }
+        }
+        .year {
+            select {
+                width: 140px;
+            }
+        }
+        .budget {
+            
+        }
+    }
+    .label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .default-select {
+        -webkit-appearance: none;
+        border: none;
+        max-width: 100%;
+        min-height: 56px;
+        border-radius: 18px;
+        font-size: 20px;
+        color: #2B2B2A;
+        background: url('/chevron.svg') no-repeat  center right 18px;
+        background-size: 24px;
+        background-color: #FFFFFF;
+        padding: 16px 18px;
     }
 }
