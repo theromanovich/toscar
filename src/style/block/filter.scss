@@ -1,4 +1,5 @@
 .filter {
+    margin-top: 40px;
     padding: 0 15px;
     &__container {
         padding: 40px;
@@ -111,6 +112,7 @@
                     background-color: #3470FF;
                     position: absolute;
                     right: 0px;
+                    cursor: pointer;
                 }
                 input {
                     &:nth-child(1) {  

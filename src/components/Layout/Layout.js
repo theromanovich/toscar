@@ -12,8 +12,6 @@ const Layout = ({children}) => (
         {children}
         {/* <Form/> */}
         {/* <Blog/> */}
-        <Filter/>
-        <DelivererCard/>
         <Footer/>
     </>
 );
