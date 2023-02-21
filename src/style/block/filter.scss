@@ -1,0 +1,36 @@
+.filter {
+    &__container {
+        padding: 40px;
+        margin: 0 auto;
+        width: 1184px;
+        max-width: 100%;
+        min-height: 284px;
+        background: #EFF0F4;
+        border-radius: 24px;
+    }
+    &__search {
+        position: relative;
+        label {
+            font-size: 16px;
+            color: #8A8A89;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 516px;
+            max-width: 100%;
+            min-height: 56px;
+            left: 0px;
+            top: 0px;
+            border: none;
+            background-color: #FFFFFF;
+            border-radius: 18px;
+            padding: 16px 60px;
+            background: url('/search.svg') no-repeat 20px;
+            background-color: #FFFFFF;
+        }
+        svg {
+
+        }
+    }
+}
