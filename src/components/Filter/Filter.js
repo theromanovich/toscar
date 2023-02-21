@@ -8,10 +8,9 @@ const Filter = () => {
             <div className="filter__search">
                 <label htmlFor="search">Пошук</label>
                 <div className="search-input">
-                    <input type="text" id="search" name="search" placeholder="Знайти виконавця"/>
+                    <input type="text" className="input" id="search" name="search" placeholder="Знайти виконавця"/>
                 </div>
-            </div>
-      
+                      
             <div className="filter__btn">
                 <button>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,6 +18,8 @@ const Filter = () => {
                     </svg>
                     Всі фільтри
                 </button>
+            </div>
+            
             </div>
 
             <div className="filter__items">
