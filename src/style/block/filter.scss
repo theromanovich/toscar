@@ -50,30 +50,6 @@
             color: #FFFFFF;
         }
     }
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 28px;
-        gap: 29px;
-        .region {
-            select {
-                width: 242px;
-            }
-        }
-        .model {
-            select {
-                width: 245px;
-            }
-        }
-        .year {
-            select {
-                width: 140px;
-            }
-        }
-        .budget {
-            
-        }
-    }
     .label {
         display: block;
         margin-bottom: 8px;
@@ -90,5 +66,88 @@
         background-size: 24px;
         background-color: #FFFFFF;
         padding: 16px 18px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 28px;
+        justify-content: space-between;
+        .region {
+            select {
+                width: 242px;
+            }
+        }
+        .model {
+            select {
+                width: 245px;
+            }
+        }
+        .year {
+            select {
+                width: 140px;
+            }
+        }
+        .budget {
+            input {
+                width: 180px;
+            }
+            &-inputs {
+                display: flex;
+                gap: 1px;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 44px;
+                    height: 56px;
+                    border-radius: 0 18px 18px 0;
+                    background-color: #3470FF;
+                    position: absolute;
+                    right: 0px;
+                }
+                input {
+                    &:nth-child(1) {  
+                        background: transparent;
+                        -webkit-appearance: none;
+                        background-color: #ffffff;
+                        border-radius: 18px 0 0 18px;
+                    }
+                    &:nth-child(2) {
+                        border-radius: 0 18px 18px 0;
+                        background-color: #FFFFFF;
+                    }
+                }
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    z-index: 2;
+                    cursor: pointer;
+                }
+            }
+          
+        }
+    }
+}
+
+.filter-found {
+    display: block;
+    width: 1184px;
+    max-width: 100%;
+    height: 56px;
+    margin: 72px auto 50px;
+
+    &__inner {
+        width: 323px;
+        max-width: 100%;
+        padding: 16px 32px;
+        background: #EFF0F4;
+        border-radius: 18px;
+        text-align: center;
+        font-size: 20px;
+        color: #2B2B2A;
+        a {
+            color: blue;
+        }
     }
 }

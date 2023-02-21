@@ -1,3 +1,5 @@
+import FilterFound from "./FilterFound"
+
 const Filter = () => {
   return (
     <div className="filter">
@@ -301,14 +303,20 @@ const Filter = () => {
                         </select>
                 </div>
                 <div className="budget">
-                    <label htmlFor="">Бюджет</label>
-                    <input type="text" className="min-limit" placeholder="Від 1000$"/>
-                    <input type="text" className="max-limit" placeholder="До 100000$"/>
+                    <label className="label">Бюджет</label>
+                    <div className="budget-inputs">
+                        <input type="text" className="min-limit default-select" placeholder="Від 1000$"/>
+                        <input type="text" className="max-limit default-select" placeholder="До 100000$"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </div>
                 </div>
             </div>
 
         </div>
-
+        <FilterFound/>
     </div>
   )
 }
