@@ -12,8 +12,7 @@ const BlogListPage = (props) => {
 
     console.log(serviceData[0].attributes);
     console.log(serviceData[1]);
-    // const tagsArray = serviceData[5].attributes.tags.split(' ')
-    // console.log(tagsArray)
+
     return (
         <div>
             <div className="blog-list__container">

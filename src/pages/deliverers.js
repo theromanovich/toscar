@@ -6,17 +6,21 @@ const deliverers = (props) => {
   
   const deliverersData = props.data.data;
   console.log(deliverersData)
+  
   return (
     <>
         <Filter/>
         {deliverersData.map(deliverer => {
-          return <DelivererCard {...deliverer.attributes} thumbnail={deliverer.attributes.thumbnail.data[0].attributes.url}/>
+          const {url} = deliverer.attributes.thumbnail.data[0].attributes;
+          const {tags} = deliverer.attributes
+          return <DelivererCard {...deliverer.attributes} thumbnail={url} tags={tags.split(', ')}/>
         })}
         
     </>
   )
 }
 export default deliverers
+
 
 export async function getStaticProps(context) {
     const res = await fetch(`http://localhost:1337/api/deliverers-cards?populate=*`)
