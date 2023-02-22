@@ -19,8 +19,8 @@ const navigation = [
     },
     {
         id: 4,
-        title: 'Pricing',
-        path: '/about'
+        title: 'Filter',
+        path: '/deliverers'
     }
 ]
 
