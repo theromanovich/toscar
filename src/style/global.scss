@@ -27,6 +27,11 @@ body {
 a {
   text-decoration: none;
 }
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
 .container {
   width: 1280px;
   max-width: 100%;
