@@ -221,17 +221,29 @@
             max-width: 100%;
             background-color: rgb(245, 244, 244);
             border-radius: 24px;
-            height: 84px;
-            display: flex;
-            align-items: center;
             padding: 30px;
             margin-bottom: 8px;
         }
         &-title {
             width: 100%;
+            max-height: 84px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            &.active {
+                svg {
+                    transition: .3s all;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &-content {
+            position: relative;
+            overflow: hidden;
+            max-height: 0;
+            &.active {
+                max-height: 1000px;
+            }
         }
     }
 }
