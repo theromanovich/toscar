@@ -95,10 +95,10 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
 
         </div>
 
-        {/* <div className="deliverer__benefits">
-            <h2>Ми пропонуємо</h2>
+        <div className="deliverer__benefits">
+            <span>Ми пропонуємо</span>
             <div className="propositions">
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,7 +112,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </svg>
                 Підбір авто
               </div>
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -126,7 +126,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </svg>
                 Розрахунок всіх витрат
               </div>
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -140,7 +140,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </svg>
                 Перевірка історії авто
               </div>
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -154,7 +154,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </svg>
                 Участь в акціоні
               </div>
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -168,7 +168,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </svg>
                 Оплата автомобіля, доставки
               </div>
-              <div>
+              <div className="propositions__item">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_517_128820)">
                   <path d="M20.1663 10.1567V11C20.1652 12.9767 19.5251 14.9001 18.3416 16.4833C17.158 18.0666 15.4944 19.2248 13.5988 19.7852C11.7032 20.3457 9.67716 20.2784 7.82294 19.5934C5.96872 18.9083 4.38561 17.6423 3.30972 15.984C2.23384 14.3257 1.72282 12.3641 1.85288 10.3916C1.98294 8.41919 2.74711 6.54164 4.03143 5.03899C5.31575 3.53634 7.05139 2.48911 8.97951 2.05348C10.9076 1.61784 12.9249 1.81715 14.7305 2.62168" stroke="#3470FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -183,7 +183,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 Доставка в Україну
               </div>
             </div>
-        </div> */}
+        </div>
 
 
     </div>
