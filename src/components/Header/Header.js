@@ -27,6 +27,10 @@ const navigation = [
 
 const Header = () => {
     const [isClicked, setIsClicked] = useState(false)
+
+    const isClickedHandler = () => {
+        setIsClicked(!isClicked)
+    }
     
     return (
         <div className='header'>
@@ -38,7 +42,7 @@ const Header = () => {
                         <nav className='nav'>
                             <ul className={`nav__menu ${isClicked && 'active'}`}>
                                 {navigation.map(({id, title, path}) => (
-                                    <li className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
+                                    <li onClick={isClickedHandler}  className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
                                 ))}
                             </ul>
                             <div className={`nav__burger ${isClicked && 'active'}`} onClick={() => setIsClicked(!isClicked)}>
