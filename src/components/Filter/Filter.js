@@ -5,10 +5,12 @@ import FilterFound from "./FilterFound"
 const Filter = () => {
     const locationInputRef = useRef(null);
     const {deliverersArr, setDeliverersArr} = useFilterContext();
+
     const fiterByLocation = () => {
         setDeliverersArr(deliverersArr.filter(deliverer => locationInputRef.current.value == deliverer.attributes.city ))
     }
-    console.log(deliverersArr);
+
+
 
     return (
             <div className="filter">

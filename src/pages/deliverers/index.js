@@ -1,6 +1,7 @@
 import Filter from "@/components/Filter/Filter";
 import DelivererCard from "@/components/DelivererCard/DelivererCard";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect } from "react";
 import { useFilterContext } from "@/helpers/filter-context/filter-context";
 
 const deliverers = (props) => {
@@ -16,10 +17,14 @@ const deliverers = (props) => {
   return (
     <>
         <Filter/>
-          {deliverersArr.map(deliverer => {
+          {deliverersArr.map((deliverer, index) => {
             const {url} = deliverer.attributes.thumbnail.data[0].attributes;
             const {tags} = deliverer.attributes
-            return <DelivererCard {...deliverer.attributes} thumbnail={url} tags={tags.split(', ')}/>
+            return (
+              <Link key={index} href={'/deliverers/' + deliverer.attributes.slug}>
+                <DelivererCard {...deliverer.attributes} thumbnail={url} tags={tags.split(', ')}/>
+              </Link>
+            ) 
             
           })}
     </>
