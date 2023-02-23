@@ -221,7 +221,6 @@
             max-width: 100%;
             background-color: rgb(245, 244, 244);
             border-radius: 24px;
-            padding: 30px;
             margin-bottom: 8px;
         }
         &-title {
@@ -229,7 +228,12 @@
             max-height: 84px;
             display: flex;
             align-items: center;
+            padding: 30px;
             justify-content: space-between;
+            svg {
+                transition: .3s all;
+                transform: rotate(0deg);
+            }
             &.active {
                 svg {
                     transition: .3s all;
@@ -241,9 +245,14 @@
             position: relative;
             overflow: hidden;
             max-height: 0;
+            transition: .3s all;
             &.active {
                 max-height: 1000px;
+                transition: .3s all;
             }
+        }
+        &-description {
+            padding: 50px;
         }
     }
 }

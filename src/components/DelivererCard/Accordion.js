@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const Accordion = ({title, paragraphs}) => {
@@ -6,6 +6,11 @@ const Accordion = ({title, paragraphs}) => {
     const accordionToggler = () => {
         setIsAccordionClicked(!isAccordionClicked)
     }
+    
+    useEffect(() => {
+        document.querySelector('.deliverer__services-title').click()
+    }, [])
+   
 
     return (
         <div className="deliverer__services-item">

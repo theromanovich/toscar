@@ -16,3 +16,24 @@ export const accordionData = [
         ]
     }
 ]
+
+export const carsData = [
+    {
+        img: '/images/nissan.png',
+        model: 'Nissan Roque 2016',
+        price: '12000',
+        terms: '1 місяць'
+    },
+    {
+        img: '/images/jetta.png',
+        model: 'Volkswagen Jetta 2014',
+        price: '7000',
+        terms: '1 місяць'
+    },
+    {
+        img: '/images/cc.png',
+        model: 'Volkswagen CC 2012',
+        price: '8000',
+        terms: '1 місяць'
+    }
+]
