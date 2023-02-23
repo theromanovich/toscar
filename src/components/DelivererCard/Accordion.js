@@ -33,6 +33,10 @@ const Accordion = ({title, paragraphs}) => {
             </div>
 
             <div className={`deliverer__services-content ${isAccordionClicked && 'active'}`}>
+                <div className="deliverer__services-cta">
+                    <button>Підбір авто</button>
+                    <button>Розрахунок всіх витрат</button>
+                </div>
                 <ul className="deliverer__services-description">
                     {paragraphsElement}
                 </ul>
