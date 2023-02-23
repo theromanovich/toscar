@@ -229,6 +229,8 @@
             display: flex;
             align-items: center;
             padding: 30px;
+            font-weight: 500;
+            font-size: 24px;
             justify-content: space-between;
             svg {
                 transition: .3s all;
@@ -253,6 +255,21 @@
         }
         &-description {
             padding: 50px;
+        }
+    }
+    &__cars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+        &-item {
+            img {
+                border-radius: 14px;
+                width: 212px;
+                max-width: 100%;
+            }
         }
     }
 }

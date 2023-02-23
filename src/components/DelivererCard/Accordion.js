@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react"
-
+import Cars from "./Cars";
+import { carsData } from "./accordionData";
 
 const Accordion = ({title, paragraphs}) => {
     const [isAccordionClicked, setIsAccordionClicked] = useState(false);
+
+    const paragraphsElement = paragraphs.map(paragraph => {
+        return <li>{paragraph}</li>
+    })
+
+    const carsElement = carsData.map(car => {
+        return <Cars {...car}/>
+    })
+
     const accordionToggler = () => {
         setIsAccordionClicked(!isAccordionClicked)
     }
-    
+
     useEffect(() => {
         document.querySelector('.deliverer__services-title').click()
     }, [])
@@ -24,10 +34,11 @@ const Accordion = ({title, paragraphs}) => {
 
             <div className={`deliverer__services-content ${isAccordionClicked && 'active'}`}>
                 <ul className="deliverer__services-description">
-                    {paragraphs.map(paragraph => {
-                        return <li>{paragraph}</li>
-                    })}
+                    {paragraphsElement}
                 </ul>
+                <div className="deliverer__cars">
+                    {carsElement}
+                </div>
             </div>
 
         </div>
