@@ -5,10 +5,10 @@ import FilterFound from "./FilterFound"
 const Filter = () => {
     const locationInputRef = useRef(null);
     const {deliverersArr, setDeliverersArr} = useFilterContext();
-
     const fiterByLocation = () => {
-        setDeliverersArr(deliverersArr.filter(deliverer => deliverer.attribute.location !== locationInputRef.current.value))
+        setDeliverersArr(deliverersArr.filter(deliverer => locationInputRef.current.value == deliverer.attributes.city ))
     }
+    console.log(deliverersArr);
 
     return (
             <div className="filter">
@@ -68,8 +68,8 @@ const Filter = () => {
                         </div>
                         
                         <div className="region">
-                            <label ref={locationInputRef} for="region" className="label">Локація</label>  
-                            <input type="text" className="input" id="region" placeholder="Регіон"/>
+                            <label for="region" className="label">Локація</label>  
+                            <input ref={locationInputRef} type="text" className="input" id="region" placeholder="Регіон"/>
                         </div>
 
                     </div>
