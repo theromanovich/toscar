@@ -1,3 +1,5 @@
+import { accordionData } from "./accordionData"
+import Accordion from "./Accordion"
 const DelivererSinglePage = ({thumbnail, company, name, specialization, description, city, rating, price, status, tags, premium}) => {
   const elements = tags.map(tag => {
       return <span>{tag}</span>
@@ -185,7 +187,11 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
             </div>
         </div>
 
-
+        <div className="deliverer__propositions">
+            {accordionData.map(accordionData => {
+              return <Accordion {...accordionData}/>
+            })}
+        </div>
     </div>
   )
 }
