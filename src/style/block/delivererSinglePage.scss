@@ -254,22 +254,81 @@
             }
         }
         &-description {
-            padding: 50px;
+            padding: 0 30px;
+            margin-bottom: 70px;
+            list-style: none;
+            li {
+                margin-bottom: 30px;
+                padding: 0 30px;
+                position: relative;
+                &:after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-color: #4C4C4C;
+                    border-radius: 100%;
+                    position: absolute;
+                    top: 6px;
+                    // transform: translateY(-50%);
+                    left: 0px;
+                }
+            }
         }
     }
     &__cars {
         display: flex;
         align-items: center;
-        justify-content: center;
+        width: 676px;
+        max-width: 100%;
         gap: 20px;
         padding-bottom: 30px;
         flex-wrap: wrap;
-        &-item {
-            img {
-                border-radius: 14px;
-                width: 212px;
+        margin: 0 auto;
+        &-btn {
+            button {
+                padding: 15px 18px;
+                width: 202px;
                 max-width: 100%;
+                height: 48px;
+                border: none;
+                color: white;
+                background: #3470FF;
+                border-radius: 14px;
+                font-size: 14px;
+            }
+        }
+        &-item {
+            .car {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                img {
+                    border-radius: 14px;
+                    width: 212px;
+                    max-width: 100%;
+                    margin-bottom: 12px;
+                }
+                span {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+            }
+            .details {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 150px;
+                max-width: 100%;
+                .price {
+                    display: flex;
+                    align-items: center;
+                }
+                .terms {
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }
+
 }

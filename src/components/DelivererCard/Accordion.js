@@ -38,6 +38,9 @@ const Accordion = ({title, paragraphs}) => {
                 </ul>
                 <div className="deliverer__cars">
                     {carsElement}
+                    <div className="deliverer__cars-btn">
+                        <button>Показати усі пропозиції</button>
+                    </div>
                 </div>
             </div>
 
