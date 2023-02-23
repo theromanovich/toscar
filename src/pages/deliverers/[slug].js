@@ -2,11 +2,12 @@ import DelivererSinglePage from "@/components/DelivererCard/DelivererSinglePage"
 
 const DelivererSingle = (props) => {
 //   const { title, author, description, tags,  } = props.data.attributes;
-//   const {url} =  props.data.attributes.img.data.attributes;
 
-  return (
-    <DelivererSinglePage/>
-  );
+    const {url} =  props.data.attributes.thumbnail.data[0].attributes;
+    const {tags} = props.data.attributes
+    return (
+        <DelivererSinglePage {...props.data.attributes} thumbnail={url} tags={tags.split(', ')}/>
+    );
 };
 export default DelivererSingle;
 
