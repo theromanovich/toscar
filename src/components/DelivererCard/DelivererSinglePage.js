@@ -9,7 +9,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
 
           <div className="deliverer__sidebar-profile">
 
-            <div className={`deliverer__status ${status === "Вільний" ? 'green' : 'red'}`}>
+            <div className={`deliverer__sidebar-status ${status === "Вільний" ? 'green' : 'red'}`}>
                   {status}
               </div>
 
@@ -28,7 +28,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 </div>
                 
                 <div className="deliverer__sidebar-specialization">
-                    Cпеціалізація: {specialization}
+                   <p>Cпеціалізація: <span>{specialization}</span></p> 
                 </div>
 
                 <div className="deliverer__sidebar-description">
@@ -64,7 +64,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                       </clipPath>
                       </defs>
                   </svg>
-                  Рейтинг: {rating}
+                  Рейтинг: <span>{rating}</span>
               </div>
               <div className="divider"></div>
               <div className="price">
@@ -73,17 +73,19 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
           </div>
 
           <div className="deliverer__sidebar-mastery">
-              <div className="experince">
-                Досвід: 5 років
+              <div className="experience">
+                <h3>Досвід</h3>
+                <p>Досвід: <span>5 років</span></p>
+                <p> Заходив: <span>25 хвилин тому</span></p>
               </div>
               <div className="divider"></div>
               <div className="vocation">
                   <span>Автовоз</span>
-                  <span>Автовоз</span>
-                  <span>Автовоз</span>
-                  <span>Автовоз</span>
-                  <span>Автовоз</span>
-                  <span>Автовоз</span>
+                  <span>Авто з США</span>
+                  <span>Авто з Європи</span>
+                  <span>Авто з Нідерландів</span>
+                  <span>Авто з Чехії</span>
+                  <span>Авто з Франції</span>
               </div>
               <div className="divider"></div>
               <div className="skills">
@@ -93,7 +95,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
 
         </div>
 
-        <div className="deliverer__benefits">
+        {/* <div className="deliverer__benefits">
             <h2>Ми пропонуємо</h2>
             <div className="propositions">
               <div>
@@ -181,7 +183,7 @@ const DelivererSinglePage = ({thumbnail, company, name, specialization, descript
                 Доставка в Україну
               </div>
             </div>
-        </div>
+        </div> */}
 
 
     </div>
