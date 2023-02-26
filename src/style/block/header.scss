@@ -89,11 +89,11 @@
       &__menu {
         position: absolute;
         left: -100%;
-        top: -80px;
+        top: 81px;
         transition: .3s all;
         background-color: white;
         width: 100vw;
-        height: 350px;
+        height: 100vh;
         display: block;
         &.active {
           transition: .3s all;
@@ -102,17 +102,23 @@
           top: 81px;
           background-color: white;
           width: 100vw;
-          height: 350px;
+          height: 100vh;
           gap: 20px;
+          z-index: 10;
           &.active &-item {
             background-color: green;
           }
         }
         &-item {
-          margin-top: 20px;
+          margin-top: 50px;
           margin-left: 20px;
           margin-bottom: 20px;
           font-size: 30px;
+          transition: .3s all;
+          &:hover {
+            text-decoration: underline;
+            transition: .3s all;
+          }
         }
       }
       &__burger {
@@ -154,14 +160,26 @@
       transition: .3s all;
       position: absolute;
       left: -100%;
-      top: 38%;
+      bottom: 50px;
       z-index: 10;
+      height: 34px;
         button {
           padding: 10px 6px;
-          width: 70px;
+          width: 200px;
+          max-width: 90%;
+          z-index: 10;
+          &::before {
+            content: "";
+            border-top: .1px solid #ccc;
+            position: absolute;
+            left: -20px;
+            width: 100vw;
+            top: -10px;
+          }
         }
       &.active {
         left: 20px;
+        bottom: 50px;
         max-width: 90%;
         button {
           margin-top: 20px;
@@ -174,7 +192,7 @@
             position: absolute;
             left: -20px;
             width: 100vw;
-            top: 0px;
+            top: -10px;
           }
         }
       }
