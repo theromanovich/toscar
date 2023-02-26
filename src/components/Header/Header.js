@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Logo from './Logo'
 const navigation = [
@@ -31,7 +31,15 @@ const Header = () => {
     const isClickedHandler = () => {
         setIsClicked(!isClicked)
     }
-    
+
+    useEffect(() => {
+        if (document.querySelector('.nav__burger').classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isClicked])
     return (
         <div className='header'>
                 <div className='container header__container'>
