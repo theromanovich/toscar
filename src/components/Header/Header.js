@@ -26,20 +26,22 @@ const navigation = [
 
 
 const Header = () => {
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState(false);
+ 
 
     const isClickedHandler = () => {
         setIsClicked(!isClicked)
+       
     }
-
+    
     useEffect(() => {
-        if (document.querySelector('.nav__burger').classList.contains('active')) {
+        if (isClicked) {
             document.body.style.overflow = 'hidden';
-        }
-        return () => {
+        } else {
             document.body.style.overflow = 'auto';
         }
     }, [isClicked])
+
     return (
         <div className='header'>
                 <div className='container header__container'>
@@ -50,10 +52,10 @@ const Header = () => {
                         <nav className='nav'>
                             <ul className={`nav__menu ${isClicked && 'active'}`}>
                                 {navigation.map(({id, title, path}) => (
-                                    <li onClick={isClickedHandler}  className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
+                                    <li onClick={() => setIsClicked(false)} className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
                                 ))}
                             </ul>
-                            <div className={`nav__burger ${isClicked && 'active'}`} onClick={() => setIsClicked(!isClicked)}>
+                            <div className={`nav__burger ${isClicked && 'active'}`} onClick={isClickedHandler}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
