@@ -31,7 +31,7 @@ export default BlogListPage;
 
 
 export async function getStaticProps(context) {
-    const res = await fetch(`http://localhost:1337/api/blogs?populate=*`)
+    const res = await fetch(`${process.env.API_URL}/blogs?populate=*`)
     const data = await res.json()
     return {
         props: {data}, 

@@ -34,7 +34,7 @@ export default deliverers
 
 
 export async function getStaticProps(context) {
-    const res = await fetch(`http://localhost:1337/api/deliverers-cards?populate=*`)
+    const res = await fetch(`${process.env.API_URL}/deliverers-cards?populate=*`)
     const data = await res.json()
     return {
         props: {data}, 

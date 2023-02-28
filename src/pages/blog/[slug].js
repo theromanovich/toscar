@@ -15,13 +15,13 @@ export default BlogSingle;
 
 export async function getStaticProps(context) {
   const res = await fetch(
-    `http://localhost:1337/api/blogs?filters[slug][$eq]=${context.params.slug}&populate=*`
+    `${process.env.API_URL}/blogs?filters[slug][$eq]=${context.params.slug}&populate=*`
   );
 
   
   console.log(context.params.slug)
   const response = await res.json();
- // http://localhost:1337/api/blogs/${context.params.slug}?populate=*
+ // ${process.env.API_URL}/blogs/${context.params.slug}?populate=*
 
   return {
     props: {
@@ -31,7 +31,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`http://localhost:1337/api/blogs`);
+  const res = await fetch(`${process.env.API_URL}/blogs`);
   const data = await res.json();
 
   return {
