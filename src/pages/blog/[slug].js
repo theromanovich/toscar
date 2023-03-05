@@ -1,45 +1,56 @@
-import BlogSinglePage from "@/components/Blog/BlogSinglePage";
-import { findDOMNode } from "react-dom";
+import BlogSinglePage from '@/components/Blog/BlogSinglePage'
+import ReactMarkdown from 'react-markdown'
+// import remarkGfm from 'remark-gfm'
 
+const BlogSingle = props => {
+  const { title, author, description, tags, article } = props.data.attributes
+  const { url } = props.data.attributes.img.data.attributes
 
-const BlogSingle = (props) => {
-  const { title, author, description, tags,  } = props.data.attributes;
-  const {url} =  props.data.attributes.img.data.attributes;
-  console.log(props.data.attributes.img.data.attributes.url)
-  console.log(props.data.attributes)
   return (
-    <BlogSinglePage title={title} author={author} img={url} description={description} tags={tags.split(', ')}/>
-  );
-};
-export default BlogSingle;
+    <>
+      <BlogSinglePage
+        title={title}
+        author={author}
+        img={url}
+        description={description}
+        tags={tags.split(', ')}
+        article={article}
+      />
+
+      <div className='markdown__container'>
+        <ReactMarkdown children={article} />
+      </div>
+    </>
+  )
+}
+export default BlogSingle
 
 export async function getStaticProps(context) {
   const res = await fetch(
     `${process.env.API_URL}/blogs?filters[slug][$eq]=${context.params.slug}&populate=*`
-  );
+  )
 
-  
   console.log(context.params.slug)
-  const response = await res.json();
- // ${process.env.API_URL}/blogs/${context.params.slug}?populate=*
+  const response = await res.json()
+  // ${process.env.API_URL}/blogs/${context.params.slug}?populate=*
 
   return {
     props: {
-      data: response.data[0],
-    }, 
-  };
+      data: response.data[0]
+    }
+  }
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.API_URL}/blogs`);
-  const data = await res.json();
+  const res = await fetch(`${process.env.API_URL}/blogs`)
+  const data = await res.json()
 
   return {
     paths: data.data.map(({ attributes }) => ({
       params: {
-        slug: attributes.slug,
-      },
+        slug: attributes.slug
+      }
     })),
-    fallback: false, 
-  };
+    fallback: false
+  }
 }
