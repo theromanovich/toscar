@@ -11,7 +11,8 @@ const DelivererSinglePage = ({
   price,
   status,
   tags,
-  premium
+  premium,
+  vocations
 }) => {
   const tagsElements = tags.map(tag => {
     return <span>{tag.attributes.tag}</span>
@@ -145,12 +146,9 @@ const DelivererSinglePage = ({
           </div>
           <div className='divider'></div>
           <div className='vocation'>
-            <span>Автовоз</span>
-            <span>Авто з США</span>
-            <span>Авто з Європи</span>
-            <span>Авто з Нідерландів</span>
-            <span>Авто з Чехії</span>
-            <span>Авто з Франції</span>
+            {vocations.data.map((vocation, i) => {
+              return <span key={i}>{vocation.attributes.vocation}</span>
+            })}
           </div>
           <div className='divider'></div>
           <div className='skills'>{tagsElements}</div>

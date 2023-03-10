@@ -5,6 +5,7 @@ const DelivererSingle = props => {
 
   const { url } = props.data.attributes.thumbnail.data[0].attributes
   const tags = props.data.attributes.tags_deliverers.data
+  console.log(props.data.attributes.vocations)
   return (
     <DelivererSinglePage
       {...props.data.attributes}
@@ -20,7 +21,6 @@ export async function getStaticProps(context) {
     `http://localhost:1337/api/deliverers-cards?filters[slug][$eq]=${context.params.slug}&populate=*`
   )
 
-  console.log(context.params.slug)
   const response = await res.json()
 
   return {
