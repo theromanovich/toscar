@@ -4,12 +4,12 @@ const DelivererSingle = props => {
   //   const { title, author, description, tags,  } = props.data.attributes;
 
   const { url } = props.data.attributes.thumbnail.data[0].attributes
-  const { tags } = props.data.attributes
+  const tags = props.data.attributes.tags_deliverers.data
   return (
     <DelivererSinglePage
       {...props.data.attributes}
       thumbnail={url}
-      tags={tags.split(', ')}
+      tags={tags}
     />
   )
 }

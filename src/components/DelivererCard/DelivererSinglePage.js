@@ -14,7 +14,7 @@ const DelivererSinglePage = ({
   premium
 }) => {
   const tagsElements = tags.map(tag => {
-    return <span>{tag}</span>
+    return <span>{tag.attributes.tag}</span>
   })
   const accordionElements = accordionData.map(accordionData => {
     return <Accordion {...accordionData} />
