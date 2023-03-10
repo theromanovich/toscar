@@ -9,8 +9,7 @@ const BlogListPage = props => {
 
   const serviceData = props.data.data
 
-  console.log(serviceData[0].attributes)
-  console.log(serviceData[1])
+  console.log(serviceData)
 
   return (
     <div>
@@ -23,7 +22,7 @@ const BlogListPage = props => {
                 title={attributes.title}
                 description={attributes.description}
                 img={attributes.img.data.attributes.url}
-                tags={attributes.tags.split(', ')}
+                tags={attributes.tags_blogs.data}
               />
             </Link>
           ))}
