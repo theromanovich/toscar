@@ -12,7 +12,11 @@ const BlogSinglePage = ({ img, title, author, description, tags, article }) => {
 
       <div className='single-blog__tags'>
         {tags.map(item => {
-          return <span className={`tag ${item.toLowerCase()}`}>{item}</span>
+          return (
+            <span className={`tag ${item.attributes.tag.toLowerCase()}`}>
+              {item.attributes.tag}
+            </span>
+          )
         })}
       </div>
 

@@ -1,25 +1,41 @@
-import { accordionData } from './accordionData'
+// import { accordionData } from './accordionData'
 import Accordion from './Accordion'
-const DelivererSinglePage = ({
-  thumbnail,
-  company,
-  name,
-  specialization,
-  description,
-  city,
-  rating,
-  price,
-  status,
-  tags,
-  premium,
-  vocations
-}) => {
+const DelivererSinglePage = props => {
+  const {
+    thumbnail,
+    company,
+    name,
+    specialization,
+    description,
+    city,
+    rating,
+    price,
+    status,
+    tags,
+    premium,
+    vocations,
+    accordions,
+    paragraphs,
+    paragraphs_accordions,
+    cars
+  } = props
+  console.log(cars)
+
   const tagsElements = tags.map(tag => {
     return <span>{tag.attributes.tag}</span>
   })
-  const accordionElements = accordionData.map(accordionData => {
-    return <Accordion {...accordionData} />
+
+  const accordionElements = accordions.data.map(accordionData => {
+    return (
+      <Accordion
+        {...accordions}
+        paragraphs={accordionData}
+        paragraphs_accordions={paragraphs_accordions}
+        cars={cars}
+      />
+    )
   })
+
   return (
     <div className='deliverer'>
       <div className='deliverer__sidebar'>
@@ -360,3 +376,17 @@ const DelivererSinglePage = ({
   )
 }
 export default DelivererSinglePage
+
+// export async function getStaticProps(context) {
+//   const res = await fetch(
+//     `http://localhost:1337/api/deliverers-cards?populate=cars.img`
+//   )
+
+//   const response = await res.json()
+
+//   return {
+//     props: {
+//       data: response.data[0]
+//     }
+//   }
+// }

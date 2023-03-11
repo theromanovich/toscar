@@ -3,9 +3,10 @@ import ReactMarkdown from 'react-markdown'
 // import remarkGfm from 'remark-gfm'
 
 const BlogSingle = props => {
-  const { title, author, description, tags, article } = props.data.attributes
+  const { title, author, description, tags_blogs, article } =
+    props.data.attributes
   const { url } = props.data.attributes.img.data.attributes
-
+  console.log(props)
   return (
     <>
       <BlogSinglePage
@@ -13,7 +14,7 @@ const BlogSingle = props => {
         author={author}
         img={url}
         description={description}
-        tags={tags.split(', ')}
+        tags={tags_blogs.data}
         article={article}
       />
 
