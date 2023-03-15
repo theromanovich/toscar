@@ -1,9 +1,15 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+import { useEffect } from 'react'
+
 const BlogList = ({ id, title, img, author, description, tags }) => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
-    <article className='blog-list-item' key={id}>
-      {/* <Link href={'/blog/' + id}> */}
+    <article data-aos='zoom-in-up' className='blog-list-item' key={id}>
       <img src={img} alt={title} />
       <div className='blog-list__author'>{author}</div>
       <div className='blog-list__title'>
@@ -39,7 +45,6 @@ const BlogList = ({ id, title, img, author, description, tags }) => {
           )
         })}
       </div>
-      {/* </Link> */}
     </article>
   )
 }
