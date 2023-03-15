@@ -10,10 +10,11 @@ const Accordion = props => {
       return <li key={i}>{paragraph.attributes.paragraph}</li>
     }
   )
-  console.log(props.cars[0])
-  const carsElement = props.cars.data.map(car => {
+
+  const carsElement = props.cars.map(car => {
     return <Cars {...car.attributes} img={car.attributes.img} />
   })
+  console.log(props.cars)
   console.log(props.paragraphs)
   const accordionToggler = () => {
     setIsAccordionClicked(!isAccordionClicked)

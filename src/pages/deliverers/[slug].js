@@ -4,15 +4,15 @@ const DelivererSingle = props => {
   const { url } = props.data.attributes.thumbnail.data[0].attributes
   const tags = props.data.attributes.tags_deliverers.data
   const paragraphs = props.data.attributes.paragraphs_accordions.data
-
-  console.log(props.data.attributes.cars.data) // CARS
-
+  const cars = props.data.attributes.cars.data
+  console.log(cars)
   return (
     <DelivererSinglePage
       {...props.data.attributes}
       thumbnail={url}
       tags={tags}
       paragraphs={paragraphs}
+      cars={cars}
     />
   )
 }
@@ -20,7 +20,7 @@ export default DelivererSingle
 
 export async function getStaticProps(context) {
   const res = await fetch(
-    `${process.env.API_URL}/deliverers-cards?filters[slug][$eq]=${context.params.slug}&populate=*`
+    `${process.env.API_URL}/deliverers-cards?filters[slug][$eq]=${context.params.slug}&populate=*` //cars img
   )
   // &populate=cars.img
   // http://localhost:1337/api/deliverers-cards?populate=cars.img
