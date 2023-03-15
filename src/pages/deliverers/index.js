@@ -12,7 +12,6 @@ const deliverers = props => {
     setDeliverersArr(deliverersData)
     console.log(deliverersArr)
   }, [deliverersData])
-
   return (
     <>
       <Filter />
