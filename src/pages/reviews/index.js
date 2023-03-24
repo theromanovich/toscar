@@ -1,4 +1,5 @@
 import Review from '@/components/Review/Review'
+import Link from 'next/link'
 const reviewsData = [
   {
     id: 1,
@@ -46,15 +47,21 @@ const reviewsData = [
 
 const reviews = () => {
   return (
-    <div>
+    <>
       <div className='review'>
         <div className='review__container'>
-          {reviewsData.map(review => {
-            return <Review {...review} key={review.id} />
-          })}
+          <div className='breadcrumbs'>
+            <Link href='/'>Головна</Link>/<Link href='/reviews'>Відгуки</Link>
+          </div>
+          <div className='review__title'>Відгуки</div>
+          <div className='review__videos'>
+            {reviewsData.map(review => {
+              return <Review {...review} key={review.id} />
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 export default reviews
