@@ -1,6 +1,7 @@
 .review {
   padding-top: 40px;
   padding-left: 200px;
+  padding-bottom: 40px;
   &__container {
     width: 1200px;
     max-width: 100%;
@@ -85,6 +86,7 @@
   gap: 35px;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 350px);
+  margin-bottom: 40px;
 }
 
 .talking {
@@ -93,4 +95,5 @@
   gap: 35px;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 350px);
+  margin-bottom: 40px;
 }
