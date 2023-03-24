@@ -7,9 +7,11 @@ import DelivererCard from '../DelivererCard/DelivererCard'
 import Filter from '../Filter/Filter'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { FilterProvider } from '@/helpers/filter-context/filter-context'
+import ToseiHeader from '../ToseiHeader/ToseiHeader'
 const Layout = ({ children }) => (
   <>
     {/* <Header /> */}
+    <ToseiHeader />
     <SideBarMenu />
     <FilterProvider>
       {/* <Hero/> */}
