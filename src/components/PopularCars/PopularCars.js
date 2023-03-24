@@ -13,7 +13,7 @@ const PopularCars = () => {
       <div className='popular-cars__container'>
         {cars.map(car => {
           return (
-            <div className='popular-cars__item'>
+            <div className='popular-cars__item' key={car.id}>
               <div className='car-photo'>
                 <img src={car.img} alt={car.make} />
               </div>
@@ -50,7 +50,7 @@ const PopularCars = () => {
                         car.status ? 'green' : 'orange'
                       }`}
                     >
-                      {car.status ? 'Вн наявності' : 'Під заказ'}
+                      {car.status ? 'В наявності' : 'Під заказ'}
                     </button>
                   </div>
                 </div>

@@ -1,0 +1,22 @@
+.review {
+  padding-top: 40px;
+  padding-left: 200px;
+  &__container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 20px;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 340px);
+  }
+  &__item {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    iframe {
+      min-height: 300px;
+    }
+  }
+}

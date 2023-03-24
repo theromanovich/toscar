@@ -89,11 +89,13 @@
       text-align: center;
       margin-top: 10px;
       margin-left: auto;
+      border: 1px solid;
+      background-color: white;
       &.green {
-        background-color: #73db43;
+        color: #73db43;
       }
       &.orange {
-        background-color: #ebb428;
+        color: #ebb428;
       }
     }
   }

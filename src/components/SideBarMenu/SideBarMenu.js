@@ -19,7 +19,7 @@ const links = [
   {
     id: 4,
     title: 'Відгуки',
-    path: '/deliverers'
+    path: '/reviews'
   },
   {
     id: 5,
