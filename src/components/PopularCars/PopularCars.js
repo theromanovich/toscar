@@ -1,10 +1,17 @@
 import { carsData } from './carsData'
+import { useState, useRef } from 'react'
 
 const PopularCars = () => {
+  const [cars, setCars] = useState(carsData.slice(0, 3))
+  const loadBtn = useRef(null)
+  const loadCars = () => {
+    setCars(carsData)
+    loadBtn.current.style.display = 'none'
+  }
   return (
     <div className='popular-cars'>
       <div className='popular-cars__container'>
-        {carsData.map(car => {
+        {cars.map(car => {
           return (
             <div className='popular-cars__item'>
               <div className='car-photo'>
@@ -51,7 +58,9 @@ const PopularCars = () => {
             </div>
           )
         })}
-        <button className='download-btn'>Показати ще</button>
+        <button ref={loadBtn} className='download-btn' onClick={loadCars}>
+          Показати ще
+        </button>
       </div>
     </div>
   )

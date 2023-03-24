@@ -6,7 +6,7 @@
     max-width: 100%;
     margin: 0 auto;
     .download-btn {
-      margin-top: 20px;
+      margin-top: 10px;
       background: red;
       padding: 6px 16px;
       width: 100%;
@@ -17,6 +17,7 @@
     }
   }
   &__item {
+    margin-bottom: 10px;
     padding: 16px 32px 16px 16px;
     min-height: 180px;
     background: #ffffff;
