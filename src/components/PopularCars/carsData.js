@@ -9,6 +9,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: true,
     img: '/images/honda-fit.png'
   },
   {
@@ -33,6 +34,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: true,
     img: 'images/toyota-prius.png'
   },
   {
@@ -49,6 +51,44 @@ export const carsData = [
   },
   {
     id: 5,
+    make: 'Honda',
+    model: 'Fit',
+    engine: '2.0',
+    year: 2015,
+    gearbox: 'Автомат',
+    drive: 'Задній',
+    price: '300 000 uah',
+    mileage: 100000,
+    status: true,
+    img: '/images/honda-fit.png'
+  },
+  {
+    id: 6,
+    make: 'Honda',
+    model: 'Fit',
+    engine: '2.0',
+    year: 2015,
+    gearbox: 'Автомат',
+    drive: 'Задній',
+    price: '300 000 uah',
+    mileage: 100000,
+    status: true,
+    img: '/images/honda-fit.png'
+  },
+  {
+    id: 6,
+    make: 'Honda',
+    model: 'Fit',
+    engine: '2.0',
+    year: 2015,
+    gearbox: 'Автомат',
+    drive: 'Задній',
+    price: '300 000 uah',
+    mileage: 100000,
+    img: '/images/honda-fit.png'
+  },
+  {
+    id: 6,
     make: 'Honda',
     model: 'Fit',
     engine: '2.0',
