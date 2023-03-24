@@ -1,3 +1,4 @@
+import MainPageFilter from '../MainPageFilter/MainPageFilter'
 const MainPage = () => {
   return (
     <div className='main-page'>
@@ -8,6 +9,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+      <MainPageFilter />
     </div>
   )
 }
