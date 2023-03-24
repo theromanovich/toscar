@@ -8,6 +8,7 @@ import Filter from '../Filter/Filter'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { FilterProvider } from '@/helpers/filter-context/filter-context'
 import ToseiHeader from '../ToseiHeader/ToseiHeader'
+import MainPage from '../MainPage/MainPage'
 const Layout = ({ children }) => (
   <>
     {/* <Header /> */}
@@ -17,7 +18,6 @@ const Layout = ({ children }) => (
       {/* <Hero/> */}
       {children}
       {/* <Form/> */}
-      {/* <Blog/> */}
     </FilterProvider>
     {/* <Footer /> */}
   </>

@@ -1,9 +1,9 @@
 const MainPage = () => {
   return (
-    <div className='main'>
-      <div className='main__container'>
-        <div className='main__bg'>
-          <div className='main__title'>
+    <div className='main-page'>
+      <div className='main-page__container'>
+        <div className='main-page__bg'>
+          <div className='main-page__title'>
             Доставимо будь-яку техніку з США за 3 тижні
           </div>
         </div>

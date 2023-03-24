@@ -1,0 +1,26 @@
+.main-page {
+  &__container {
+    margin-left: 200px;
+    position: relative;
+  }
+  &__bg {
+    min-height: 316px;
+    background-image: url('/images/main-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
