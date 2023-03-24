@@ -5,17 +5,19 @@ import Form from '../Form/Form'
 import Blog from '../../../alpina-ui/src/components/Blog/Blog'
 import DelivererCard from '../DelivererCard/DelivererCard'
 import Filter from '../Filter/Filter'
+import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { FilterProvider } from '@/helpers/filter-context/filter-context'
 const Layout = ({ children }) => (
   <>
-    <Header />
+    {/* <Header /> */}
+    <SideBarMenu />
     <FilterProvider>
       {/* <Hero/> */}
       {children}
       {/* <Form/> */}
       {/* <Blog/> */}
     </FilterProvider>
-    <Footer />
+    {/* <Footer /> */}
   </>
 )
 

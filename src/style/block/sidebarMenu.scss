@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  &__container {
+    width: 200px;
+    min-height: 100vh;
+    padding: 28px 0px 0px;
+    background: #f7f7f9;
+  }
+  & .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 26px;
+    gap: 10px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    padding-top: 40px;
+    padding-left: 26px;
+    list-style: none;
+    &-item {
+      a {
+        font-size: 20px;
+        color: #000000;
+      }
+    }
+  }
+  &__icons {
+    margin-top: 290px;
+    display: flex;
+    gap: 10px;
+    padding-left: 26px;
+  }
+}
