@@ -1,0 +1,89 @@
+.popular-cars {
+  padding-left: 200px;
+  &__container {
+    padding: 0 15px;
+    width: 850px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__item {
+    padding: 16px 32px 16px 16px;
+    min-height: 180px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    display: flex;
+    gap: 30px;
+  }
+  .car-info {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-size: 25px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+    &__characteristics {
+      display: flex;
+      gap: 50px;
+      .engine {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+      .year {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+      .mileage {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+    }
+    &__drive {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    &__gearbox {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    &__price {
+      color: #8b8b8b;
+      .price {
+        font-size: 30px;
+        color: black;
+      }
+    }
+    .status-btn {
+      border: none;
+      border-radius: 12px;
+      padding: 10px;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: auto;
+      &.green {
+        background-color: #73db43;
+      }
+      &.orange {
+        background-color: #ebb428;
+      }
+    }
+  }
+}
