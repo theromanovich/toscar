@@ -5,6 +5,16 @@
     width: 850px;
     max-width: 100%;
     margin: 0 auto;
+    .download-btn {
+      margin-top: 20px;
+      background: red;
+      padding: 6px 16px;
+      width: 100%;
+      border: none;
+      background: #f4f4f4;
+      border-radius: 4px;
+      color: #2c2c2c;
+    }
   }
   &__item {
     padding: 16px 32px 16px 16px;
