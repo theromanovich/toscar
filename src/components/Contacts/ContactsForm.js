@@ -1,11 +1,59 @@
+import { useRef, useState, useEffect } from 'react'
+
 const ContactsForm = () => {
+  const nameInput = useRef()
+  const phoneInput = useRef()
+  const messageInput = useRef()
+  const [submitState, setSubmitState] = useState(false)
+
+  const submitHandler = e => {
+    e.preventDefault()
+    if (
+      nameInput.current.value.trim() &&
+      phoneInput.current.value.trim() &&
+      messageInput.current.value.trim()
+    ) {
+      setSubmitState(true)
+      nameInput.current.value = ''
+      phoneInput.current.value = ''
+      messageInput.current.value = ''
+    }
+  }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (submitState) setSubmitState(false)
+    }, 2000)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [submitState])
+  const setDynamicBtn = () => {
+    if (submitState) {
+      return (
+        <button disabled style={{ background: 'green' }}>
+          Відправлено
+        </button>
+      )
+    } else {
+      return <button>Надіслати</button>
+    }
+  }
+
+  const dynamicBtn = setDynamicBtn()
   return (
-    <form className='contacts-form'>
+    <form className='contacts-form' onSubmit={submitHandler}>
       <div className='contacts-form__title'>Напишіть нам</div>
       <label htmlFor='name'>Ваше ім'я</label>
-      <input type='text' id='name' placeholder="Ім'я" required />
+      <input
+        ref={nameInput}
+        type='text'
+        id='name'
+        placeholder="Ім'я"
+        required
+      />
       <label htmlFor='phone'>Контактний телефон</label>
       <input
+        ref={phoneInput}
         id='phone'
         required
         type='tel'
@@ -15,12 +63,13 @@ const ContactsForm = () => {
       />
       <label htmlFor='message'>Ваше повідомлення</label>
       <textarea
+        ref={messageInput}
         name='message'
         required
         id='message'
         placeholder='Повідомлення'
       ></textarea>
-      <button>Надіслати</button>
+      {dynamicBtn}
     </form>
   )
 }
