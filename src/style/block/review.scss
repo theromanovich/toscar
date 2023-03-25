@@ -1,6 +1,6 @@
 .review {
   padding-top: 40px;
-  padding-left: 200px;
+  margin-left: 200px;
   padding-bottom: 40px;
   &__container {
     width: 1200px;
@@ -22,6 +22,7 @@
       width: 350px;
       max-width: 100%;
       min-height: 200px;
+      border: none;
     }
     .rating {
       margin-top: 10px;
@@ -96,4 +97,7 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 350px);
   margin-bottom: 40px;
+  iframe {
+    border: none;
+  }
 }
