@@ -1,0 +1,50 @@
+.footer {
+  margin-top: 30px;
+  padding-left: 200px;
+  background: #ffffff;
+  box-shadow: 0px -1px 0px #f4f4f4;
+  &__container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 32px 42px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  &__descr {
+    width: 325px;
+    max-width: 100%;
+    color: #8b8b8b;
+    margin-bottom: 12px;
+  }
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding-top: 35px;
+    padding-left: 30px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  &__email {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

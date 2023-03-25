@@ -10,6 +10,7 @@ import { FilterProvider } from '@/helpers/filter-context/filter-context'
 import ToseiHeader from '../ToseiHeader/ToseiHeader'
 import MainPage from '../MainPage/MainPage'
 import MainPageFilter from '../MainPageFilter/MainPageFilter'
+import ToseiFooter from '../ToseiFooter/ToseiFooter'
 
 const Layout = ({ children }) => (
   <>
@@ -23,7 +24,7 @@ const Layout = ({ children }) => (
       {/* <Form/> */}
       {/* </MainPageFilter> */}
     </FilterProvider>
-    {/* <Footer /> */}
+    <ToseiFooter />
   </>
 )
 
