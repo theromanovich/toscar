@@ -9,15 +9,19 @@ import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { FilterProvider } from '@/helpers/filter-context/filter-context'
 import ToseiHeader from '../ToseiHeader/ToseiHeader'
 import MainPage from '../MainPage/MainPage'
+import MainPageFilter from '../MainPageFilter/MainPageFilter'
+
 const Layout = ({ children }) => (
   <>
     {/* <Header /> */}
     <ToseiHeader />
     <SideBarMenu />
     <FilterProvider>
+      {/* <MainPageFilter> */}
       {/* <Hero/> */}
       {children}
       {/* <Form/> */}
+      {/* </MainPageFilter> */}
     </FilterProvider>
     {/* <Footer /> */}
   </>

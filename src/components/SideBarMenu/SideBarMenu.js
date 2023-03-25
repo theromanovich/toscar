@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Whatsapp, Instagram, Youtube, Logo } from './SideBarIcons'
 const links = [
   {
@@ -27,13 +28,21 @@ const links = [
     path: '/contacts'
   }
 ]
-const navElements = links.map(({ id, title, path }) => (
-  <li className='sidebar__menu-item' key={id}>
-    <Link href={path}>{title}</Link>
-  </li>
-))
 
 const SideBarMenu = () => {
+  const router = useRouter()
+
+  const navElements = links.map(({ id, title, path }) => (
+    <li
+      className={`sidebar__menu-item ${
+        router.pathname == path ? 'active' : ''
+      }`}
+      key={id}
+    >
+      <Link href={path}>{title}</Link>
+    </li>
+  ))
+
   return (
     <div className='sidebar'>
       <div className='sidebar__container'>
