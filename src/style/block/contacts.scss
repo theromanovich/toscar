@@ -1,0 +1,61 @@
+.contacts {
+  padding-left: 200px;
+  &__container {
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 43px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .breadcrumbs {
+    margin-top: 40px;
+    color: #8b8b8b;
+    a {
+      color: #8b8b8b;
+    }
+  }
+  &__title {
+    margin-top: 20px;
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  &__address {
+    font-size: 26px;
+  }
+  &__phone {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+  &__email {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .map {
+    width: calc(100vw - 200px);
+    max-width: 2560px;
+    margin: 0 auto;
+    display: block;
+    min-height: 590px;
+    border: none;
+    position: relative;
+    user-select: none;
+    &__wrapper {
+      position: relative;
+    }
+  }
+}
+.footer {
+  margin-top: 0px;
+}
