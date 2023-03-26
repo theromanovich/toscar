@@ -15,7 +15,7 @@ const links = [
   {
     id: 3,
     title: 'Інформація',
-    path: '/form'
+    path: '/information'
   },
   {
     id: 4,

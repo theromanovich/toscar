@@ -1,0 +1,146 @@
+.information {
+  padding-left: 200px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    .breadcrumbs {
+      color: #8b8b8b;
+      margin-bottom: 18px;
+      a {
+        color: #8b8b8b;
+      }
+    }
+  }
+  &__title {
+    font-size: 36px;
+    margin-bottom: 12px;
+    span {
+      color: #cd0000;
+    }
+  }
+  &__subtitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  &__descr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    img {
+      width: 400px;
+      max-width: 100%;
+    }
+    p {
+      &:nth-child(1) {
+        span {
+          display: block;
+        }
+      }
+      span {
+        color: #cd0000;
+      }
+    }
+  }
+  &__mission {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    &-descr {
+      width: 65%;
+      p {
+        span {
+          color: #cd0000;
+        }
+      }
+    }
+    &-title {
+      font-size: 28px;
+      margin-bottom: 12px;
+      span {
+        color: #cd0000;
+      }
+    }
+  }
+  &__graphic {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    width: 400px;
+    max-width: 100%;
+    justify-content: center;
+    .wrap {
+      margin-top: 20px;
+      transform: rotate(360deg);
+      color: white;
+      background: linear-gradient(180deg, #494949, rgba(73, 73, 73, 0));
+      position: relative;
+      margin-top: auto;
+      &:nth-child(1) {
+        height: 100px;
+        animation: grow1 1s linear;
+      }
+      &:nth-child(2) {
+        height: 150px;
+        animation: grow2 1s linear;
+      }
+      &:nth-child(3) {
+        height: 180px;
+        animation: grow3 1s linear;
+      }
+      div {
+        background: none;
+        color: #cd0000;
+        position: absolute;
+        gap: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        &:nth-child(1) {
+          top: -20px;
+          font-size: 23px;
+        }
+        &:nth-child(2) {
+          top: 0px;
+          color: black;
+          font-size: 17px;
+        }
+      }
+      span {
+        font-size: 20px;
+        display: block;
+        margin: 50px 0 0 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@keyframes grow1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes grow2 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 150px;
+  }
+}
+@keyframes grow3 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 180px;
+  }
+}
