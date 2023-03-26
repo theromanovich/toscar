@@ -1,0 +1,10 @@
+.buy {
+  padding-left: 200px;
+  margin-top: 50px;
+  &__container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+}
