@@ -1,0 +1,19 @@
+.privacy-policy {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50px 0px 50px 200px;
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}

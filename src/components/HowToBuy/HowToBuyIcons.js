@@ -1,7 +1,7 @@
 export const RequestIcon = () => {
   return (
     <svg
-      width='800px'
+      width='80px'
       height='800px'
       viewBox='0 0 1024 1024'
       class='icon'

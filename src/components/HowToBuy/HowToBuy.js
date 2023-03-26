@@ -6,6 +6,7 @@ import {
   DeliveryItem,
   LeaveRequestIcon
 } from './HowToBuyIcons'
+import Modal from './Modal'
 
 const HowToBuy = () => {
   return (
@@ -44,7 +45,7 @@ const HowToBuy = () => {
             </div>
             <div className='buy__points-item'>
               <ShippingIcon />
-              <div className='title'>Доставка в Україну та оформлення</div>
+              <div className='title'>Доставка та оформлення</div>
               <div className='descr'>
                 Ми транспортуємо авто в порт, вантажимо на судно та доставляємо
                 до України, де проходить митне оформлення.
@@ -59,11 +60,13 @@ const HowToBuy = () => {
               </div>
             </div>
             <div className='buy__points-item'>
+              Залишити заявку
               <LeaveRequestIcon />
             </div>
           </div>
         </div>
       </div>
+      <Modal />
     </div>
   )
 }
