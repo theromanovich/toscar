@@ -7,8 +7,17 @@ import {
   LeaveRequestIcon
 } from './HowToBuyIcons'
 import Modal from './Modal'
+import { useEffect, useState } from 'react'
 
 const HowToBuy = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  useEffect(() => {
+    setModalOpen(false)
+  })
+  const handleCloseModal = () => {
+    setModalOpen(false)
+  }
+
   return (
     <div className='buy'>
       <div className='buy__container'>
@@ -59,14 +68,17 @@ const HowToBuy = () => {
                 способом або Ви самі забираєте його у Києві.
               </div>
             </div>
-            <div className='buy__points-item'>
+            <div
+              onClick={() => setModalOpen(true)}
+              className='buy__points-item'
+            >
               Залишити заявку
               <LeaveRequestIcon />
             </div>
           </div>
         </div>
       </div>
-      <Modal />
+      <Modal modalStatus={modalOpen} onClose={handleCloseModal} />
     </div>
   )
 }
