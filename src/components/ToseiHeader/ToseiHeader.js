@@ -3,7 +3,7 @@ const ToseiHeader = () => {
     <div className='header'>
       <div className='header__container'>
         <div className='header__title'>
-          Автомобілі з CША та доставкою по всій Україні.
+          Автомобілі зі CША та доставкою по всій Україні.
         </div>
         <div className='header__phone'>
           <span>+38(067)506-45-06</span>

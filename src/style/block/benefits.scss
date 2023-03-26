@@ -1,0 +1,43 @@
+.benefits {
+  padding-left: 200px;
+  margin-bottom: 30px;
+  &__container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 20px auto;
+    text-align: center;
+    color: black;
+    font-size: 36px;
+  }
+  &__wrapper {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    .descr {
+      margin-top: 3px;
+      color: #8b8b8b;
+    }
+    .title {
+      margin-top: 10px;
+      color: black;
+      font-size: 24px;
+    }
+    .icon {
+      svg {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import MainPageFilter from '../MainPageFilter/MainPageFilter'
 import PopularCars from '../PopularCars/PopularCars'
+import Benefits from '../Benefits/Benefits'
+
 const MainPage = () => {
   return (
     <div className='main-page'>
@@ -12,6 +14,7 @@ const MainPage = () => {
       </div>
       <MainPageFilter />
       <PopularCars />
+      <Benefits />
     </div>
   )
 }
