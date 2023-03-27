@@ -29,8 +29,8 @@ const HowToBuy = () => {
             <div className='title'>Як відбувається купівля</div>
             <div className='buy__points'>
               <div className='buy__points-item'>
-                <RequestIcon />
-
+                {/* <RequestIcon /> */}
+                <img src='/resume 1.png' alt='' style={{ width: '50px' }} />
                 <div className='title'>Залишаєте заявку</div>
                 <div className='descr'>
                   Ви залишаєте заявку на сайті, або зв'язуєтеся з нами зручним
@@ -38,23 +38,31 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                <ContractIcon />
+                {/* <ContractIcon /> */}
+                <img
+                  src='/conversation 1.png'
+                  alt=''
+                  style={{ width: '50px' }}
+                />
                 <div className='title'>Укладаємо договір</div>
                 <div className='descr'>
                   Укладаємо договір, Ви вносите гарантійний депозит.
                 </div>
               </div>
               <div className='buy__points-item'>
-                <SelectionIcon />
+                {/* <SelectionIcon /> */}
+                <img src='carIcon.png' alt='' style={{ width: '50px' }} />
 
                 <div className='title'>Підбір та купівля авто</div>
                 <div className='descr'>
-                  Вам пропонуються підходящі варіанти з аукціонів, Ви приймаєте
-                  рішення, автомобіль викуповується.
+                  Вам пропонуються варіанти, приймаємо рішення, автомобіль
+                  викуповується.
                 </div>
               </div>
               <div className='buy__points-item'>
-                <ShippingIcon />
+                {/* <ShippingIcon />
+                 */}
+                <img src='cargo-ship 1.png' alt='' style={{ width: '50px' }} />
                 <div className='title'>Доставка та оформлення</div>
                 <div className='descr'>
                   Ми транспортуємо авто в порт, вантажимо на судно та
@@ -62,7 +70,12 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                <DeliveryItem />
+                {/* <DeliveryItem /> */}
+                <img
+                  src='delivery-truck 1.png'
+                  alt=''
+                  style={{ width: '50px' }}
+                />
                 <div className='title'>Доставка до вашого міста</div>
                 <div className='descr'>
                   Ми доставляємо авто в будь-який регіон України обраним Вами

@@ -56,7 +56,7 @@ const Modal = ({ modalStatus, onClose }) => {
       setTimeout(() => {
         closeModal()
         setSubmitModal(false)
-      }, 4000)
+      }, 3000)
     }
   }
 

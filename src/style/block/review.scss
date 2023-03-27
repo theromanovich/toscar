@@ -12,7 +12,6 @@
     display: grid;
     gap: 35px;
     justify-content: space-between;
-    padding: 0 20px;
     grid-template-columns: repeat(auto-fill, 350px);
   }
   &__item {
@@ -31,11 +30,9 @@
   }
   &__title {
     font-size: 40px;
-    padding-left: 20px;
     margin: 40px 0;
   }
   .breadcrumbs {
-    padding-left: 20px;
     display: flex;
     gap: 10px;
     color: #8b8b8b;
@@ -44,9 +41,8 @@
     }
   }
   &__tabs {
-    width: 1160px;
+    width: 1200px;
     max-width: 100%;
-    margin-left: 20px;
     display: flex;
     gap: 28px;
     position: relative;
@@ -86,8 +82,8 @@
 .google-review {
   margin-top: 40px;
   display: grid;
-  gap: 35px;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 30px;
   grid-template-columns: repeat(auto-fill, 350px);
   margin-bottom: 40px;
 }
@@ -95,8 +91,8 @@
 .talking {
   margin-top: 40px;
   display: grid;
-  gap: 35px;
-  justify-content: center;
+  gap: 30px;
+  justify-content: space-between;
   grid-template-columns: repeat(auto-fill, 350px);
   margin-bottom: 40px;
   iframe {

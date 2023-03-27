@@ -1,55 +1,55 @@
 export const getStars = rating => {
-  if (rating == 1)
-    <>
-      <Star />
-      <NoStar />
-      <NoStar />
-      <NoStar />
-      <NoStar />
-    </>
-  if (rating == 2) {
-    return (
-      <>
-        <Star />
-        <Star />
-        <NoStar />
-        <NoStar />
-        <NoStar />
-      </>
-    )
-  }
-  if (rating == 3) {
-    return (
-      <>
-        <Star />
-        <Star />
-        <Star />
-        <NoStar />
-        <NoStar />
-      </>
-    )
-  }
-  if (rating == 4) {
-    return (
-      <>
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <NoStar />
-      </>
-    )
-  }
-  if (rating == 5) {
-    return (
-      <>
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-      </>
-    )
+  switch (rating) {
+    case 1:
+      return (
+        <>
+          <Star />
+          <NoStar />
+          <NoStar />
+          <NoStar />
+          <NoStar />
+        </>
+      )
+    case 2:
+      return (
+        <>
+          <Star />
+          <Star />
+          <NoStar />
+          <NoStar />
+          <NoStar />
+        </>
+      )
+    case 3:
+      return (
+        <>
+          <Star />
+          <Star />
+          <Star />
+          <NoStar />
+          <NoStar />
+        </>
+      )
+    case 4:
+      return (
+        <>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <NoStar />
+        </>
+      )
+    case 5:
+      return (
+        <>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+        </>
+      )
   }
 }
 
