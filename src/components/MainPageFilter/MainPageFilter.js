@@ -43,7 +43,7 @@ const MainPageFilter = () => {
         </div>
         <div className='filter__cta'>
           <div className='search-result'>
-            Знайдето автомобілей: <span>256</span>
+            Знайдено автомобілей: <span>256</span>
           </div>
           <button className='search-btn'>Пошук</button>
         </div>

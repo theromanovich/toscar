@@ -1,0 +1,209 @@
+.catalog {
+  position: relative;
+  padding: 0px 0px 40px 200px;
+  display: flex;
+  flex-direction: column;
+  &__container {
+    padding: 0 15px;
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    .download-btn {
+      margin-top: 10px;
+      background: red;
+      padding: 6px 16px;
+      width: 100%;
+      border: none;
+      background: #f4f4f4;
+      border-radius: 4px;
+      color: #2c2c2c;
+      margin-bottom: 40px;
+    }
+    .car__filter {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 14px;
+      div {
+        input {
+          width: 18px;
+          height: 18px;
+        }
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+  &__filter {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 0;
+    background: #f7f7f9;
+    box-shadow: -1px 0px 0px #e5e5ef;
+    z-index: 10;
+    min-height: 364px;
+    padding: 30px;
+    justify-content: space-between;
+    .main-page__filter {
+      box-shadow: 0px 9px 34px rgba(58, 68, 83, 0.24);
+      border-radius: 6px;
+      max-width: 100%;
+    }
+    .breadcrumbs {
+      color: #8b8b8b;
+      margin-bottom: 12px;
+      width: 900px;
+      max-width: 100%;
+      margin: 0 auto;
+      a {
+        color: #8b8b8b;
+      }
+    }
+  }
+  &__title {
+    font-size: 30px;
+    margin-bottom: 12px;
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__item {
+    margin-bottom: 10px;
+    padding: 16px 32px 16px 16px;
+    min-height: 180px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    display: flex;
+    gap: 30px;
+  }
+  .car-info {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-size: 25px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+    &__characteristics {
+      display: flex;
+      gap: 70px;
+      .engine {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+      .year {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+      .mileage {
+        color: #8b8b8b;
+        margin-bottom: 8px;
+        span {
+          color: black;
+        }
+      }
+    }
+    &__drive {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    &__gearbox {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    &__price {
+      color: #8b8b8b;
+      .price {
+        font-size: 30px;
+        color: black;
+      }
+    }
+    .status-btn {
+      border: none;
+      border-radius: 12px;
+      padding: 10px;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: auto;
+      border: 1px solid;
+      background-color: white;
+      &.green {
+        color: #73db43;
+      }
+      &.orange {
+        color: #ebb428;
+      }
+    }
+  }
+  .main-page__filter {
+    position: static;
+    // top: -10px;
+    // left: 50%;
+    transform: translateX(0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    margin: 0 auto;
+    z-index: 1;
+    .filter {
+      &__container {
+        padding: 32px 24px;
+        width: 900px;
+        max-width: 100%;
+        min-height: 180px;
+        background: #ffffff;
+        position: relative;
+        margin: 0 auto;
+        box-shadow: 0px 9px 34px rgba(58, 68, 83, 0.24);
+        border-radius: 6px;
+      }
+    }
+  }
+  .paginate-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .next {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+    .prev {
+      cursor: pointer;
+    }
+    .pages {
+      button {
+        background: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        &.active {
+          background: red;
+          color: white;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

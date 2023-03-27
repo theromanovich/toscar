@@ -10,7 +10,7 @@ const links = [
   {
     id: 2,
     title: 'Каталог техніки',
-    path: '/blog'
+    path: '/catalog'
   },
   {
     id: 3,
