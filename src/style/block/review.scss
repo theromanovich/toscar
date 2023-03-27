@@ -6,12 +6,13 @@
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
   }
   &__videos {
     display: grid;
     gap: 35px;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
     grid-template-columns: repeat(auto-fill, 350px);
   }
   &__item {
@@ -43,7 +44,7 @@
     }
   }
   &__tabs {
-    width: 1120px;
+    width: 1160px;
     max-width: 100%;
     margin-left: 20px;
     display: flex;

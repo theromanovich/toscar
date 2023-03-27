@@ -1,33 +1,96 @@
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const Modal = ({ modalStatus, onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  console.log(modalStatus)
+  const [submitModal, setSubmitModal] = useState(false)
+  const modalRef = useRef()
+  const nameModalInput = useRef()
+  const phoneModalInput = useRef()
+  const checkbox = useRef()
+
+  const setDynamicBtn = () => {
+    if (submitModal) {
+      return (
+        <button disabled style={{ background: 'green' }}>
+          Оформлено
+        </button>
+      )
+    } else {
+      return <button>Оформити заявку</button>
+    }
+  }
+  let dynamicModalBtn = setDynamicBtn()
   useEffect(() => {
     if (modalStatus) {
       setIsModalOpen(true)
+      dynamicModalBtn = <button onClick={stopBubbling}>Оформити заявку</button>
     }
-  }, [modalStatus])
+    if (modalRef.current.classList.contains('active')) {
+      document.body.style.overflow = 'hidden'
+    }
+  }, [modalStatus, modalRef])
 
-  const closeModal = e => {
-    e.stopPropagation()
+  const closeModal = () => {
+    // e.preventDefault()
     setIsModalOpen(false)
     onClose()
+    document.body.style.overflow = 'auto'
   }
 
-  const handleContentClick = e => {
+  const stopBubbling = e => {
     e.stopPropagation()
   }
+
+  const onSubmitModal = e => {
+    e.preventDefault()
+    if (
+      nameModalInput.current.value.trim() &&
+      phoneModalInput.current.value.trim() &&
+      checkbox.current.checked
+    ) {
+      setSubmitModal(true)
+      nameModalInput.current.value = ''
+      phoneModalInput.current.value = ''
+      checkbox.current.checked = false
+      setTimeout(() => {
+        closeModal()
+        setSubmitModal(false)
+      }, 4000)
+    }
+  }
+
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => {
+  //       if (isModalOpen) {
+  //         setIsModalOpen(false)
+  //       }
+  //       return () => {
+  //         clearTimeout(timer)
+  //       }
+  //     }, 4004)
+  //   }, [isModalOpen])
+
   return (
-    <div className={isModalOpen ? 'modal active' : 'modal'}>
+    <div ref={modalRef} className={isModalOpen ? 'modal active' : 'modal'}>
       <div onClick={closeModal} className='modal__overlay'>
-        <form className='modal__content'>
+        <form
+          onSubmit={onSubmitModal}
+          onClick={stopBubbling}
+          className='modal__content'
+        >
           <div className='title'>Ваші контактні дані</div>
           <label htmlFor='username'>Ім'я</label>
-          <input type='text' id='username' required placeholder="Ім'я" />
+          <input
+            ref={nameModalInput}
+            type='text'
+            id='username'
+            required
+            placeholder="Ім'я"
+          />
           <label htmlFor='phone-num'>Номер телефону</label>
           <input
+            ref={phoneModalInput}
             type='tel'
             id='phone-num'
             required
@@ -36,13 +99,15 @@ const Modal = ({ modalStatus, onClose }) => {
           />
           <div className='checkbox'>
             {' '}
-            <input type='checkbox' id='check' required />
+            <input ref={checkbox} type='checkbox' id='check' required />
             <label htmlFor=''>
               я згоден(на) з{' '}
-              <Link href='/privacy-policy'>політикою конфіденційності</Link>
+              <Link href='/privacy-policy' onClick={closeModal}>
+                політикою конфіденційності
+              </Link>
             </label>
           </div>
-          <button>Оформити заявку</button>
+          {dynamicModalBtn}
           <div onClick={() => setIsModalOpen(false)} className='close-modal'>
             +
           </div>

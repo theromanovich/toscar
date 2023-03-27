@@ -10,13 +10,16 @@
     background: #f7f7f9;
   }
   & .logo {
-    display: flex;
-    align-items: center;
-    padding-left: 26px;
-    gap: 10px;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #000000;
+    cursor: pointer;
+    a {
+      display: flex;
+      align-items: center;
+      padding-left: 26px;
+      gap: 10px;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #000000;
+    }
   }
   &__menu {
     display: flex;
@@ -27,6 +30,7 @@
     padding-left: 26px;
     list-style: none;
     &-item {
+      cursor: pointer;
       a {
         font-size: 20px;
         color: #000000;

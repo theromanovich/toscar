@@ -47,8 +47,10 @@ const SideBarMenu = () => {
     <div className='sidebar'>
       <div className='sidebar__container'>
         <div className='logo'>
-          <Logo />
-          tosei
+          <Link href='/'>
+            <Logo />
+            tosei
+          </Link>
         </div>
         <ul className='sidebar__menu'>{navElements}</ul>
         <div className='sidebar__icons'>
