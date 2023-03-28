@@ -40,6 +40,13 @@ const Catalog = () => {
   }, [page, carsState])
 
   useEffect(() => {
+    if (carsState.length >= 1) {
+      document.querySelector('.pag-btn').click()
+      console.log('click')
+    }
+  }, [carsState])
+
+  useEffect(() => {
     radioAny.current.click()
   }, [])
 
@@ -228,21 +235,21 @@ const Catalog = () => {
           : ''}
         <div className='paginate-btns' style={{ 'user-select': 'none' }}>
           <div className='prev' onClick={prevBtn}>
-            <ArrowIcon />
+            {carsState.length > 0 && <ArrowIcon />}
           </div>
           <div className='pages'>
             {carsState.map((car, index) => (
               <button
                 key={index}
                 onClick={() => handlePageClick(index)}
-                className={page == index && 'active'}
+                className={`${page == index && 'active'} pag-btn`}
               >
                 {index + 1}
               </button>
             ))}
           </div>
           <div className='next' onClick={nextBtn}>
-            <ArrowIcon />
+            {carsState.length > 0 && <ArrowIcon />}
           </div>
         </div>
       </div>
