@@ -10,6 +10,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: true,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -22,6 +23,8 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: true,
+    body: 'SUV',
     img: '/images/bmw-x5.png'
   },
   {
@@ -35,6 +38,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: true,
+    body: 'hatchback',
     img: 'images/toyota-prius.png'
   },
   {
@@ -47,6 +51,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -60,6 +65,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: true,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -73,6 +79,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: true,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -86,6 +93,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -99,6 +107,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -112,6 +121,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -125,6 +135,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -138,6 +149,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -151,6 +163,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -164,6 +177,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -177,6 +191,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -190,6 +205,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -203,6 +219,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -216,6 +233,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -229,6 +247,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -242,6 +261,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -255,6 +275,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -268,6 +289,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -281,6 +303,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -294,6 +317,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -307,6 +331,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -320,6 +345,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -333,6 +359,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -346,6 +373,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -359,6 +387,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -372,6 +401,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -385,6 +415,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -398,6 +429,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -411,6 +443,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -424,6 +457,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'hatchback',
     img: '/images/honda-fit.png'
   },
   {
@@ -437,6 +471,7 @@ export const carsData = [
     price: '300 000 uah',
     mileage: 100000,
     status: false,
+    body: 'sedan',
     img: '/images/honda-fit.png'
   }
 ]

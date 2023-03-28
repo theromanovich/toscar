@@ -35,18 +35,6 @@ const Catalog = () => {
     })
   }
 
-  //   const filterByAny = () => {
-  //     setCarsState(paginate(carsData))
-  //   }
-
-  //   const filterByAvailable = () => {
-  //     setCarsState(paginate(carsData.filter(car => car.status)))
-  //   }
-
-  //   const filterByAwait = () => {
-  //     setCarsState(paginate(carsData.filter(car => !car.status)))
-  //   }
-
   useEffect(() => {
     setPaginateCars(carsState[page])
   }, [page, carsState])
@@ -59,7 +47,18 @@ const Catalog = () => {
     setPage(index)
   }
 
+  const [makeState, setMake] = useState()
+  const [engineState, setEngine] = useState()
+  const [bodyState, setBody] = useState()
+  const [yearFromState, setYearFrom] = useState()
+  const [yearToState, setYearTo] = useState()
+
   const filterHandler = (make, engine, body, yearFrom, yearTo) => {
+    setMake(make)
+    setEngine(engine)
+    setBody(body)
+    setYearFrom(yearFrom)
+    setYearTo(yearTo)
     if (radioState === 'available') {
       filterCars(make, engine, body, yearFrom, yearTo, true)
     } else if (radioState === 'await') {
@@ -97,6 +96,28 @@ const Catalog = () => {
       )
     )
   }
+
+  const handleRadioChange = event => {
+    const value = event.target.value
+    setRadioState(value)
+
+    let status = undefined
+    if (value === 'available') {
+      status = true
+    } else if (value === 'await') {
+      status = false
+    }
+
+    filterCars(
+      makeState,
+      engineState,
+      bodyState,
+      yearFromState,
+      yearToState,
+      status
+    )
+  }
+
   let notFound = ''
   if (carsState.length === 0) {
     notFound = 'No cars found with specified parameters'
@@ -124,7 +145,8 @@ const Catalog = () => {
               value='any'
               name='status'
               id='any'
-              onChange={() => setRadioState('any')}
+              //   onChange={() => setRadioState('any')}
+              onChange={handleRadioChange}
             />
             <label htmlFor='any'>Будь-які</label>
           </div>
@@ -135,7 +157,8 @@ const Catalog = () => {
               name='status'
               value='available'
               id='available'
-              onChange={() => setRadioState('available')}
+              //   onChange={() => setRadioState('available')}
+              onChange={handleRadioChange}
             />
             <label htmlFor='available'>В наявності</label>
           </div>
@@ -146,7 +169,8 @@ const Catalog = () => {
               name='status'
               value='await'
               id='await'
-              onChange={() => setRadioState('await')}
+              //   onChange={() => setRadioState('await')}
+              onChange={handleRadioChange}
             />
             <label htmlFor='await'>Під заказ</label>
           </div>
