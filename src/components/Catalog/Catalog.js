@@ -6,23 +6,15 @@ import paginate from '@/utils/utils'
 import { useEffect, useState } from 'react'
 
 const Catalog = () => {
-  //   const [carsState, setCarsState] = useState(paginate(carsData))
+  const [carsState, setCarsState] = useState(paginate(carsData))
   const [paginateCars, setPaginateCars] = useState([])
   const [page, setPage] = useState(0)
-
-  useEffect(() => {
-    setPaginateCars(paginate(carsData)[page])
-  }, [page])
-
-  const handlePageClick = index => {
-    setPage(index)
-  }
 
   const prevBtn = () => {
     setPage(oldPage => {
       let prevPage = oldPage - 1
       if (prevPage < 0) {
-        prevPage = paginate(carsData).length - 1
+        prevPage = carsState.length - 1
       }
       return prevPage
     })
@@ -31,11 +23,31 @@ const Catalog = () => {
   const nextBtn = () => {
     setPage(oldPage => {
       let nextPage = oldPage + 1
-      if (nextPage > paginate(carsData).length - 1) {
+      if (nextPage > carsState.length - 1) {
         nextPage = 0
       }
       return nextPage
     })
+  }
+
+  const filterByAny = () => {
+    setCarsState(paginate(carsData))
+  }
+
+  const filterByAvailable = () => {
+    setCarsState(paginate(carsData.filter(car => car.status)))
+  }
+
+  const filterByAwait = () => {
+    setCarsState(paginate(carsData.filter(car => !car.status)))
+  }
+
+  useEffect(() => {
+    setPaginateCars(carsState[page])
+  }, [page, carsState])
+
+  const handlePageClick = index => {
+    setPage(index)
   }
 
   return (
@@ -51,7 +63,13 @@ const Catalog = () => {
       <div className='catalog__container'>
         <form className='car__filter'>
           <div>
-            <input type='radio' value='any' name='status' id='any' />
+            <input
+              type='radio'
+              value='any'
+              name='status'
+              id='any'
+              onClick={filterByAny}
+            />
             <label htmlFor='any'>Будь-які</label>
           </div>
           <div>
@@ -60,16 +78,26 @@ const Catalog = () => {
               name='status'
               value='available'
               id='available'
+              onClick={filterByAvailable}
             />
             <label htmlFor='available'>В наявності</label>
           </div>
           <div>
-            <input type='radio' name='status' value='await' id='await' />
+            <input
+              type='radio'
+              name='status'
+              value='await'
+              id='await'
+              onClick={filterByAwait}
+            />
             <label htmlFor='await'>Під заказ</label>
           </div>
         </form>
 
         {paginateCars.map(car => {
+          {
+            paginateCars.length == 0 && <span>не знайдено</span>
+          }
           return (
             <div className='catalog__item' key={car.id}>
               <div className='car-photo'>
@@ -121,7 +149,7 @@ const Catalog = () => {
             <ArrowIcon />
           </div>
           <div className='pages'>
-            {paginate(carsData).map((car, index) => (
+            {carsState.map((car, index) => (
               <button
                 key={index}
                 onClick={() => handlePageClick(index)}
