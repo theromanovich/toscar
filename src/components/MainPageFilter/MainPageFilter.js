@@ -29,11 +29,11 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
 
     onFilter(make, engine, body, yearFrom, yearTo)
 
-    makeRef.current.value = 'undefined'
-    engineRef.current.value = 'undefined'
-    bodyRef.current.value = 'undefined'
-    yearFromRef.current.value = 'undefined'
-    yearToRef.current.value = 'undefined'
+    // makeRef.current.value = 'undefined'
+    // engineRef.current.value = 'undefined'
+    // bodyRef.current.value = 'undefined'
+    // yearFromRef.current.value = 'undefined'
+    // yearToRef.current.value = 'undefined'
   }
 
   return (

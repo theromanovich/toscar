@@ -34,14 +34,17 @@ const Catalog = () => {
 
   const filterByAny = () => {
     setCarsState(paginate(carsData))
+    // filterCars(make, engine, body, yearFrom, yearTo)
   }
 
   const filterByAvailable = () => {
     setCarsState(paginate(carsData.filter(car => car.status)))
+    // filterCars(make, engine, body, yearFrom, yearTo).filter(car => car.status)
   }
 
   const filterByAwait = () => {
     setCarsState(paginate(carsData.filter(car => !car.status)))
+    // filterCars(make, engine, body, yearFrom, yearTo).filter(car => !car.status)
   }
 
   useEffect(() => {
@@ -61,25 +64,27 @@ const Catalog = () => {
   }
 
   function filterCars(make, engine, body, yearFrom, yearTo) {
-    return setPaginateCars(
-      carsState[page].filter(car => {
-        if (make != undefined && car.make !== make) {
-          return false
-        }
-        if (engine != undefined && car.engine !== engine) {
-          return false
-        }
-        if (body != undefined && car.body !== body) {
-          return false
-        }
-        if (yearFrom != undefined && car.year < yearFrom) {
-          return false
-        }
-        if (yearTo != undefined && car.year > yearTo) {
-          return false
-        }
-        return true
-      })
+    return setCarsState(
+      paginate(
+        carsData.filter(car => {
+          if (make != undefined && car.make !== make) {
+            return false
+          }
+          if (engine != undefined && car.engine !== engine) {
+            return false
+          }
+          if (body != undefined && car.body !== body) {
+            return false
+          }
+          if (yearFrom != undefined && car.year < yearFrom) {
+            return false
+          }
+          if (yearTo != undefined && car.year > yearTo) {
+            return false
+          }
+          return true
+        })
+      )
     )
   }
 
