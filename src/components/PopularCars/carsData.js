@@ -85,6 +85,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -97,6 +98,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -109,6 +111,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -121,6 +124,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -133,6 +137,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -145,6 +150,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -157,6 +163,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -169,6 +176,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -181,6 +189,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -193,6 +202,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -205,6 +215,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -217,6 +228,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -229,6 +241,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -241,6 +254,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -253,6 +267,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -265,6 +280,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -277,6 +293,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -289,6 +306,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -301,6 +319,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -313,6 +332,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -325,6 +345,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -337,6 +358,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -349,6 +371,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -361,6 +384,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -373,6 +397,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -385,6 +410,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -397,6 +423,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   },
   {
@@ -409,6 +436,7 @@ export const carsData = [
     drive: 'Задній',
     price: '300 000 uah',
     mileage: 100000,
+    status: false,
     img: '/images/honda-fit.png'
   }
 ]

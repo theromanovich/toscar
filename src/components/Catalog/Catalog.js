@@ -11,6 +11,9 @@ const Catalog = () => {
   const [paginateCars, setPaginateCars] = useState([])
   const [page, setPage] = useState(0)
   const radioAny = useRef()
+  const radioAvailable = useRef()
+  const radioAwait = useRef()
+  const [radioState, setRadioState] = useState('')
 
   const prevBtn = () => {
     setPage(oldPage => {
@@ -32,20 +35,17 @@ const Catalog = () => {
     })
   }
 
-  const filterByAny = () => {
-    setCarsState(paginate(carsData))
-    // filterCars(make, engine, body, yearFrom, yearTo)
-  }
+  //   const filterByAny = () => {
+  //     setCarsState(paginate(carsData))
+  //   }
 
-  const filterByAvailable = () => {
-    setCarsState(paginate(carsData.filter(car => car.status)))
-    // filterCars(make, engine, body, yearFrom, yearTo).filter(car => car.status)
-  }
+  //   const filterByAvailable = () => {
+  //     setCarsState(paginate(carsData.filter(car => car.status)))
+  //   }
 
-  const filterByAwait = () => {
-    setCarsState(paginate(carsData.filter(car => !car.status)))
-    // filterCars(make, engine, body, yearFrom, yearTo).filter(car => !car.status)
-  }
+  //   const filterByAwait = () => {
+  //     setCarsState(paginate(carsData.filter(car => !car.status)))
+  //   }
 
   useEffect(() => {
     setPaginateCars(carsState[page])
@@ -60,10 +60,16 @@ const Catalog = () => {
   }
 
   const filterHandler = (make, engine, body, yearFrom, yearTo) => {
-    filterCars(make, engine, body, yearFrom, yearTo)
+    if (radioState === 'available') {
+      filterCars(make, engine, body, yearFrom, yearTo, true)
+    } else if (radioState === 'await') {
+      filterCars(make, engine, body, yearFrom, yearTo, false)
+    } else {
+      filterCars(make, engine, body, yearFrom, yearTo, undefined)
+    }
   }
 
-  function filterCars(make, engine, body, yearFrom, yearTo) {
+  function filterCars(make, engine, body, yearFrom, yearTo, status) {
     return setCarsState(
       paginate(
         carsData.filter(car => {
@@ -82,10 +88,18 @@ const Catalog = () => {
           if (yearTo != undefined && car.year > yearTo) {
             return false
           }
+          if (status !== undefined && car.status !== status) {
+            return false
+          }
+
           return true
         })
       )
     )
+  }
+  let notFound = ''
+  if (carsState.length === 0) {
+    notFound = 'No cars found with specified parameters'
   }
 
   return (
@@ -110,82 +124,84 @@ const Catalog = () => {
               value='any'
               name='status'
               id='any'
-              onClick={filterByAny}
+              onChange={() => setRadioState('any')}
             />
             <label htmlFor='any'>Будь-які</label>
           </div>
           <div>
             <input
+              ref={radioAvailable}
               type='radio'
               name='status'
               value='available'
               id='available'
-              onClick={filterByAvailable}
+              onChange={() => setRadioState('available')}
             />
             <label htmlFor='available'>В наявності</label>
           </div>
           <div>
             <input
+              ref={radioAwait}
               type='radio'
               name='status'
               value='await'
               id='await'
-              onClick={filterByAwait}
+              onChange={() => setRadioState('await')}
             />
             <label htmlFor='await'>Під заказ</label>
           </div>
         </form>
 
-        {paginateCars.map(car => {
-          {
-            paginateCars.length == 0 && <span>не знайдено</span>
-          }
-          return (
-            <div className='catalog__item' key={car.id}>
-              <div className='car-photo'>
-                <img src={car.img} alt={car.make} />
-              </div>
-              <div className='car-info'>
-                <div className='car-info__title'>
-                  {car.make} {car.model}
-                </div>
+        {notFound}
+        {paginateCars
+          ? paginateCars.map(car => {
+              return (
+                <div className='catalog__item' key={car.id}>
+                  <div className='car-photo'>
+                    <img src={car.img} alt={car.make} />
+                  </div>
+                  <div className='car-info'>
+                    <div className='car-info__title'>
+                      {car.make} {car.model}
+                    </div>
 
-                <div className='car-info__characteristics'>
-                  <div>
-                    <div className='engine'>
-                      Об'єм двигуна <span>{car.engine}</span>
+                    <div className='car-info__characteristics'>
+                      <div>
+                        <div className='engine'>
+                          Об'єм двигуна <span>{car.engine}</span>
+                        </div>
+                        <div className='year'>
+                          Рік <span>{car.year}</span>
+                        </div>
+                        <div className='mileage'>
+                          Пробіг <span>{car.mileage} км</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div className='car-info__drive'>
+                          Привід <span>{car.drive}</span>
+                        </div>
+                        <div className='car-info__gearbox'>
+                          КПП <span>{car.gearbox}</span>
+                        </div>
+                      </div>
+                      <div className='car-info__price'>
+                        Вартість в Україні
+                        <div className='price'>{car.price}</div>
+                        <button
+                          className={`status-btn ${
+                            car.status ? 'green' : 'orange'
+                          }`}
+                        >
+                          {car.status ? 'В наявності' : 'Під заказ'}
+                        </button>
+                      </div>
                     </div>
-                    <div className='year'>
-                      Рік <span>{car.year}</span>
-                    </div>
-                    <div className='mileage'>
-                      Пробіг <span>{car.mileage} км</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='car-info__drive'>
-                      Привід <span>{car.drive}</span>
-                    </div>
-                    <div className='car-info__gearbox'>
-                      КПП <span>{car.gearbox}</span>
-                    </div>
-                  </div>
-                  <div className='car-info__price'>
-                    Вартість в Україні
-                    <div className='price'>{car.price}</div>
-                    <button
-                      className={`status-btn ${
-                        car.status ? 'green' : 'orange'
-                      }`}
-                    >
-                      {car.status ? 'В наявності' : 'Під заказ'}
-                    </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          )
-        })}
+              )
+            })
+          : ''}
         <div className='paginate-btns' style={{ 'user-select': 'none' }}>
           <div className='prev' onClick={prevBtn}>
             <ArrowIcon />
