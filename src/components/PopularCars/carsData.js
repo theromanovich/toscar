@@ -100,18 +100,6 @@ export const carsData = [
     img: '/images/honda-fit.png'
   },
   {
-    id: 8,
-    make: 'Honda',
-    model: 'Fit',
-    engine: '2.0',
-    year: 2015,
-    gearbox: 'Автомат',
-    drive: 'Задній',
-    price: '300 000 uah',
-    mileage: 100000,
-    img: '/images/honda-fit.png'
-  },
-  {
     id: 9,
     make: 'Honda',
     model: 'Fit',
@@ -401,6 +389,18 @@ export const carsData = [
   },
   {
     id: 33,
+    make: 'Honda',
+    model: 'Fit',
+    engine: '2.0',
+    year: 2015,
+    gearbox: 'Автомат',
+    drive: 'Задній',
+    price: '300 000 uah',
+    mileage: 100000,
+    img: '/images/honda-fit.png'
+  },
+  {
+    id: 34,
     make: 'Honda',
     model: 'Fit',
     engine: '2.0',

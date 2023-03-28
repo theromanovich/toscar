@@ -4,11 +4,13 @@ import MainPageFilter from '../MainPageFilter/MainPageFilter'
 import PopularCars from '../PopularCars/PopularCars'
 import paginate from '@/utils/utils'
 import { useEffect, useState } from 'react'
+import { useRef } from 'react'
 
 const Catalog = () => {
   const [carsState, setCarsState] = useState(paginate(carsData))
   const [paginateCars, setPaginateCars] = useState([])
   const [page, setPage] = useState(0)
+  const radioAny = useRef()
 
   const prevBtn = () => {
     setPage(oldPage => {
@@ -46,8 +48,39 @@ const Catalog = () => {
     setPaginateCars(carsState[page])
   }, [page, carsState])
 
+  useEffect(() => {
+    radioAny.current.click()
+  }, [])
+
   const handlePageClick = index => {
     setPage(index)
+  }
+
+  const filterHandler = (make, engine, body, yearFrom, yearTo) => {
+    filterCars(make, engine, body, yearFrom, yearTo)
+  }
+
+  function filterCars(make, engine, body, yearFrom, yearTo) {
+    return setPaginateCars(
+      carsState[page].filter(car => {
+        if (make != undefined && car.make !== make) {
+          return false
+        }
+        if (engine != undefined && car.engine !== engine) {
+          return false
+        }
+        if (body != undefined && car.body !== body) {
+          return false
+        }
+        if (yearFrom != undefined && car.year < yearFrom) {
+          return false
+        }
+        if (yearTo != undefined && car.year > yearTo) {
+          return false
+        }
+        return true
+      })
+    )
   }
 
   return (
@@ -57,13 +90,17 @@ const Catalog = () => {
           <Link href='/'>Головна</Link> / <Link href='/catalog'>Каталог</Link>
         </div>
         <div className='catalog__title'>Каталог авто</div>
-        <MainPageFilter />
+        <MainPageFilter
+          onFilter={filterHandler}
+          findCars={carsState.reduce((acc, curr) => acc + curr.length, 0)}
+        />
       </div>
 
       <div className='catalog__container'>
         <form className='car__filter'>
           <div>
             <input
+              ref={radioAny}
               type='radio'
               value='any'
               name='status'
@@ -144,7 +181,7 @@ const Catalog = () => {
             </div>
           )
         })}
-        <div className='paginate-btns'>
+        <div className='paginate-btns' style={{ 'user-select': 'none' }}>
           <div className='prev' onClick={prevBtn}>
             <ArrowIcon />
           </div>
