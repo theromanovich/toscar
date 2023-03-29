@@ -211,7 +211,7 @@ export default async function handler(req, res) {
         gearbox: 'Механіка',
         drive: 'Задній',
         mileage: 70000,
-        body: 'SUV',
+        body: 'coupe',
         status: false,
         main_image: 'https://i.infocar.ua/i/2/3212/102461/1920x.jpg',
         price: '$15,000',

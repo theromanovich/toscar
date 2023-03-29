@@ -30,6 +30,16 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
     onFilter(make, engine, body, yearFrom, yearTo)
   }
 
+  const resetFilter = () => {
+    onFilter(
+      (makeRef.current.value = undefined),
+      (bodyRef.current.value = undefined),
+      (bodyRef.current.value = undefined),
+      (yearFromRef.current.value = undefined),
+      (yearToRef.current.value = undefined)
+    )
+  }
+
   return (
     <form onSubmit={onSubmitForm} className='main-page__filter'>
       <div className='filter__container'>
@@ -46,6 +56,26 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
               <option value='BMW'>BMW</option>
               <option value='Honda'>Honda</option>
               <option value='Toyota'>Toyota</option>
+              <option value='Ford'>Ford</option>
+              <option value='Chevrolet'>Chevrolet</option>
+              <option value='Audi'>Audi</option>
+              <option value='Mercedes-Benz'>Mercedes-Benz</option>
+              <option value='Porsche'>Porsche</option>
+              <option value='Nissan'>Nissan</option>
+              <option value='Tesla'>Tesla</option>
+              <option value='Lexus'>Lexus</option>
+              <option value='Jaguar'>Jaguar</option>
+              <option value='Ford'>Ford</option>
+              <option value='Dodge'>Dodge</option>
+              <option value='Ferrari'>Ferrari</option>
+              <option value='Volkswagen'>Volkswagen</option>
+              <option value='Cadillac'>Cadillac</option>
+              <option value='Fiat'>Fiat</option>
+              <option value='Hyundai'>Hyundai</option>
+              <option value='Kia'>Kia</option>
+              <option value='Volvo'>Volvo</option>
+              <option value='Mazda'>Mazda</option>
+              <option value='Chrysler'>Chrysler</option>
             </select>
           </div>
           <div className='engine'>
@@ -57,9 +87,21 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
               id='engine'
             >
               <option value='undefined'>Не вибрано</option>
+              <option value='1.4'>1.4</option>
+              <option value='1.5'>1.5</option>
               <option value='1.6'>1.6</option>
+              <option value='1.8'>1.8</option>
               <option value='2.0'>2.0</option>
+              <option value='2.5'>2.5</option>
               <option value='3.0'>3.0</option>
+              <option value='3.5'>3.5</option>
+              <option value='3.6'>3.6</option>
+              <option value='3.8'>3.8</option>
+              <option value='4.5'>4.5</option>
+              <option value='4.6'>4.6</option>
+              <option value='5.0'>5.0</option>
+              <option value='6.2'>6.2</option>
+              <option value='Electric'>Електродвигун</option>
             </select>
           </div>
           <div className='body'>
@@ -74,6 +116,7 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
               <option value='sedan'>Седан</option>
               <option value='SUV'>SUV</option>
               <option value='hatchback'>Хетчбек</option>
+              <option value='сoupe'>Купе</option>
             </select>
           </div>
           <div className='year'>
@@ -143,7 +186,10 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
           <div className='search-result'>
             Знайдено автомобілей: <span>{findCars}</span>
           </div>
-          <button className='search-btn'>Пошук</button>
+          <div className='btns'>
+            <button onClick={resetFilter}>Скинути</button>
+            <button className='search-btn'>Пошук</button>
+          </div>
         </div>
       </div>
     </form>
