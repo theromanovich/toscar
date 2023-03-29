@@ -216,6 +216,272 @@ export default async function handler(req, res) {
         main_image: 'https://i.infocar.ua/i/2/3212/102461/1920x.jpg',
         price: '$15,000',
         slug: 'chevrolet-camaro-2013'
+      },
+      {
+        make: 'Jaguar',
+        model: 'F-Type',
+        engine: '3.0',
+        year: 2016,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 70000,
+        body: 'coupe',
+        status: false,
+        main_image:
+          'https://www.motortrend.com/uploads/sites/5/2016/02/2016-Jaguar-F-Type-AWD-R-Coupe-front-three-quarter-in-motion.jpg',
+        price: '$45,000',
+        slug: 'jaguar-ftype-2016'
+      },
+      {
+        make: 'Ford',
+        model: 'F-150',
+        engine: '6.2',
+        year: 2017,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 60000,
+        body: 'truck',
+        status: false,
+        main_image:
+          'https://cdn3.riastatic.com/photosnew/auto/photo/ford_f-150__431292938fx.jpg',
+        price: '$30,000',
+        slug: 'ford-f150-2017'
+      },
+      {
+        make: 'Dodge',
+        model: 'Charger',
+        engine: '3.6',
+        year: 2015,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 70000,
+        body: 'sedan',
+        status: false,
+        main_image:
+          'https://images.ctfassets.net/c9t6u0qhbv9e/2015DodgeChargerTestDriveReviewsummary/3fa52937041643b2b128210a610435a5/2015_Dodge_Charger_Test_Drive_Review_summaryImage.jpeg',
+        price: '$20,000',
+        slug: 'dodge-charger-2015'
+      },
+      {
+        make: 'Ferrari',
+        model: '458',
+        engine: '4.5',
+        year: 2012,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 20000,
+        body: 'сoupe',
+        status: false,
+        main_image:
+          'https://cdn3.riastatic.com/photosnew/auto/photo/ferrari_458-italia__331683108f.jpg',
+        price: '$140,000',
+        slug: 'ferrari-458-2012'
+      },
+      {
+        make: 'Toyota',
+        model: 'Supra',
+        engine: '3.0',
+        year: 2022,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 25000,
+        body: 'сoupe',
+        status: false,
+        main_image:
+          'https://media.ed.edmunds-media.com/toyota/gr-supra/2022/oem/2022_toyota_gr-supra_coupe_20_fq_oem_1_1600.jpg',
+        price: '$40,000',
+        slug: 'toyota-supra-2022'
+      },
+      {
+        make: 'Volkswagen',
+        model: 'Golf',
+        engine: '2.0',
+        year: 2018,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 40000,
+        body: 'hatchback',
+        status: true,
+        main_image:
+          'https://cdn.motor1.com/images/mgl/YKOkW/s1/2018-volkswagen-golf-r-review.jpg',
+        price: '$22,000',
+        slug: 'volkswagen-golf-2018'
+      },
+      {
+        make: 'Cadillac',
+        model: 'Escalade',
+        engine: '6.2',
+        year: 2018,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 45000,
+        body: 'SUV',
+        status: true,
+        main_image: 'https://www.motortrend.com/uploads/f/171715639.jpg',
+        price: '$50,000',
+        slug: 'cadillac-escalade-2018'
+      },
+      {
+        make: 'Nissan',
+        model: 'GT-R',
+        engine: '3.8',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 50000,
+        body: 'coupe',
+        status: true,
+        main_image:
+          'https://car-images.bauersecure.com/wp-images/13851/01nissangtrnismocarreview.jpg',
+        price: '$70,000',
+        slug: 'nissan-gtr-2014'
+      },
+      {
+        make: 'Fiat',
+        model: '500',
+        engine: '1.4',
+        year: 2013,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 60000,
+        body: 'hatchback',
+        status: true,
+        main_image:
+          'https://upload.wikimedia.org/wikipedia/commons/f/f4/2013_Fiat_500_Lounge_1.2.jpg',
+        price: '$8,000',
+        slug: 'fiat-500-2013'
+      },
+      {
+        make: 'Hyundai',
+        model: 'Accent',
+        engine: '1.6',
+        year: 2011,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 100000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2012_Hyundai_Accent_GLS_sedan_--_12-14-2011.jpg/1200px-2012_Hyundai_Accent_GLS_sedan_--_12-14-2011.jpg',
+        price: '$6,000',
+        slug: 'hyundai-accent-2011'
+      },
+      {
+        make: 'Kia',
+        model: 'Soul',
+        engine: '2.0',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 70000,
+        body: 'hatchback',
+        status: true,
+        main_image:
+          'https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Kia_Soul_Plus_US_front_left.jpg',
+        price: '$10,000',
+        slug: 'kia-soul-2014'
+      },
+      {
+        make: 'Volvo',
+        model: 'S60',
+        engine: '2.5',
+        year: 2016,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 30000,
+        body: 'sedan',
+        status: false,
+        main_image:
+          'https://media.ed.edmunds-media.com/volvo/s60/2016/oem/2016_volvo_s60_sedan_t5-cross-country-platinum_fq_oem_1_1600.jpg',
+        price: '$10,000',
+        slug: 'volvo-s60-2016'
+      },
+      {
+        make: 'Hyundai',
+        model: 'Elantra',
+        engine: '1.8',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 70000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://bidfax.info/uploads/posts/2020-03/10/hyundai-elantra-se-2014-5npdh4ae1eh477168-img1.jpg',
+        price: '$9,000',
+        slug: 'hyundai-elantra-2014'
+      },
+      {
+        make: 'Mazda',
+        model: 'CX-5',
+        engine: '2.5',
+        year: 2013,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 90000,
+        body: 'SUV',
+        status: true,
+        main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
+        price: '$12,000',
+        slug: 'mazda-cx-5-2013'
+      },
+      {
+        make: 'Mercedes-Benz',
+        model: 'S-Class',
+        engine: '4.6',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 80000,
+        body: 'sedan',
+        status: true,
+        main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
+        price: '$28,000',
+        slug: 'mercedes-benz-s-class-2014'
+      },
+      {
+        make: 'Cadillac',
+        model: 'CTS',
+        engine: '3.6',
+        year: 2015,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 60000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://www.tampabay.com/resizer//tC2K8zlp61SSrKSLgE_fycNE7_0=/900x506/smart/arc-anglerfish-arc2-prod-tbt.s3.amazonaws.com/public/U5LSH2GG64I6TBKNIBWI6S7HAY.jpg',
+        price: '$18,000',
+        slug: 'cadillac-cts-2015'
+      },
+      {
+        make: 'Chrysler',
+        model: '300',
+        engine: '3.6',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 120000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://images.hgmsites.net/hug/2014-chrysler-300_100446116_h.jpg',
+        price: '$10,000',
+        slug: 'chrysler-300-2014'
+      },
+      {
+        make: 'BMW',
+        model: '5',
+        engine: '3.0',
+        year: 2020,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 12000,
+        body: 'sedan',
+        status: true,
+        main_image: 'https://i.infocar.ua/i/12/6224/1200x630.jpg',
+        price: '$41,800',
+        slug: 'bmw-5-2020'
       }
     ]
   })
@@ -241,19 +507,42 @@ export default async function handler(req, res) {
     cars.find(car => car.slug === 'porsche-911-2021')?.id || 1
   const TeslaModel32018Id =
     cars.find(car => car.slug === 'tesla-model3-2018')?.id || 1
-  //   const pukkaId = cars.find(car => car.slug === 'Pukka')?.id || 1
-  //   const kamasutraIndianId =
-  //     cars.find(car => car.slug === 'Kamasutra Indian')?.id || 1
-  //   const eldoradoTacoId = cars.find(car => car.slug === 'Eldorado Taco')?.id || 1
-  //   const laBartolaId = cars.find(car => car.slug === 'La Bartola')?.id || 1
-  //   const elCatrinId = cars.find(car => car.slug === 'El Catrin')?.id || 1
-  //   const mariachisId = cars.find(car => car.slug === '3 Mariachis')?.id || 1
-  //   const canoRestaurantId =
-  //     cars.find(car => car.slug === 'Cano Restaurant')?.id || 1
-  //   const bluRistoranteId =
-  //     cars.find(car => car.slug === 'Blu Ristorante')?.id || 1
-  //   const stelvioId = cars.find(car => car.slug === 'Stelvio')?.id || 1
-  //   const sofiaId = cars.find(car => car.slug === 'Sofia')?.id || 1
+  const LexusRX2021Id = cars.find(car => car.slug === 'lexus-rx-2021')?.id || 1
+  const ChevroletCamaro2013Id =
+    cars.find(car => car.slug === 'chevrolet-camaro-2013')?.id || 1
+  const JaguarFType2016Id =
+    cars.find(car => car.slug === 'jaguar-ftype-2016')?.id || 1
+  const FordF1502017Id =
+    cars.find(car => car.slug === 'ford-f150-2017')?.id || 1
+  const DodgeCharger2015Id =
+    cars.find(car => car.slug === 'dodge-charger-2015')?.id || 1
+  const Ferrari4582012Id =
+    cars.find(car => car.slug === 'ferrari-458-2012')?.id || 1
+  const ToyotaSupra2022Id =
+    cars.find(car => car.slug === 'toyota-supra-2022')?.id || 1
+  const VolkswagenGolf2018Id =
+    cars.find(car => car.slug === 'volkswagen-golf-2018')?.id || 1
+  const CadillacEscalade2018Id =
+    cars.find(car => car.slug === 'cadillac-escalade-2018')?.id || 1
+  const NissanGTR2014Id =
+    cars.find(car => car.slug === 'nissan-gtr-2014')?.id || 1
+  const Fiat5002013Id = cars.find(car => car.slug === 'fiat-500-2013')?.id || 1
+  const HyundaiAccent2011Id =
+    cars.find(car => car.slug === 'hyundai-accent-2011')?.id || 1
+  const KiaSoul2014Id = cars.find(car => car.slug === 'kia-soul-2014')?.id || 1
+  const VolvoS602016Id =
+    cars.find(car => car.slug === 'volvo-s60-2016')?.id || 1
+  const HyundaiElantra2014Id =
+    cars.find(car => car.slug === 'hyundai-elantra-2014')?.id || 1
+  const MazdaCX52013Id =
+    cars.find(car => car.slug === 'mazda-cx-5-2013')?.id || 1
+  const MercedesBenzSClass2014Id =
+    cars.find(car => car.slug === 'mercedes-benz-s-class-2014')?.id || 1
+  const CadillacCTS2015Id =
+    cars.find(car => car.slug === 'cadillac-cts-2015')?.id || 1
+  const Chrysler3002014Id =
+    cars.find(car => car.slug === 'chrysler-300-2014')?.id || 1
+  const BMW52020Id = cars.find(car => car.slug === 'bmw-5-2020')?.id || 1
 
   res.status(200).json({ name: 'hello' })
 }

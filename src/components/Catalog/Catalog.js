@@ -9,6 +9,7 @@ import { ArrowIcon } from './ArrowIcon'
 import { PrismaClient } from '@prisma/client'
 
 function Catalog({ cars }) {
+  //   console.log(cars)
   const [carsState, setCarsState] = useState(paginate(cars))
   const [paginateCars, setPaginateCars] = useState([])
   const [page, setPage] = useState(0)
