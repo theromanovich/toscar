@@ -1,5 +1,6 @@
 import Catalog from '@/components/Catalog/Catalog'
 import { PrismaClient } from '@prisma/client'
+
 const catalogPage = ({ cars }) => {
   return <Catalog cars={cars} />
 }

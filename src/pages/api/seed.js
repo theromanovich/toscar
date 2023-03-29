@@ -112,6 +112,110 @@ export default async function handler(req, res) {
           'https://s.auto.drom.ru/i24271/c/photos/fullsize/bmw/3-series/bmw_3-series_1084231.jpg',
         price: '$30,000',
         slug: 'bmw-3-2019'
+      },
+      {
+        make: 'Audi',
+        model: 'A4',
+        engine: '2.0',
+        year: 2020,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 10000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://cdn.motor1.com/images/mgl/brOzk/s1/2020-audi-a4.jpg',
+        price: '$35,000',
+        slug: 'audi-a4-2020'
+      },
+      {
+        make: 'Mercedes-Benz',
+        model: 'C-Class',
+        engine: '2.0',
+        year: 2021,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 5000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://www.ixbt.com/img/n1/news/2021/11/5/mercedes-c-klasse-limousine-2021_large.jpg',
+        price: '$45,000',
+        slug: 'mercedes-cclass-2021'
+      },
+      {
+        make: 'Porsche',
+        model: '911',
+        engine: '3.0',
+        year: 2021,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 3000,
+        body: 'сoupe',
+        status: false,
+        main_image:
+          'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/is8rDPGsGlcg/v1/-1x-1.jpg',
+        price: '$90,000',
+        slug: 'porsche-911-2021'
+      },
+      {
+        make: 'Nissan',
+        model: 'Altima',
+        engine: '2.5',
+        year: 2020,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 20000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://hips.hearstapps.com/hmg-prod/images/2019-nissan-altima-102-1538074559.jpg',
+        price: '$20,000',
+        slug: 'nissan-altima-2020'
+      },
+      {
+        make: 'Tesla',
+        model: 'Model 3',
+        engine: 'Electric',
+        year: 2018,
+        gearbox: 'Автомат',
+        drive: 'Задній',
+        mileage: 40000,
+        body: 'sedan',
+        status: false,
+        main_image:
+          'https://bossauto-images.s3.eu-central-1.amazonaws.com/images/image_1604308116990.jpg',
+        price: '$20,000',
+        slug: 'tesla-model3-2018'
+      },
+      {
+        make: 'Lexus',
+        model: 'RX',
+        engine: '3.5',
+        year: 2021,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 5000,
+        body: 'SUV',
+        status: false,
+        main_image:
+          'https://img.automoto.ua/overview/lexus-rx-2021-4db-huge-1949.jpg',
+        price: '$50,000',
+        slug: 'lexus-rx-2021'
+      },
+      {
+        make: 'Chevrolet',
+        model: 'Camaro',
+        engine: '3.6',
+        year: 2013,
+        gearbox: 'Механіка',
+        drive: 'Задній',
+        mileage: 70000,
+        body: 'SUV',
+        status: false,
+        main_image: 'https://i.infocar.ua/i/2/3212/102461/1920x.jpg',
+        price: '$15,000',
+        slug: 'chevrolet-camaro-2013'
       }
     ]
   })
@@ -130,6 +234,13 @@ export default async function handler(req, res) {
   const ChevroletCorvette2021Id =
     cars.find(car => car.slug === 'chevrolet-corvette-2021')?.id || 1
   const BMW32019Id = cars.find(car => car.slug === 'bmw-3-2019')?.id || 1
+  const AudiA42O2OId = cars.find(car => car.slug === 'audi-a4-2020')?.id || 1
+  const MercedesCClass2021Id =
+    cars.find(car => car.slug === 'mercedes-cclass-2021')?.id || 1
+  const Porsche9112021Id =
+    cars.find(car => car.slug === 'porsche-911-2021')?.id || 1
+  const TeslaModel32018Id =
+    cars.find(car => car.slug === 'tesla-model3-2018')?.id || 1
   //   const pukkaId = cars.find(car => car.slug === 'Pukka')?.id || 1
   //   const kamasutraIndianId =
   //     cars.find(car => car.slug === 'Kamasutra Indian')?.id || 1
