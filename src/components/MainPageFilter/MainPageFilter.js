@@ -34,7 +34,7 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
     onFilter(
       (makeRef.current.value = undefined),
       (bodyRef.current.value = undefined),
-      (bodyRef.current.value = undefined),
+      (engineRef.current.value = undefined),
       (yearFromRef.current.value = undefined),
       (yearToRef.current.value = undefined)
     )
