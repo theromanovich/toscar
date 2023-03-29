@@ -1,11 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { PRICE, PrismaClient } from '@prisma/client'
-
 const prisma = new PrismaClient()
-
 export default async function handler(req, res) {
   await prisma.car.deleteMany()
-
   await prisma.car.createMany({
     data: [
       {
@@ -19,7 +16,7 @@ export default async function handler(req, res) {
         body: 'SUV',
         status: true,
         main_image:
-          'https://upload.wikimedia.org/wikipedia/commons/2/21/BMW_X5_%28E53%2C_Facelift%29_%E2%80%93_Frontansicht%2C_12._Juni_2011%2C_D%C3%BCsseldorf.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/2/21/BMW_X5_(E53%2C_Facelift)_–_Frontansicht%2C_12._Juni_2011%2C_Düsseldorf.jpg',
         price: '$10,000 ',
         slug: 'bmw-x5-2005'
       },
@@ -441,7 +438,7 @@ export default async function handler(req, res) {
       },
       {
         make: 'Cadillac',
-        model: 'CTS',
+        model: 'CS',
         engine: '3.6',
         year: 2015,
         gearbox: 'Автомат',
@@ -482,12 +479,39 @@ export default async function handler(req, res) {
         main_image: 'https://i.infocar.ua/i/12/6224/1200x630.jpg',
         price: '$41,800',
         slug: 'bmw-5-2020'
+      },
+      {
+        make: 'Lexus',
+        model: 'ES',
+        engine: '2.5',
+        year: 2014,
+        gearbox: 'Автомат',
+        drive: 'Повний',
+        mileage: 70000,
+        body: 'sedan',
+        status: true,
+        main_image: 'https://i.ytimg.com/vi/lqPQdIWmIR4/maxresdefault.jpg',
+        price: '$16,500',
+        slug: 'lexus-es-2014'
+      },
+      {
+        make: 'Toyota',
+        model: 'Corolla',
+        engine: '2.0',
+        year: 2015,
+        gearbox: 'Автомат',
+        drive: 'Передній',
+        mileage: 100000,
+        body: 'sedan',
+        status: true,
+        main_image:
+          'https://upload.wikimedia.org/wikipedia/commons/4/4f/2015_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282015-11-11%29_01.jpg',
+        price: '$9000',
+        slug: 'toyota-corolla-2015'
       }
     ]
   })
-
   const cars = await prisma.car.findMany()
-
   const BMWX52005Id = cars.find(car => car.slug === 'bmw-x5-2005')?.id || 1
   const HondaFit2015Id =
     cars.find(car => car.slug === 'honda-fit-2015')?.id || 1
@@ -543,6 +567,5 @@ export default async function handler(req, res) {
   const Chrysler3002014Id =
     cars.find(car => car.slug === 'chrysler-300-2014')?.id || 1
   const BMW52020Id = cars.find(car => car.slug === 'bmw-5-2020')?.id || 1
-
   res.status(200).json({ name: 'hello' })
 }

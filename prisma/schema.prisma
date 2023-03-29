@@ -10,20 +10,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Car {
-  id         Int    @id @default(autoincrement())
-  make       String 
-  model      String 
-  engine     String 
-  year       Int
-  gearbox    String
-  drive      String
-  price      String
-  mileage    Int
-  body       String
-  status     Boolean
-  main_image String 
-
-  slug       String  @unique
-}
+  id Int @id @default(autoincrement())
+  make String
+  model String
+  engine String
+  year Int
+  gearbox String
+  drive String
+  price String
+  mileage Int
+  body String
+  status Boolean
+  main_image String
+  slug String @unique
+  }
