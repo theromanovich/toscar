@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Whatsapp, Instagram, Youtube, Logo } from './SideBarIcons'
+import { Telegram, Instagram, Youtube, Logo } from './SideBarIcons'
 const links = [
   {
     id: 1,
@@ -53,8 +53,20 @@ const SideBarMenu = () => {
           </Link>
         </div>
         <ul className='sidebar__menu'>{navElements}</ul>
+        <div className='schedule'>
+          <div>
+            <div>пн-пт</div>
+            <div>сб</div>
+            <div>нд</div>
+          </div>
+          <div>
+            <div>10:00 - 19:00</div>
+            <div>10:00 - 17:00</div>
+            <div>10:00 - 15:00</div>
+          </div>
+        </div>
         <div className='sidebar__icons'>
-          <Whatsapp />
+          <Telegram />
           <Instagram />
           <Youtube />
         </div>

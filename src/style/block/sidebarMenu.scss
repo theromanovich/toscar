@@ -58,9 +58,16 @@
     }
   }
   &__icons {
-    margin-top: 290px;
+    margin-top: 50px;
     display: flex;
     gap: 10px;
     padding-left: 26px;
+  }
+  .schedule {
+    margin-top: 300px;
+    padding-left: 26px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
   }
 }
