@@ -1,7 +1,9 @@
+import ReviewSlider from './ReviewSlider'
+
 const ReviewGoogle = () => {
   return (
     <div className='google-review'>
-      {reviewGoogle.map(rev => {
+      {/* {reviewGoogle.map(rev => {
         return (
           <img
             key={rev.id}
@@ -10,7 +12,8 @@ const ReviewGoogle = () => {
             alt=''
           />
         )
-      })}
+      })} */}
+      <ReviewSlider />
     </div>
   )
 }

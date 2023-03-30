@@ -34,6 +34,7 @@
     img {
       width: 400px;
       max-width: 100%;
+      object-fit: cover;
     }
     p {
       &:nth-child(1) {
@@ -142,5 +143,13 @@
   }
   100% {
     height: 180px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .information {
+    &__container {
+      padding: 0 16px;
+    }
   }
 }

@@ -48,3 +48,11 @@
     gap: 8px;
   }
 }
+
+@media (max-width: 1420px) {
+  .footer {
+    &__container {
+      padding: 32px 16px;
+    }
+  }
+}

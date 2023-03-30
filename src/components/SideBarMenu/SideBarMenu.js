@@ -14,7 +14,7 @@ const links = [
   },
   {
     id: 3,
-    title: 'Інформація',
+    title: 'Про компанію',
     path: '/information'
   },
   {

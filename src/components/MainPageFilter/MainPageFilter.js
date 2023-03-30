@@ -53,29 +53,28 @@ const MainPageFilter = ({ findCars = 0, onFilter }) => {
               id='make'
             >
               <option value='undefined'>Не вибрано</option>
-              <option value='BMW'>BMW</option>
-              <option value='Honda'>Honda</option>
-              <option value='Toyota'>Toyota</option>
-              <option value='Ford'>Ford</option>
-              <option value='Chevrolet'>Chevrolet</option>
               <option value='Audi'>Audi</option>
-              <option value='Mercedes-Benz'>Mercedes-Benz</option>
-              <option value='Porsche'>Porsche</option>
-              <option value='Nissan'>Nissan</option>
-              <option value='Tesla'>Tesla</option>
-              <option value='Lexus'>Lexus</option>
-              <option value='Jaguar'>Jaguar</option>
-              <option value='Ford'>Ford</option>
+              <option value='BMW'>BMW</option>
+              <option value='Cadillac'>Cadillac</option>
+              <option value='Chevrolet'>Chevrolet</option>
+              <option value='Chrysler'>Chrysler</option>
               <option value='Dodge'>Dodge</option>
               <option value='Ferrari'>Ferrari</option>
-              <option value='Volkswagen'>Volkswagen</option>
-              <option value='Cadillac'>Cadillac</option>
               <option value='Fiat'>Fiat</option>
+              <option value='Ford'>Ford</option>
               <option value='Hyundai'>Hyundai</option>
+              <option value='Honda'>Honda</option>
+              <option value='Jaguar'>Jaguar</option>
               <option value='Kia'>Kia</option>
-              <option value='Volvo'>Volvo</option>
+              <option value='Lexus'>Lexus</option>
               <option value='Mazda'>Mazda</option>
-              <option value='Chrysler'>Chrysler</option>
+              <option value='Mercedes-Benz'>Mercedes-Benz</option>
+              <option value='Nissan'>Nissan</option>
+              <option value='Porsche'>Porsche</option>
+              <option value='Tesla'>Tesla</option>
+              <option value='Toyota'>Toyota</option>
+              <option value='Volkswagen'>Volkswagen</option>
+              <option value='Volvo'>Volvo</option>
             </select>
           </div>
           <div className='engine'>

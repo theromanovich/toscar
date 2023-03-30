@@ -6,7 +6,7 @@
   &__container {
     width: 200px;
     min-height: 100vh;
-    padding: 28px 0px 0px;
+    padding: 44px 0px 0px;
     background: #f7f7f9;
   }
   & .logo {
@@ -29,6 +29,7 @@
     padding-top: 40px;
     padding-left: 26px;
     list-style: none;
+    margin-top: 25px;
     &-item {
       cursor: pointer;
       a {
@@ -64,7 +65,7 @@
     padding-left: 26px;
   }
   .schedule {
-    margin-top: 300px;
+    margin-top: 250px;
     padding-left: 26px;
     display: flex;
     flex-direction: row;

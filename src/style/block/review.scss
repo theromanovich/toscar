@@ -2,24 +2,27 @@
   padding-top: 40px;
   margin-left: 200px;
   padding-bottom: 40px;
+  z-index: 44;
   &__container {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
+    z-index: 30;
   }
   &__videos {
     display: grid;
-    gap: 35px;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 60px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 20;
   }
   &__item {
     margin: 10px auto 0;
     display: flex;
     flex-direction: column;
     iframe {
-      width: 350px;
+      width: 360px;
       max-width: 100%;
       min-height: 200px;
       border: none;
@@ -79,23 +82,37 @@
     }
   }
 }
-.google-review {
-  margin-top: 40px;
-  display: grid;
-  justify-content: space-between;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fill, 350px);
-  margin-bottom: 40px;
-}
+// .google-review {
+//   margin-top: 40px;
+//   display: grid;
+//   justify-content: space-between;
+//   gap: 30px;
+//   grid-template-columns: repeat(3, 1fr);
+//   margin-bottom: 40px;
+//   img {
+//     width: 370px;
+//     max-width: 100%;
+//     object-fit: contain;
+//   }
+// }
 
 .talking {
   margin-top: 40px;
   display: grid;
   gap: 30px;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 40px;
   iframe {
     border: none;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1420px) {
+  .review {
+    &__container {
+      padding: 0 16px;
+    }
   }
 }
