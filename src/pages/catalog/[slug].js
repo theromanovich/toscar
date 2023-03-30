@@ -1,19 +1,20 @@
 import { PrismaClient } from '@prisma/client'
-import { useRouter } from 'next/router'
 import CarSinglePage from '@/components/Catalog/CarSinglePage'
-import Catalog from '@/components/Catalog/Catalog'
-import CarsList from '@/components/Catalog/CarsList'
 
 const prisma = new PrismaClient()
 
 export default function CarPage({ car, cars }) {
   console.log(cars)
+  const min = 0
+  const max = 34
+  const rangeForFirstNum = max - min - 2
+  const firstNumber = Math.floor(Math.random() * rangeForFirstNum) + min
+  const secondNumber = firstNumber + 3
   return (
     <>
       <div className='car-page'>
-        <CarSinglePage car={car} cars={cars} />
+        <CarSinglePage car={car} cars={cars.slice(firstNumber, secondNumber)} />
       </div>
-      <CarsList cars={cars.slice(19, 22)} />
     </>
   )
 }

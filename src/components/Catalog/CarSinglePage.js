@@ -85,7 +85,10 @@ const CarSinglePage = ({ car, cars }) => {
           </div>
         </div>
       </div>
-      {/* <CarsList cars={cars} /> */}
+      <div className='youmaylike'>
+        <p>Можливо вас зацікавить: </p>
+        <CarsList cars={cars} />
+      </div>
       <Modal modalStatus={modalOpen} onClose={handleCloseModal} />
     </div>
   )

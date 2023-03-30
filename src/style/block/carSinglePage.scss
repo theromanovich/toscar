@@ -20,6 +20,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    font-weight: bold;
     .status-btn {
       border: none;
       border-radius: 12px;
@@ -27,6 +28,7 @@
       text-align: center;
       font-size: 16px;
       border: 1px solid;
+      margin: 0;
       background-color: white;
       &.green {
         color: #73db43;
@@ -97,5 +99,14 @@
       border: 1px solid #cacaca;
       border-radius: 4px;
     }
+  }
+}
+
+.youmaylike {
+  margin-top: 40px;
+  p {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
