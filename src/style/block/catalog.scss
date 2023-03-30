@@ -95,80 +95,7 @@
       }
     }
   }
-  .car-info {
-    display: flex;
-    flex-direction: column;
-    &__title {
-      font-size: 25px;
-      font-weight: bold;
-      color: #000000;
-      margin-bottom: 8px;
-    }
-    &__characteristics {
-      display: flex;
-      gap: 70px;
-      .engine {
-        color: #8b8b8b;
-        margin-bottom: 8px;
-        span {
-          color: black;
-        }
-      }
-      .year {
-        color: #8b8b8b;
-        margin-bottom: 8px;
-        span {
-          color: black;
-        }
-      }
-      .mileage {
-        color: #8b8b8b;
-        margin-bottom: 8px;
-        span {
-          color: black;
-        }
-      }
-    }
-    &__drive {
-      color: #8b8b8b;
-      margin-bottom: 8px;
-      span {
-        color: black;
-      }
-    }
-    &__gearbox {
-      color: #8b8b8b;
-      margin-bottom: 8px;
-      span {
-        color: black;
-      }
-    }
-    &__price {
-      color: #8b8b8b;
-      .price {
-        text-align: right;
-        font-size: 30px;
-        color: black;
-      }
-    }
-    .status-btn {
-      border: none;
-      border-radius: 12px;
-      padding: 10px;
-      display: block;
-      text-align: center;
-      margin-top: 10px;
-      margin-left: auto;
-      border: 1px solid;
-      background-color: white;
-      &.green {
-        color: #73db43;
-      }
-      &.orange {
-        color: #ebb428;
-      }
-    }
-  }
+
   .main-page__filter {
     position: static;
     // top: -10px;
@@ -218,6 +145,82 @@
           border-radius: 100%;
         }
       }
+    }
+  }
+}
+
+.status-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  border: 1px solid;
+  background-color: white;
+  &.green {
+    color: #73db43;
+  }
+  &.orange {
+    color: #ebb428;
+  }
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  &__characteristics {
+    display: flex;
+    gap: 70px;
+    .engine {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    .year {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+    .mileage {
+      color: #8b8b8b;
+      margin-bottom: 8px;
+      span {
+        color: black;
+      }
+    }
+  }
+  &__drive {
+    color: #8b8b8b;
+    margin-bottom: 8px;
+    span {
+      color: black;
+    }
+  }
+  &__gearbox {
+    color: #8b8b8b;
+    margin-bottom: 8px;
+    span {
+      color: black;
+    }
+  }
+  &__price {
+    color: #8b8b8b;
+    .price {
+      text-align: right;
+      font-size: 30px;
+      color: black;
     }
   }
 }

@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { useRef } from 'react'
 import { ArrowIcon } from './ArrowIcon'
 import { PrismaClient } from '@prisma/client'
+import CarsList from './CarsList'
 
 function Catalog({ cars }) {
   //   console.log(cars)
@@ -190,49 +191,51 @@ function Catalog({ cars }) {
         {paginateCars
           ? paginateCars.map(car => {
               return (
-                <div className='catalog__item' key={car.id}>
-                  <div className='car-photo'>
-                    <img src={car.main_image} alt={car.make} />
-                  </div>
-                  <div className='car-info'>
-                    <div className='car-info__title'>
-                      {car.make} {car.model}
+                <Link href={`catalog/${car.slug}`}>
+                  <div className='catalog__item' key={car.id}>
+                    <div className='car-photo'>
+                      <img src={car.main_image} alt={car.make} />
                     </div>
+                    <div className='car-info'>
+                      <div className='car-info__title'>
+                        {car.make} {car.model}
+                      </div>
 
-                    <div className='car-info__characteristics'>
-                      <div>
-                        <div className='engine'>
-                          Об'єм двигуна <span>{car.engine}</span>
+                      <div className='car-info__characteristics'>
+                        <div>
+                          <div className='engine'>
+                            Об'єм двигуна <span>{car.engine}</span>
+                          </div>
+                          <div className='year'>
+                            Рік <span>{car.year}</span>
+                          </div>
+                          <div className='mileage'>
+                            Пробіг <span>{car.mileage} км</span>
+                          </div>
                         </div>
-                        <div className='year'>
-                          Рік <span>{car.year}</span>
+                        <div>
+                          <div className='car-info__drive'>
+                            Привід <span>{car.drive}</span>
+                          </div>
+                          <div className='car-info__gearbox'>
+                            КПП <span>{car.gearbox}</span>
+                          </div>
                         </div>
-                        <div className='mileage'>
-                          Пробіг <span>{car.mileage} км</span>
+                        <div className='car-info__price'>
+                          Вартість в Україні
+                          <div className='price'>{car.price}</div>
+                          <button
+                            className={`status-btn ${
+                              car.status ? 'green' : 'orange'
+                            }`}
+                          >
+                            {car.status ? 'В наявності' : 'Під заказ'}
+                          </button>
                         </div>
-                      </div>
-                      <div>
-                        <div className='car-info__drive'>
-                          Привід <span>{car.drive}</span>
-                        </div>
-                        <div className='car-info__gearbox'>
-                          КПП <span>{car.gearbox}</span>
-                        </div>
-                      </div>
-                      <div className='car-info__price'>
-                        Вартість в Україні
-                        <div className='price'>{car.price}</div>
-                        <button
-                          className={`status-btn ${
-                            car.status ? 'green' : 'orange'
-                          }`}
-                        >
-                          {car.status ? 'В наявності' : 'Під заказ'}
-                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               )
             })
           : ''}

@@ -19,7 +19,7 @@ const DelivererSinglePage = props => {
     paragraphs_accordions,
     cars
   } = props
-  console.log(cars)
+  // console.log(cars)
 
   const tagsElements = tags.map(tag => {
     return <span>{tag.attributes.tag}</span>

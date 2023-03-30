@@ -5,7 +5,7 @@ const DelivererSingle = props => {
   const tags = props.data.attributes.tags_deliverers.data
   const paragraphs = props.data.attributes.paragraphs_accordions.data
   const cars = props.data.attributes.cars.data
-  console.log(cars)
+  // console.log(cars)
   return (
     <DelivererSinglePage
       {...props.data.attributes}
