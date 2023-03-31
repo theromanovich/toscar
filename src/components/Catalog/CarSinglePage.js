@@ -56,8 +56,11 @@ const CarSinglePage = ({ car, cars }) => {
           <img src={main_image} alt={make} />
         </div>
         <div className='car-page__buy'>
-          Вартість в Україні
-          <div className='price'>{price}</div>
+          <div className='ukrprice'>
+            {' '}
+            Вартість в Україні
+            <span className='price'>{price}</span>
+          </div>
           <div className='characteristics'>
             <div>
               Об'єм двигуна: <span>{engine} л</span>
