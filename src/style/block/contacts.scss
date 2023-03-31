@@ -58,3 +58,15 @@
 .footer {
   margin-top: 0px;
 }
+
+@media (max-width: 1079px) {
+  .contacts {
+    margin-left: 0;
+    &__container {
+      padding: 0 26px;
+    }
+    .map {
+      width: 100vw;
+    }
+  }
+}

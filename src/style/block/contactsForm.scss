@@ -54,3 +54,10 @@
     color: white;
   }
 }
+
+@media (max-width: 420px) {
+  .contacts-form {
+    right: 5px;
+    left: 0px;
+  }
+}
