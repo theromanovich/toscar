@@ -70,3 +70,97 @@
     }
   }
 }
+
+@media (max-width: 1079px) {
+  .buy {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 822px) {
+  .buy {
+    margin-top: 350px;
+    &__director {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 734px) {
+  .buy {
+    margin-top: 400px;
+  }
+}
+
+@media (max-width: 547px) {
+  .buy {
+    margin-top: 450px;
+  }
+}
+
+@media (max-width: 510px) {
+  .buy {
+    margin-top: 500px;
+  }
+}
+
+@media (max-width: 440px) {
+  .buy {
+    margin-top: 680px;
+    &__points {
+      gap: 20px;
+    }
+    &__info {
+      .title {
+        &:nth-child(1) {
+          font-size: 24px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 343px) {
+  .buy {
+    margin-top: 720px;
+  }
+}
+
+@media (max-width: 328px) {
+  .buy {
+    margin-top: 750px;
+  }
+}
+
+@media (max-width: 307px) {
+  .buy {
+    margin-top: 830px;
+  }
+}
+
+@media (max-width: 299px) {
+  .buy {
+    margin-top: 850px;
+    &__info {
+      .title {
+        &:nth-child(1) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 281px) {
+  .buy {
+    margin-top: 880px;
+    &__info {
+      .title {
+        &:nth-child(1) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
