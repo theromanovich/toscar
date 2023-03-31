@@ -11,6 +11,7 @@
     flex-direction: column;
     margin: 60px 10px;
     margin-left: 20px;
+    height: 452px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
     position: relative;
     background: white;
@@ -24,7 +25,7 @@
       left: -60px;
       width: 300px;
       margin-left: 40px;
-      height: 560px;
+      height: 520px;
       border-top: 10px solid #cd0000;
       border-left: 10px solid #cd0000;
       border-bottom: 10px solid #cd0000;
@@ -133,6 +134,122 @@
             border-top: 10px solid #cd0000;
             border-right: 10px solid #cd0000;
             border-bottom: 10px solid #cd0000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 856px) {
+  .slider {
+    min-height: 800px;
+    &__container {
+      margin-top: 20px;
+    }
+    &__card {
+      height: 100%;
+      .square {
+        display: none;
+      }
+      .content {
+        flex-direction: column;
+        div {
+          &:nth-child(1) {
+            &::after {
+              border-right: none;
+              border-left: 10px solid #cd0000;
+              left: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .slider {
+    min-height: 800px;
+    &__container {
+      margin-top: 20px;
+    }
+    &__card {
+      height: 100%;
+      .square {
+        display: none;
+      }
+      .content {
+        flex-direction: column;
+        p {
+          font-size: 22px;
+        }
+        div {
+          display: flex;
+          img {
+            max-width: 95%;
+            margin: 0 auto;
+          }
+          &:nth-child(1) {
+            &::after {
+              border-right: none;
+              border-left: 10px solid #cd0000;
+              left: -30px;
+              max-width: 105%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 443px) {
+  .slider {
+    &__card {
+      .content {
+        padding: 60px 40px;
+        div {
+          img {
+            width: 270px;
+            height: 270px;
+          }
+          &:nth-child(1) {
+            &::after {
+              width: 290px;
+              height: 300px;
+              left: -20px;
+            }
+          }
+        }
+        p {
+          span {
+            &:after {
+              top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .slider {
+    &__card {
+      .content {
+        p {
+          font-size: 20px;
+          span {
+            margin-left: 60px;
+            &::before {
+              top: 7px;
+              left: -61px;
+            }
+            &::after {
+              left: -58px;
+              top: 22px;
+            }
           }
         }
       }

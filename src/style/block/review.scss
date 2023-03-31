@@ -2,13 +2,11 @@
   padding-top: 40px;
   margin-left: 200px;
   padding-bottom: 40px;
-  z-index: 44;
   &__container {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
-    z-index: 30;
   }
   &__videos {
     display: grid;
@@ -17,7 +15,6 @@
     grid-row-gap: 20px;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
-    z-index: 20;
   }
   &__item {
     margin: 10px auto 0;
@@ -118,6 +115,47 @@
   .review {
     &__container {
       padding: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 1079px) {
+  .review {
+    margin-left: 0px;
+    &__videos {
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .talking {
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .review {
+    &__videos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .talking {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .review {
+    &__videos {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .talking {
+      grid-template-columns: repeat(1, 1fr);
+      iframe {
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
     }
   }
 }

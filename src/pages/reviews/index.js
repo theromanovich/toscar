@@ -75,7 +75,7 @@ const reviews = () => {
                 tabState == 2 ? 'review__tabs-item active' : 'review__tabs-item'
               }
             >
-              Відгуки в соцмережах
+              Відгуки клієнтів
             </div>
             <div
               onClick={() => toggleTab(3)}
