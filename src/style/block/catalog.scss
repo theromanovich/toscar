@@ -52,7 +52,7 @@
     margin-top: 0;
     background: #f7f7f9;
     box-shadow: -1px 0px 0px #e5e5ef;
-    z-index: 10;
+    z-index: 5;
     min-height: 364px;
     padding: 30px;
     justify-content: space-between;
@@ -222,6 +222,131 @@
       text-align: right;
       font-size: 30px;
       color: black;
+    }
+  }
+}
+
+@media (max-width: 1079px) {
+  .catalog {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 867px) {
+  .catalog {
+    &__container {
+      width: 600px;
+    }
+    &__item {
+      flex-direction: column;
+      .car-photo {
+        img {
+          width: 500px;
+          max-width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      .car-info {
+        &__title {
+          text-align: center;
+        }
+        &__characteristics {
+          gap: 30px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .catalog {
+    &__item {
+      .car-info {
+        &__characteristics {
+          flex-wrap: wrap;
+          div {
+            &:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+            }
+            &:nth-child(2) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .catalog {
+    &__item {
+      padding-right: 16px;
+      .car-info {
+        &__characteristics {
+          flex-wrap: wrap;
+          div {
+            &:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+            }
+            &:nth-child(2) {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+            }
+          }
+        }
+        &__price {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .catalog {
+    &__item {
+      padding-right: 16px;
+      .car-info {
+        &__characteristics {
+          flex-wrap: wrap;
+          div {
+            &:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+            }
+            &:nth-child(2) {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+            }
+          }
+        }
+        &__characteristics {
+          .mileage {
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+        &__price {
+          text-align: center;
+          .price {
+            text-align: center;
+          }
+          .status-btn {
+            display: inline;
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }

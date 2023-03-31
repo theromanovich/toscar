@@ -10,6 +10,7 @@
   z-index: 1;
   .filter {
     &__container {
+      display: none;
       padding: 32px 24px;
       width: 900px;
       max-width: 100%;

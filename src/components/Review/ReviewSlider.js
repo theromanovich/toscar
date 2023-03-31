@@ -23,7 +23,7 @@ const ReviewSlider = () => {
                 США. Їхня команда експертів знає все про процес і допоможе вам у
                 кожному кроці. Я отримав своє авто вчасно і без будь-яких
                 проблем!
-                <span className='auhor'>Олександр Ковальчук</span>
+                <span className='auhor'>Роман Ковальчук</span>
                 <button className='left' onClick={() => toggleTab(2)}>
                   {' '}
                   <ChevronRight />
@@ -78,7 +78,7 @@ const ReviewSlider = () => {
                 цей сайт - ваш найкращий вибір. Їхні ціни були найкращими, які я
                 знайшов на ринку, а сервіс - на високому рівні. Я точно
                 рекомендую їхні послуги!
-                <span className='auhor'>Володимир Петренко</span>
+                <span className='auhor'>Віталій Петренко</span>
                 <button className='left' onClick={() => toggleTab(1)}>
                   <ChevronRight />
                 </button>

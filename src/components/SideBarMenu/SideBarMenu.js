@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
+import Modal from '../HowToBuy/Modal'
 import { Telegram, Instagram, Youtube, Logo } from './SideBarIcons'
 const links = [
   {
@@ -31,6 +33,13 @@ const links = [
 
 const SideBarMenu = () => {
   const router = useRouter()
+  const [modalOpen, setModalOpen] = useState(false)
+  useEffect(() => {
+    setModalOpen(false)
+  })
+  const handleCloseModal = () => {
+    setModalOpen(false)
+  }
 
   const navElements = links.map(({ id, title, path }) => (
     <li
@@ -53,6 +62,8 @@ const SideBarMenu = () => {
           </Link>
         </div>
         <ul className='sidebar__menu'>{navElements}</ul>
+        <button onClick={() => setModalOpen(true)}>Зв'язатись</button>
+        <Modal modalStatus={modalOpen} onClose={handleCloseModal} />
         <div className='schedule'>
           <div>
             <div>пн-пт</div>

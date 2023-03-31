@@ -233,3 +233,12 @@
     }
   }
 }
+
+@media (max-width: 1079px) {
+  .header {
+    margin-left: 0px;
+    &__container {
+      margin-left: 0;
+    }
+  }
+}

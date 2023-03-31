@@ -1,7 +1,7 @@
 .slider {
   z-index: 3;
   &__container {
-    padding: 60px;
+    margin-top: 100px;
     gap: 60px;
     background: #ffffff;
     z-index: 2;
@@ -9,23 +9,22 @@
   &__card {
     display: flex;
     flex-direction: column;
-    margin: 60px;
+    margin: 60px 10px;
+    margin-left: 20px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
     position: relative;
     background: white;
     z-index: 1;
-    .v {
-      padding: 60px;
-    }
     .square {
       position: absolute;
       display: block;
       top: 50%;
       z-index: -10;
       transform: translateY(-50%);
-      left: -30px;
+      left: -60px;
       width: 300px;
-      height: 530px;
+      margin-left: 40px;
+      height: 560px;
       border-top: 10px solid #cd0000;
       border-left: 10px solid #cd0000;
       border-bottom: 10px solid #cd0000;
@@ -37,7 +36,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       background: white;
-      gap: 50px;
+      gap: 40px;
       p {
         background: white;
         font-size: 25px;

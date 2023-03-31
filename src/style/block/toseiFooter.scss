@@ -56,3 +56,14 @@
     }
   }
 }
+
+@media (max-width: 1079px) {
+  .footer {
+    margin-left: 0px;
+    &__container {
+      flex-wrap: wrap;
+      padding-left: 42px;
+      padding-right: 42px;
+    }
+  }
+}

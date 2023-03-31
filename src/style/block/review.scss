@@ -13,6 +13,8 @@
   &__videos {
     display: grid;
     gap: 60px;
+    grid-column-gap: 60px;
+    grid-row-gap: 20px;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     z-index: 20;
@@ -29,6 +31,9 @@
     }
     .rating {
       margin-top: 10px;
+    }
+    .author {
+      font-weight: bold;
     }
   }
   &__title {
