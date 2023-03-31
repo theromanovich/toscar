@@ -51,3 +51,53 @@
     }
   }
 }
+
+@media (max-width: 1079px) {
+  .benefits {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 822px) {
+  .main-page {
+    &__bg {
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 822px) {
+  .benefits {
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+  }
+  .buy {
+    margin-top: 450px;
+  }
+}
+
+@media (max-width: 545px) {
+  .benefits {
+    &__container {
+      top: -65px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .main-page {
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .benefits {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+}

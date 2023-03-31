@@ -24,3 +24,11 @@
     color: #ffffff;
   }
 }
+
+@media (max-width: 1079px) {
+  .main-page {
+    &__container {
+      margin-left: 0;
+    }
+  }
+}
