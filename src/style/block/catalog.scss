@@ -232,6 +232,36 @@
   }
 }
 
+@media (max-width: 899) {
+  .catalog {
+    &__title {
+      margin: 20px 0px;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .catalog {
+    .main-page__filter {
+      display: block;
+      box-shadow: none;
+      margin: 0;
+      .filter {
+        &__container {
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 628px;
+          margin: 10px 0 0 0;
+        }
+        &__items {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 867px) {
   .catalog {
     &__container {
@@ -260,6 +290,22 @@
   }
 }
 
+@media (max-width: 659px) {
+  .catalog {
+    .main-page__filter {
+      .filter {
+        &__container {
+          width: 428px;
+        }
+        &__items {
+          gap: 10px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 520px) {
   .catalog {
     &__item {
@@ -276,6 +322,32 @@
               flex-direction: column;
               justify-content: center;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .catalog {
+    .main-page__filter {
+      .filter {
+        &__container {
+          width: 330px;
+        }
+        &__items {
+          gap: 20px;
+          justify-content: space-between;
+          .year-selects {
+            flex-wrap: wrap;
+          }
+        }
+        &__cta {
+          flex-direction: column;
+          .search-result {
+            margin-top: 10px;
+            margin-bottom: 10px;
           }
         }
       }
@@ -312,6 +384,12 @@
 
 @media (max-width: 424px) {
   .catalog {
+    .car {
+      &__filter {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
     &__item {
       padding-right: 16px;
       .car-info {
@@ -345,6 +423,18 @@
             display: inline;
             margin-left: 0;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 290px) {
+  .catalog {
+    .main-page__filter {
+      .filter {
+        &__container {
+          padding: 32px 15px;
         }
       }
     }
