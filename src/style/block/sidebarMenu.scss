@@ -90,3 +90,45 @@
     display: none;
   }
 }
+
+@media (max-width: 420px) {
+  .header {
+    &__container {
+      .sidebar {
+        &.active {
+          backdrop-filter: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    &.active {
+      backdrop-filter: none;
+    }
+
+    &__container {
+      width: 100vw;
+      padding-top: 22px;
+    }
+    &__menu {
+      padding-top: 0px;
+      gap: 60px;
+      &-item {
+        a {
+          font-size: 35px;
+        }
+      }
+    }
+    .schedule {
+      font-size: 25px;
+      margin-top: 60px;
+      // margin-bottom: 20px;
+    }
+    &__icons {
+      display: none;
+    }
+  }
+}

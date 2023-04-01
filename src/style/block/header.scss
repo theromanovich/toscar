@@ -208,6 +208,9 @@
     justify-content: space-between;
     background: #ffffff;
     box-shadow: 0px 1px 0px #f4f4f4;
+    .logo {
+      display: none;
+    }
   }
   &__title {
     font-weight: 300;
@@ -232,6 +235,28 @@
       }
     }
   }
+  &__burger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background-color: black;
+    display: none;
+    span {
+      transition: 0.3s all;
+      display: block;
+      height: 3px;
+      width: 14px;
+      margin-left: 10px;
+      background-color: white;
+      border-radius: 10px;
+      &:nth-child(2) {
+        width: 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1079px) {
@@ -239,6 +264,67 @@
     margin-left: 0px;
     &__container {
       margin-left: 0;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .sidebar {
+        display: block;
+        transition: 0.5s all linear;
+        transform: translate(-100%, 90px);
+      }
+      .sidebar.active {
+        transition: 0.3s all linear;
+        transform: translate(0%, 0px);
+        margin-top: 94px;
+        width: 100vw;
+        backdrop-filter: blur(2px);
+        &__container {
+          width: 100vw;
+        }
+      }
     }
+    &__burger {
+      display: flex;
+      transition: 0.3s all;
+      &.active {
+        span {
+          transition: 0.3s all;
+          width: 22px;
+          height: 3px;
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(2px, 3px);
+          }
+          &:nth-child(2) {
+            transform: rotate(-45deg) translate(3px, -3px);
+          }
+        }
+      }
+    }
+    &__title {
+      display: none;
+    }
+    &__phone {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    &__container {
+      .sidebar.active {
+        &__container {
+          width: 300vw;
+        }
+      }
+    }
+  }
+  .sidebar__container {
+    width: 300px;
   }
 }

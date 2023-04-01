@@ -24,6 +24,7 @@ const CarSinglePage = ({ car, cars }) => {
     if (body.toLowerCase() == 'suv') return 'SUV'
     if (body.toLowerCase() == 'coupe') return 'Купе'
     if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
+    if (body.toLowerCase() == 'truck') return 'Пікап'
   }
   const bodyTranslate = translatebody()
 
