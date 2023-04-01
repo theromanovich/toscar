@@ -58,7 +58,7 @@ const SideBarMenu = () => {
         <div className='logo'>
           <Link href='/'>
             <Logo />
-            tosei
+            {/* tosei */}
           </Link>
         </div>
         <ul className='sidebar__menu'>{navElements}</ul>

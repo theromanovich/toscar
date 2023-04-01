@@ -10,7 +10,7 @@ const ToseiHeader = () => {
     <div className='header'>
       <div className='header__container'>
         <div className='logo'>
-          <Logo /> Toscar
+          <Logo height={40} width={140} />
         </div>
         <div className='header__title'>
           Автомобілі зі CША та доставкою по всій Україні.
