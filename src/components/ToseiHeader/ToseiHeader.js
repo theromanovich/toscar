@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Logo } from '../SideBarMenu/SideBarIcons'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { BurgerMenu } from '../SideBarMenu/SideBarMenu'
+import Link from 'next/link'
 
 const ToseiHeader = () => {
   const [burgerMenu, setBurgerMenu] = useState(false)
@@ -10,7 +11,9 @@ const ToseiHeader = () => {
     <div className='header'>
       <div className='header__container'>
         <div className='logo'>
-          <Logo height={40} width={140} />
+          <Link href='/'>
+            <Logo height={40} width={140} />
+          </Link>
         </div>
         <div className='header__title'>
           Автомобілі зі CША та доставкою по всій Україні.
