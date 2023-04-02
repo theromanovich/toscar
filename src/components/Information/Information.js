@@ -8,7 +8,7 @@ const Information = () => {
           <Link href='/information'>Інформація</Link>
         </div>
         <div className='information__title'>
-          <span>Tosei</span> - більше ніж авто з США
+          <span>TOSCAR</span> - більше ніж авто з США
         </div>
         <div className='information__descr'>
           <div>

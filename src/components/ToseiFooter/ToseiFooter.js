@@ -6,7 +6,7 @@ const ToseiFooter = () => {
     <div className='footer'>
       <div className='footer__container'>
         <div className='footer__about'>
-          <div className='footer__title'>Tosei {footerYear}</div>
+          <div className='footer__title'>TOSCAR {footerYear}</div>
           <div className='footer__descr'>
             Продаж вантажної та спецтехніки, легкових автомобілів, водної
             техніки. Будь-яка техніка з США. Авто з аукціонів.

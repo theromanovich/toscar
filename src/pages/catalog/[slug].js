@@ -4,7 +4,6 @@ import CarSinglePage from '@/components/Catalog/CarSinglePage'
 const prisma = new PrismaClient()
 
 export default function CarPage({ car, cars }) {
-  console.log(cars)
   const min = 0
   const max = 34
   const rangeForFirstNum = max - min - 2

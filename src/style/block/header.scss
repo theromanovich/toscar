@@ -223,16 +223,14 @@
   &__phone {
     display: flex;
     flex-direction: column;
-    & span {
-      &:nth-child(1) {
-        font-size: 30px;
-        color: #cd0000;
-        margin-left: auto;
-      }
-      &:nth-child(2) {
-        font-size: 22px;
-        color: #000000;
-      }
+    a {
+      font-size: 30px;
+      color: #cd0000;
+      margin-left: auto;
+    }
+    span {
+      font-size: 22px;
+      color: #000000;
     }
   }
   &__burger {
