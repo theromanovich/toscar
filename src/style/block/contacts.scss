@@ -59,6 +59,18 @@
   margin-top: 0px;
 }
 
+@media (min-width: 1500px) {
+  .contacts {
+    .map {
+      width: 100%;
+      &__wrapper {
+        width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 @media (max-width: 1079px) {
   .contacts {
     margin-left: 0;
