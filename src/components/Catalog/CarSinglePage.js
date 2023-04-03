@@ -36,6 +36,13 @@ const CarSinglePage = ({ car, cars }) => {
     setModalOpen(false)
   }
 
+  const engineNaming = () => {
+    if (engine.toLowerCase() == 'electric') return 'Електричний'
+    return engine + ' ' + 'л'
+  }
+
+  const engineRenamed = engineNaming()
+
   return (
     <div className='car-page__container'>
       <div className='breadcrubms'>
@@ -64,7 +71,7 @@ const CarSinglePage = ({ car, cars }) => {
           </div>
           <div className='characteristics'>
             <div>
-              Об'єм двигуна: <span>{engine} л</span>
+              Об'єм двигуна: <span>{engineRenamed}</span>
             </div>
             <div>
               Коробка передач: <span>{gearbox}</span>
