@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import CarSinglePage from '@/components/Catalog/CarSinglePage'
+import Head from 'next/head'
 
 const prisma = new PrismaClient()
 
@@ -11,6 +12,11 @@ export default function CarPage({ car, cars }) {
   const secondNumber = firstNumber + 3
   return (
     <>
+      <Head>
+        <title>
+          Купити {car.make} {car.model} {car.year}
+        </title>
+      </Head>
       <div className='car-page'>
         <CarSinglePage car={car} cars={cars.slice(firstNumber, secondNumber)} />
       </div>

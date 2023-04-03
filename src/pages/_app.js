@@ -8,6 +8,7 @@ import './../style/global.scss'
 const MyApp = ({ Component, pageProps }) => (
   <Layout>
     <Head>
+      <title>Toscar</title>
       <link
         href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap'
         rel='stylesheet'

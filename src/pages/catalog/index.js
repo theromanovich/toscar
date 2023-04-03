@@ -1,8 +1,16 @@
+import Head from 'next/head'
 import Catalog from '@/components/Catalog/Catalog'
 import { PrismaClient } from '@prisma/client'
 
 const catalogPage = ({ cars }) => {
-  return <Catalog cars={cars} />
+  return (
+    <>
+      <Head>
+        <title>Каталог</title>
+      </Head>
+      <Catalog cars={cars} />
+    </>
+  )
 }
 export default catalogPage
 
