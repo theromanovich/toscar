@@ -39,11 +39,11 @@ const Information = () => {
         <div className='information__mission'>
           <div className='information__mission-descr'>
             <div className='information__mission-title'>
-              Місія компаніїї <span>Tosei</span>
+              Місія компаніїї <span>TOSCAR</span>
             </div>
             <p>
               Із звичайної потреби придбати машину за адекватні гроші народилася
-              місія Tosei: зробити авто із Америки реальністю для кожного
+              місія TOSCAR: зробити авто із Америки реальністю для кожного
               покупця.
             </p>
             <p>
@@ -59,8 +59,8 @@ const Information = () => {
               хорошим технічним станом та запасом міцності на роки вперед.
             </p>
             <p>
-              <span>Це і є філософія Tosei</span>. Це – основа нашого підходу до
-              надання послуг та мірило якості.
+              <span>Це і є філософія TOSCAR</span>. Це – основа нашого підходу
+              до надання послуг та мірило якості.
             </p>
           </div>
           <div className='information__graphic'>

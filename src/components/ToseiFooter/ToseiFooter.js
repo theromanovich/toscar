@@ -13,7 +13,7 @@ const ToseiFooter = () => {
           </div>
           <div className='footer__address'>
             <LocationIcon />
-            Вулиця Верхній Вал 54, Київ
+            Вулиця Волоська 24/37, Київ
           </div>
         </div>
         <div className='footer__phone'>
