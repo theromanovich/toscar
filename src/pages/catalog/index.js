@@ -10,7 +10,7 @@ export async function getStaticProps() {
   const prisma = new PrismaClient()
 
   const cars = await prisma.car.findMany()
-  console.log(cars)
+  // console.log(cars)
   return {
     props: { cars }
   }

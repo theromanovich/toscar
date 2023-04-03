@@ -1,8 +1,7 @@
 import { carsData } from './carsData'
 import { useState, useRef } from 'react'
-import { useMainPageFilterContext } from '@/helpers/main-page-filter-context'
+
 const PopularCars = () => {
-  // const { carsState, setCarsState } = useMainPageFilterContext()
   const [cars, setCars] = useState(carsData.slice(0, 3))
   const loadBtn = useRef(null)
   const loadCars = () => {
