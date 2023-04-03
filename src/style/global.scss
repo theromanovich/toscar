@@ -60,3 +60,17 @@ p {
 button {
   cursor: pointer;
 }
+
+.page-not-found {
+  margin: 50px 0;
+  margin-left: 200px;
+  color: #cd0000;
+  font-size: 60px;
+  text-align: center;
+}
+
+@media (max-width: 1079px) {
+  .page-not-found {
+    margin-left: 0;
+  }
+}
