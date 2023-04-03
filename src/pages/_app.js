@@ -19,7 +19,11 @@ const MyApp = ({ Component, pageProps }) => (
         href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
         rel='stylesheet'
       />
-      <link rel='icon' type='image/svg+xml' href='favicon/letter-favicon.ico' />
+      <link
+        rel='icon'
+        type='image/svg+xml'
+        href='favicon/car-emoji-favicon.ico'
+      />
     </Head>
     <main>
       <Component {...pageProps} />
