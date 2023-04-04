@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 
 const MainPageFilter = ({ findCars = 0, onFilter }) => {
-  const makeRef = useRef()
-  const engineRef = useRef()
-  const bodyRef = useRef()
-  const yearFromRef = useRef()
-  const yearToRef = useRef()
+  const makeRef = useRef<HTMLSelectElement>(null)
+  const engineRef = useRef<HTMLSelectElement>(null)
+  const bodyRef = useRef<HTMLSelectElement>(null)
+  const yearFromRef = useRef<HTMLSelectElement>(null)
+  const yearToRef = useRef<HTMLSelectElement>(null)
 
   const onSubmitForm = e => {
     e.preventDefault()

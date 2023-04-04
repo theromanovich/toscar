@@ -1,4 +1,4 @@
-import Reviews from '@/components/Review/Reviews'
+import Reviews from '../../components/Review/Reviews'
 import Head from 'next/head'
 
 const ReviewsPage = () => {

@@ -1,10 +1,21 @@
 import { PrismaClient } from '@prisma/client'
-import CarSinglePage from '@/components/Catalog/CarSinglePage'
+import CarSinglePage from '../../components/Catalog/CarSinglePage'
 import Head from 'next/head'
 
 const prisma = new PrismaClient()
 
-export default function CarPage({ car, cars }) {
+type car = {
+  make: string
+  model: string
+  year: number
+  slug: string
+}
+interface CarPageProps {
+  car: car
+  cars: car[]
+}
+
+export default function CarPage({ car, cars }: CarPageProps) {
   const min = 0
   const max = 34
   const rangeForFirstNum = max - min - 2

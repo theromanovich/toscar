@@ -1,4 +1,4 @@
-import Contacts from '@/components/Contacts/Contacts'
+import Contacts from '../../components/Contacts/Contacts'
 import Head from 'next/head'
 
 const contactsPage = () => {

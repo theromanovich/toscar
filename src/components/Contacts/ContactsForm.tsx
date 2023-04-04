@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from 'react'
 
 const ContactsForm = () => {
-  const nameInput = useRef()
-  const phoneInput = useRef()
-  const messageInput = useRef()
+  const nameInput = useRef<HTMLInputElement>(null)
+  const phoneInput = useRef<HTMLInputElement>(null)
+  const messageInput = useRef<HTMLTextAreaElement>(null)
   const [submitState, setSubmitState] = useState(false)
 
   const submitHandler = e => {

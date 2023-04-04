@@ -4,7 +4,7 @@ export const RequestIcon = () => {
       width='80px'
       height='800px'
       viewBox='0 0 1024 1024'
-      class='icon'
+      className='icon'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
     >
@@ -78,7 +78,7 @@ export const DeliveryItem = () => {
       version='1.1'
       id='Layer_1'
       xmlns='http://www.w3.org/2000/svg'
-      xmlnsLink='http://www.w3.org/1999/xlink'
+      xmlnsXlink='http://www.w3.org/1999/xlink'
       viewBox='0 0 256 203.5'
       enable-background='new 0 0 256 203.5'
       xmlSpace='preserve'

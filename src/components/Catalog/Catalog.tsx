@@ -2,19 +2,19 @@ import { carsData } from '../PopularCars/carsData'
 import Link from 'next/link'
 import MainPageFilter from '../MainPageFilter/MainPageFilter'
 import PopularCars from '../PopularCars/PopularCars'
-import paginate from '@/utils/utils'
+import paginate from '../../utils/utils'
+
 import { useEffect, useState } from 'react'
 import { useRef } from 'react'
 import { ArrowIcon } from './ArrowIcon'
 import { PrismaClient } from '@prisma/client'
-import CarsList from './CarsList'
+// import CarsList from './CarsList'
 
 function Catalog({ cars }) {
-  //   console.log(cars)
   const [carsState, setCarsState] = useState(paginate(cars))
   const [paginateCars, setPaginateCars] = useState([])
   const [page, setPage] = useState(0)
-  const radioAny = useRef()
+  const radioAny = useRef<HTMLInputElement>(null)
   const radioAvailable = useRef()
   const radioAwait = useRef()
   const [radioState, setRadioState] = useState('')
@@ -45,16 +45,16 @@ function Catalog({ cars }) {
 
   useEffect(() => {
     if (carsState.length >= 1) {
-      document.querySelector('.pag-btn').click()
+      ;(document.querySelector('.pag-btn') as HTMLButtonElement).click()
       console.log('click')
     }
   }, [carsState])
 
   useEffect(() => {
-    radioAny.current.click()
+    radioAny?.current?.click()
   }, [])
 
-  const handlePageClick = index => {
+  const handlePageClick = (index: number) => {
     setPage(index)
   }
 
@@ -239,7 +239,7 @@ function Catalog({ cars }) {
               )
             })
           : ''}
-        <div className='paginate-btns' style={{ 'user-select': 'none' }}>
+        <div className='paginate-btns' style={{ userSelect: 'none' }}>
           <div className='prev' onClick={prevBtn}>
             {carsState.length > 0 && <ArrowIcon />}
           </div>

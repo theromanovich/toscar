@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from 'react'
 const Modal = ({ modalStatus, onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [submitModal, setSubmitModal] = useState(false)
-  const modalRef = useRef()
-  const nameModalInput = useRef()
-  const phoneModalInput = useRef()
-  const checkbox = useRef()
+  const modalRef = useRef<HTMLDivElement>()
+  const nameModalInput = useRef<HTMLInputElement>()
+  const phoneModalInput = useRef<HTMLInputElement>()
+  const checkbox = useRef<HTMLInputElement>()
 
   const setDynamicBtn = () => {
     if (submitModal) {
@@ -59,17 +59,6 @@ const Modal = ({ modalStatus, onClose }) => {
       }, 3000)
     }
   }
-
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       if (isModalOpen) {
-  //         setIsModalOpen(false)
-  //       }
-  //       return () => {
-  //         clearTimeout(timer)
-  //       }
-  //     }, 4004)
-  //   }, [isModalOpen])
 
   return (
     <div ref={modalRef} className={isModalOpen ? 'modal active' : 'modal'}>

@@ -85,7 +85,7 @@ export const Logo = ({ width = 140, height = 70 }) => {
         xmlns='http://www.w3.org/2000/svg'
         version='1.1'
         xmlnsXlink='http://www.w3.org/1999/xlink'
-        xmlnsSvgjs='http://svgjs.dev/svgjs'
+        data-svgjs='http://svgjs.dev/svgjs'
         width={width}
         height={height}
         viewBox='0 0 1000 111'
@@ -166,7 +166,7 @@ export const Logo = ({ width = 140, height = 70 }) => {
                                           opacity='1'
                                           transform='matrix(1,0,0,1,0,0)'
                                           fill='#cd0000'
-                                          class='undefined-text-0'
+                                          className='undefined-text-0'
                                           data-fill-palette-color='primary'
                                         ></path>
                                       </svg>
@@ -183,7 +183,7 @@ export const Logo = ({ width = 140, height = 70 }) => {
                                         xmlSpace='preserve'
                                         height='57.5199'
                                         width='177.9700125676884'
-                                        class='icon-s-0'
+                                        className='icon-s-0'
                                         data-fill-palette-color='accent'
                                         id='s-0'
                                       >

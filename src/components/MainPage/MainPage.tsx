@@ -13,8 +13,6 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      {/* <MainPageFilter />
-      <PopularCars /> */}
       <Benefits />
       <HowToBuy />
     </div>

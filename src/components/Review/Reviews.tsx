@@ -1,6 +1,6 @@
-import Review from '@/components/Review/Review'
+import Review from '../../components/Review/Review'
 import Link from 'next/link'
-import ReviewGoogle from '@/components/Review/ReviewGoogle'
+import ReviewGoogle from '../../components/Review/ReviewGoogle'
 import { useRef, useEffect, useState } from 'react'
 const reviewsData = [
   {

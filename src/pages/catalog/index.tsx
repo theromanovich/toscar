@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Catalog from '@/components/Catalog/Catalog'
+import Catalog from '../../components/Catalog/Catalog'
 import { PrismaClient } from '@prisma/client'
 
-const catalogPage = ({ cars }) => {
+const catalogPage = ({ cars }: { cars: [] }) => {
   return (
     <>
       <Head>
@@ -18,7 +18,6 @@ export async function getStaticProps() {
   const prisma = new PrismaClient()
 
   const cars = await prisma.car.findMany()
-  // console.log(cars)
   return {
     props: { cars }
   }
