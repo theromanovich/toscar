@@ -1,39 +1,21 @@
 import Link from 'next/link'
+import { links } from './links'
+import Modal from '../HowToBuy/Modal'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import Modal from '../HowToBuy/Modal'
+import { Dispatch, SetStateAction } from 'react'
 import { Telegram, Instagram, Youtube, Logo } from './SideBarIcons'
-const links = [
-  {
-    id: 1,
-    title: 'Головна',
-    path: '/'
-  },
-  {
-    id: 2,
-    title: 'Каталог техніки',
-    path: '/catalog'
-  },
-  {
-    id: 3,
-    title: 'Про компанію',
-    path: '/information'
-  },
-  {
-    id: 4,
-    title: 'Відгуки',
-    path: '/reviews'
-  },
-  {
-    id: 5,
-    title: 'Контакти',
-    path: '/contacts'
-  }
-]
+
+interface NavElement {
+  id: number
+  title: string
+  path: string
+}
 
 const SideBarMenu = () => {
   const router = useRouter()
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
+
   useEffect(() => {
     setModalOpen(false)
   })
@@ -41,7 +23,7 @@ const SideBarMenu = () => {
     setModalOpen(false)
   }
 
-  const navElements = links.map(({ id, title, path }) => (
+  const navElements = links.map(({ id, title, path }: NavElement) => (
     <li
       className={`sidebar__menu-item ${
         router.pathname == path ? 'active' : ''
@@ -58,7 +40,6 @@ const SideBarMenu = () => {
         <div className='logo'>
           <Link href='/'>
             <Logo />
-            {/* tosei */}
           </Link>
         </div>
         <ul className='sidebar__menu'>{navElements}</ul>
@@ -87,7 +68,12 @@ const SideBarMenu = () => {
 }
 export default SideBarMenu
 
-export const BurgerMenu = ({ setMenuStatus, menuStatus }) => {
+interface BurgerProps {
+  setMenuStatus: Dispatch<SetStateAction<boolean>>
+  menuStatus: boolean
+}
+
+export const BurgerMenu = ({ setMenuStatus, menuStatus }: BurgerProps) => {
   useEffect(() => {
     if (document.querySelector('.sidebar').classList.contains('active')) {
       document.body.style.overflow = 'hidden'
@@ -95,7 +81,7 @@ export const BurgerMenu = ({ setMenuStatus, menuStatus }) => {
   }, [menuStatus])
   const router = useRouter()
 
-  const navElements = links.map(({ id, title, path }) => (
+  const navElements = links.map(({ id, title, path }: NavElement) => (
     <li
       className={`sidebar__menu-item ${
         router.pathname == path ? 'active' : ''
