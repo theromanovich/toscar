@@ -1,12 +1,6 @@
 import Link from 'next/link'
-import {
-  LocationIcon,
-  TelIcon,
-  EmailIcon,
-  TelephoneIcon
-} from '../ToseiFooter/ToseiFooterIcons'
 import MapBg from './MapBg'
-import ContactsForm from './ContactsForm'
+import { EmailIcon, TelephoneIcon } from '../ToseiFooter/ToseiFooterIcons'
 
 const Contacts = () => {
   return (

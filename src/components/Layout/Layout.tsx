@@ -3,7 +3,7 @@ import ToseiHeader from '../ToseiHeader/ToseiHeader'
 import ToseiFooter from '../ToseiFooter/ToseiFooter'
 import React from 'react'
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
     <ToseiHeader />
     <SideBarMenu />

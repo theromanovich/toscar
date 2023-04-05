@@ -1,27 +1,38 @@
-import { carsData } from '../PopularCars/carsData'
 import Link from 'next/link'
-import MainPageFilter from '../MainPageFilter/MainPageFilter'
-import PopularCars from '../PopularCars/PopularCars'
-import paginate from '../../utils/utils'
-
-import { useEffect, useState } from 'react'
-import { useRef } from 'react'
+import { FormEvent, HTMLInputTypeAttribute, useRef } from 'react'
 import { ArrowIcon } from './ArrowIcon'
-import { PrismaClient } from '@prisma/client'
-// import CarsList from './CarsList'
+import paginate from '../../utils/utils'
+import { useEffect, useState } from 'react'
+import MainPageFilter from '../MainPageFilter/MainPageFilter'
 
-function Catalog({ cars }) {
-  const [carsState, setCarsState] = useState(paginate(cars))
-  const [paginateCars, setPaginateCars] = useState([])
-  const [page, setPage] = useState(0)
+interface Car {
+  id: number
+  slug: string
+  main_image: string
+  make: string
+  model: string
+  engine: string | number
+  year: number | string
+  body: string
+  mileage: number
+  drive: string
+  gearbox: string
+  price: number
+  status: boolean
+}
+
+function Catalog({ cars }: { cars: Car[] }) {
+  const [carsState, setCarsState] = useState<Car[][]>(paginate(cars))
+  const [paginateCars, setPaginateCars] = useState<Car[]>([])
+  const [page, setPage] = useState<number>(0)
   const radioAny = useRef<HTMLInputElement>(null)
-  const radioAvailable = useRef()
-  const radioAwait = useRef()
-  const [radioState, setRadioState] = useState('')
+  const radioAvailable = useRef<HTMLInputElement>()
+  const radioAwait = useRef<HTMLInputElement>()
+  const [radioState, setRadioState] = useState<string>('')
 
   const prevBtn = () => {
     setPage(oldPage => {
-      let prevPage = oldPage - 1
+      let prevPage: number = oldPage - 1
       if (prevPage < 0) {
         prevPage = carsState.length - 1
       }
@@ -58,13 +69,19 @@ function Catalog({ cars }) {
     setPage(index)
   }
 
-  const [makeState, setMake] = useState()
-  const [engineState, setEngine] = useState()
-  const [bodyState, setBody] = useState()
-  const [yearFromState, setYearFrom] = useState()
-  const [yearToState, setYearTo] = useState()
+  const [makeState, setMake] = useState<string>()
+  const [engineState, setEngine] = useState<string | number>()
+  const [bodyState, setBody] = useState<string>()
+  const [yearFromState, setYearFrom] = useState<string | number>()
+  const [yearToState, setYearTo] = useState<string | number>()
 
-  const filterHandler = (make, engine, body, yearFrom, yearTo) => {
+  const filterHandler = (
+    make: string,
+    engine: string,
+    body: string,
+    yearFrom: string | number,
+    yearTo: string | number
+  ) => {
     setMake(make)
     setEngine(engine)
     setBody(body)
@@ -79,7 +96,14 @@ function Catalog({ cars }) {
     }
   }
 
-  function filterCars(make, engine, body, yearFrom, yearTo, status) {
+  function filterCars(
+    make: string,
+    engine: string | number,
+    body: string,
+    yearFrom: string | number,
+    yearTo: string | number,
+    status: boolean | undefined
+  ) {
     return setCarsState(
       paginate(
         cars.filter(car => {
@@ -108,7 +132,7 @@ function Catalog({ cars }) {
     )
   }
 
-  const handleRadioChange = event => {
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
     setRadioState(value)
 
@@ -129,7 +153,7 @@ function Catalog({ cars }) {
     )
   }
 
-  let notFound = ''
+  let notFound: string = ''
   if (carsState.length === 0) {
     notFound = 'No cars found with specified parameters'
   }
@@ -156,7 +180,6 @@ function Catalog({ cars }) {
               value='any'
               name='status'
               id='any'
-              //   onChange={() => setRadioState('any')}
               onChange={handleRadioChange}
             />
             <label htmlFor='any'>Будь-які</label>
@@ -168,7 +191,6 @@ function Catalog({ cars }) {
               name='status'
               value='available'
               id='available'
-              //   onChange={() => setRadioState('available')}
               onChange={handleRadioChange}
             />
             <label htmlFor='available'>В наявності</label>
@@ -180,7 +202,6 @@ function Catalog({ cars }) {
               name='status'
               value='await'
               id='await'
-              //   onChange={() => setRadioState('await')}
               onChange={handleRadioChange}
             />
             <label htmlFor='await'>Під заказ</label>
@@ -190,46 +211,60 @@ function Catalog({ cars }) {
         <span className='notFound'>{notFound}</span>
         {paginateCars
           ? paginateCars.map(car => {
+              const {
+                slug,
+                id,
+                make,
+                main_image,
+                model,
+                engine,
+                year,
+                mileage,
+                drive,
+                gearbox,
+                price,
+                status
+              } = car
               return (
-                <Link href={`catalog/${car.slug}`}>
-                  <div className='catalog__item' key={car.id}>
+                <Link href={`catalog/${slug}`}>
+                  <div className='catalog__item' key={id}>
                     <div className='car-photo'>
-                      <img src={car.main_image} alt={car.make} />
+                      <img src={main_image} alt={make} />
                     </div>
                     <div className='car-info'>
                       <div className='car-info__title'>
-                        {car.make} {car.model}
+                        {make} {model}
                       </div>
 
                       <div className='car-info__characteristics'>
                         <div>
                           <div className='engine'>
-                            Об'єм двигуна <span>{car.engine}</span>
+                            Об'єм двигуна <span>{engine}</span>
                           </div>
                           <div className='year'>
-                            Рік <span>{car.year}</span>
+                            Рік <span>{year}</span>
                           </div>
                           <div className='mileage'>
-                            Пробіг <span>{car.mileage} км</span>
+                            Пробіг <span>{mileage} км</span>
                           </div>
                         </div>
                         <div>
                           <div className='car-info__drive'>
-                            Привід <span>{car.drive}</span>
+                            Привід <span>{drive}</span>
                           </div>
                           <div className='car-info__gearbox'>
-                            КПП <span>{car.gearbox}</span>
+                            КПП <span>{gearbox}</span>
                           </div>
                         </div>
                         <div className='car-info__price'>
                           Вартість в Україні
-                          <div className='price'>{car.price}</div>
+                          <div className='price'>{price}</div>
                           <button
                             className={`status-btn ${
-                              car.status ? 'green' : 'orange'
+                              status ? 'green' : 'orange'
                             }`}
                           >
-                            {car.status ? 'В наявності' : 'Під заказ'}
+                            {status ? 'В наявності' : 'Під заказ'}
                           </button>
                         </div>
                       </div>

@@ -1,5 +1,3 @@
-import MainPageFilter from '../MainPageFilter/MainPageFilter'
-import PopularCars from '../PopularCars/PopularCars'
 import Benefits from '../Benefits/Benefits'
 import HowToBuy from '../HowToBuy/HowToBuy'
 

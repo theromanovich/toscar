@@ -10,7 +10,8 @@ import Modal from './Modal'
 import { useEffect, useState } from 'react'
 
 const HowToBuy = () => {
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
+
   useEffect(() => {
     setModalOpen(false)
   })
@@ -29,7 +30,6 @@ const HowToBuy = () => {
             <div className='title'>Як відбувається купівля</div>
             <div className='buy__points'>
               <div className='buy__points-item'>
-                {/* <RequestIcon /> */}
                 <img src='/resume 1.png' alt='' style={{ width: '50px' }} />
                 <div className='title'>Залишаєте заявку</div>
                 <div className='descr'>
@@ -38,7 +38,6 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                {/* <ContractIcon /> */}
                 <img
                   src='/conversation 1.png'
                   alt=''
@@ -50,7 +49,6 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                {/* <SelectionIcon /> */}
                 <img src='carIcon.png' alt='' style={{ width: '50px' }} />
 
                 <div className='title'>Підбір та купівля авто</div>
@@ -60,8 +58,6 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                {/* <ShippingIcon />
-                 */}
                 <img src='cargo-ship 1.png' alt='' style={{ width: '50px' }} />
                 <div className='title'>Доставка та оформлення</div>
                 <div className='descr'>
@@ -70,7 +66,6 @@ const HowToBuy = () => {
                 </div>
               </div>
               <div className='buy__points-item'>
-                {/* <DeliveryItem /> */}
                 <img
                   src='delivery-truck 1.png'
                   alt=''
