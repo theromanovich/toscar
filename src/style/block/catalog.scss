@@ -62,6 +62,8 @@
       max-width: 100%;
     }
     .breadcrumbs {
+      display: flex;
+      gap: 6px;
       color: #8b8b8b;
       margin-bottom: 12px;
       width: 900px;

@@ -16,7 +16,7 @@ const Reviews = () => {
       <div className='review'>
         <div className='review__container'>
           <div className='breadcrumbs'>
-            <Link href='/'>Головна</Link>/<Link href='/reviews'>Відгуки</Link>
+            <Link href='/'>Головна</Link> / <Link href='/reviews'>Відгуки</Link>
           </div>
           <div className='review__title'>Відгуки</div>
           <div className='review__tabs'>

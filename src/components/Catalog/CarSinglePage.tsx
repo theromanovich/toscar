@@ -1,10 +1,15 @@
 import Link from 'next/link'
-import Catalog from './Catalog'
-import Modal from '../HowToBuy/Modal'
-import { useState, useEffect } from 'react'
 import CarsList from './CarsList'
+import Modal from '../HowToBuy/Modal'
+import { Car } from '@prisma/client'
+import { useState, useEffect } from 'react'
 
-const CarSinglePage = ({ car, cars }) => {
+interface CarSinglePageProps {
+  car: Car
+  cars: Car[]
+}
+
+const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
   const {
     make,
     model,
@@ -26,9 +31,9 @@ const CarSinglePage = ({ car, cars }) => {
     if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
     if (body.toLowerCase() == 'truck') return 'Пікап'
   }
-  const bodyTranslate = translatebody()
+  const bodyTranslate: string = translatebody()
 
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState<boolean>(false)
   useEffect(() => {
     setModalOpen(false)
   })
@@ -41,13 +46,12 @@ const CarSinglePage = ({ car, cars }) => {
     return engine + ' ' + 'л'
   }
 
-  const engineRenamed = engineNaming()
+  const engineRenamed: string = engineNaming()
 
   return (
     <div className='car-page__container'>
       <div className='breadcrubms'>
-        <Link href='/'>Головна</Link> / <Link href='/catalog'>Каталог</Link> /
-        {'  '}
+        <Link href='/'>Головна</Link> / <Link href='/catalog'>Каталог</Link> /{' '}
         <Link href={`/catalog/${slug}`}>
           {make} {model} {year}
         </Link>

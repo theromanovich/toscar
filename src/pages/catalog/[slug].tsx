@@ -1,26 +1,21 @@
+import Head from 'next/head'
+import { Car } from '@prisma/client'
 import { PrismaClient } from '@prisma/client'
 import CarSinglePage from '../../components/Catalog/CarSinglePage'
-import Head from 'next/head'
 
 const prisma = new PrismaClient()
 
-type car = {
-  make: string
-  model: string
-  year: number
-  slug: string
-}
 interface CarPageProps {
-  car: car
-  cars: car[]
+  car: Car
+  cars: Car[]
 }
 
 export default function CarPage({ car, cars }: CarPageProps) {
-  const min = 0
-  const max = 34
-  const rangeForFirstNum = max - min - 2
-  const firstNumber = Math.floor(Math.random() * rangeForFirstNum) + min
-  const secondNumber = firstNumber + 3
+  const min: number = 0
+  const max: number = 34
+  const rangeForFirstNum: number = max - min - 2
+  const firstNumber: number = Math.floor(Math.random() * rangeForFirstNum) + min
+  const secondNumber: number = firstNumber + 3
   return (
     <>
       <Head>

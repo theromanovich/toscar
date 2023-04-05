@@ -6,6 +6,8 @@
     padding: 40px;
     margin: 0 auto;
     .breadcrubms {
+      display: flex;
+      gap: 6px;
       color: #8b8b8b;
       margin-bottom: 12px;
       a {
