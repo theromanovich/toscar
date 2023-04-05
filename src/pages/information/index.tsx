@@ -1,5 +1,5 @@
-import Information from '../../components/Information/Information'
 import Head from 'next/head'
+import Information from '../../components/Information/Information'
 
 const InformationPage = () => {
   return (

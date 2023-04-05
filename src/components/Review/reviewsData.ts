@@ -1,4 +1,4 @@
-export const reviewsData = [
+const reviewsData = [
   {
     id: 1,
     author: 'Віктор Сергійович',
@@ -42,3 +42,5 @@ export const reviewsData = [
     url: 'https://www.youtube.com/embed/N3Sw9rJSldg'
   }
 ]
+
+export default reviewsData

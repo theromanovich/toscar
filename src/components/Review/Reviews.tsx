@@ -1,7 +1,7 @@
 import Review from '../../components/Review/Review'
 import Link from 'next/link'
 import ReviewGoogle from '../../components/Review/ReviewGoogle'
-import { reviewsData } from './ReviewsData'
+import reviewsData from './reviewsData'
 import { useState } from 'react'
 
 const Reviews = () => {

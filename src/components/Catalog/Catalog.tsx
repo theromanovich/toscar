@@ -1,25 +1,10 @@
 import Link from 'next/link'
-import { FormEvent, HTMLInputTypeAttribute, useRef } from 'react'
+import { Car } from '@prisma/client'
 import { ArrowIcon } from './ArrowIcon'
 import paginate from '../../utils/utils'
 import { useEffect, useState } from 'react'
 import MainPageFilter from '../MainPageFilter/MainPageFilter'
-
-interface Car {
-  id: number
-  slug: string
-  main_image: string
-  make: string
-  model: string
-  engine: string | number
-  year: number | string
-  body: string
-  mileage: number
-  drive: string
-  gearbox: string
-  price: number
-  status: boolean
-}
+import { FormEvent, HTMLInputTypeAttribute, useRef } from 'react'
 
 function Catalog({ cars }: { cars: Car[] }) {
   const [carsState, setCarsState] = useState<Car[][]>(paginate(cars))

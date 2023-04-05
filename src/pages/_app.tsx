@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import type { AppProps } from 'next/app'
-
-import Layout from '../components/Layout/Layout'
-
-import 'normalize.css/normalize.css'
 import './../style/global.scss'
+import 'normalize.css/normalize.css'
+import type { AppProps } from 'next/app'
+import Layout from '../components/Layout/Layout'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Layout>

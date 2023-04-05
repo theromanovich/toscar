@@ -1,4 +1,6 @@
-const paginate = cars => {
+import { Car } from '@prisma/client'
+
+const paginate = (cars: Car[]) => {
   const itemsPerPage = 8
   const pages = Math.ceil(cars.length / itemsPerPage)
 

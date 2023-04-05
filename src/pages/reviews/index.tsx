@@ -1,5 +1,5 @@
-import Reviews from '../../components/Review/Reviews'
 import Head from 'next/head'
+import Reviews from '../../components/Review/Reviews'
 
 const ReviewsPage = () => {
   return (
