@@ -1,13 +1,29 @@
 import { carsData } from './carsData'
 import { useState, useRef } from 'react'
 
+interface Car {
+  id: number
+  make: string
+  model: string
+  img: string
+  engine: string
+  year: number
+  mileage: number
+  drive: string
+  gearbox: string
+  price: string
+  status: boolean
+}
+
 const PopularCars = () => {
-  const [cars, setCars] = useState(carsData.slice(0, 3))
-  const loadBtn = useRef(null)
+  const [cars, setCars] = useState<Car[]>(carsData.slice(0, 3))
+  const loadBtn = useRef<HTMLButtonElement>(null)
+
   const loadCars = () => {
     setCars(carsData)
     loadBtn.current.style.display = 'none'
   }
+
   return (
     <div className='popular-cars'>
       <div className='popular-cars__container'>

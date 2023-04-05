@@ -1,31 +1,37 @@
-import { useRef } from 'react'
+import { FormEvent, useRef } from 'react'
 
-const MainPageFilter = ({ findCars = 0, onFilter }) => {
+interface FilterProps {
+  findCars: number
+  onFilter: (
+    make: string,
+    engine: string | number,
+    body: string,
+    yearFrom: string,
+    yearTo: string
+  ) => void
+}
+
+const MainPageFilter = ({ findCars = 0, onFilter }: FilterProps) => {
   const makeRef = useRef<HTMLSelectElement>(null)
   const engineRef = useRef<HTMLSelectElement>(null)
   const bodyRef = useRef<HTMLSelectElement>(null)
   const yearFromRef = useRef<HTMLSelectElement>(null)
   const yearToRef = useRef<HTMLSelectElement>(null)
 
-  const onSubmitForm = e => {
+  type CarInfo = undefined | string
+
+  const onSubmitForm = (e: FormEvent) => {
     e.preventDefault()
 
-    const make =
-      makeRef.current.value == 'undefined' ? undefined : makeRef.current.value
-    const engine =
-      engineRef.current.value == 'undefined'
-        ? undefined
-        : engineRef.current.value
-    const body =
-      bodyRef.current.value == 'undefined' ? undefined : bodyRef.current.value
-    const yearFrom =
-      yearFromRef.current.value == 'undefined'
-        ? undefined
-        : yearFromRef.current.value
-    const yearTo =
-      yearToRef.current.value == 'undefined'
-        ? undefined
-        : yearToRef.current.value
+    const checkInputValue = (value: string): undefined | string => {
+      return value == 'undefined' ? undefined : value
+    }
+
+    const make: CarInfo = checkInputValue(makeRef.current.value)
+    const engine: CarInfo = checkInputValue(engineRef.current.value)
+    const body: CarInfo = checkInputValue(bodyRef.current.value)
+    const yearFrom: CarInfo = checkInputValue(yearFromRef.current.value)
+    const yearTo: CarInfo = checkInputValue(yearToRef.current.value)
 
     onFilter(make, engine, body, yearFrom, yearTo)
   }
