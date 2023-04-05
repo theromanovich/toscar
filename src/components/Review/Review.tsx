@@ -1,6 +1,15 @@
-import { Star, NoStar, getStars } from './ReviewStars'
-const Review = ({ author, rating, channel, url }) => {
+import { getStars } from './ReviewStars'
+
+interface ReviewVideo {
+  author: string
+  rating: number
+  channel: string
+  url: string
+}
+
+const Review = ({ author, rating, channel, url }: ReviewVideo) => {
   const stars = getStars(rating)
+
   return (
     <div className='review__item'>
       <iframe src={url}></iframe>

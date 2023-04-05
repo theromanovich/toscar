@@ -1,4 +1,4 @@
-export const getStars = rating => {
+export const getStars = (rating: number) => {
   switch (rating) {
     case 1:
       return (

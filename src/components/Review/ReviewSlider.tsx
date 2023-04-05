@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
 const ReviewSlider = () => {
-  const [currSlide, setCurrSlide] = useState(1)
-  const toggleTab = indexTab => {
+  const [currSlide, setCurrSlide] = useState<number>(1)
+
+  const toggleTab = (indexTab: number) => {
     setCurrSlide(indexTab)
   }
+
   return (
     <div className='slider'>
       <div className='slider__container'>

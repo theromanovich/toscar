@@ -1,57 +1,16 @@
 import Review from '../../components/Review/Review'
 import Link from 'next/link'
 import ReviewGoogle from '../../components/Review/ReviewGoogle'
-import { useRef, useEffect, useState } from 'react'
-const reviewsData = [
-  {
-    id: 1,
-    author: 'Віктор Сергійович',
-    rating: 4,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/5y39-0U7c-E'
-  },
-  {
-    id: 2,
-    author: 'Віктор Сергійович',
-    rating: 5,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/hsBtTlhgbmU'
-  },
-  {
-    id: 3,
-    author: 'Віктор Сергійович',
-    rating: 4,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/WicY3-uQgLM'
-  },
-  {
-    id: 4,
-    author: 'Віктор Сергійович',
-    rating: 5,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/X8JfzQHgTfs'
-  },
-  {
-    id: 5,
-    author: 'Віктор Сергійович',
-    rating: 5,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/V9JNPeUjkTg'
-  },
-  {
-    id: 6,
-    author: 'Віктор Сергійович',
-    rating: 5,
-    channel: 'Toyota Allion',
-    url: 'https://www.youtube.com/embed/N3Sw9rJSldg'
-  }
-]
+import { reviewsData } from './ReviewsData'
+import { useState } from 'react'
 
 const Reviews = () => {
-  const [tabState, setTabState] = useState(1)
-  const toggleTab = indexTab => {
-    setTabState(indexTab)
+  const [reviewTabState, setReviewTabState] = useState<number>(1)
+
+  const toggleTab = (indexTab: number) => {
+    setReviewTabState(indexTab)
   }
+
   return (
     <>
       <div className='review'>
@@ -64,7 +23,9 @@ const Reviews = () => {
             <div
               onClick={() => toggleTab(1)}
               className={
-                tabState == 1 ? 'review__tabs-item active' : 'review__tabs-item'
+                reviewTabState == 1
+                  ? 'review__tabs-item active'
+                  : 'review__tabs-item'
               }
             >
               Відео відгуки
@@ -72,7 +33,9 @@ const Reviews = () => {
             <div
               onClick={() => toggleTab(2)}
               className={
-                tabState == 2 ? 'review__tabs-item active' : 'review__tabs-item'
+                reviewTabState == 2
+                  ? 'review__tabs-item active'
+                  : 'review__tabs-item'
               }
             >
               Відгуки клієнтів
@@ -80,21 +43,23 @@ const Reviews = () => {
             <div
               onClick={() => toggleTab(3)}
               className={
-                tabState == 3 ? 'review__tabs-item active' : 'review__tabs-item'
+                reviewTabState == 3
+                  ? 'review__tabs-item active'
+                  : 'review__tabs-item'
               }
             >
               Про нас говорять
             </div>
           </div>
-          {tabState == 1 && (
+          {reviewTabState == 1 && (
             <div className='review__videos'>
               {reviewsData.map(review => {
                 return <Review {...review} key={review.id} />
               })}
             </div>
           )}
-          {tabState == 2 && <ReviewGoogle />}
-          {tabState == 3 && (
+          {reviewTabState == 2 && <ReviewGoogle />}
+          {reviewTabState == 3 && (
             <div className='talking'>
               <iframe
                 src='https://rayon.in.ua/news/354608-avto-z-ssha-perevagi-i-nedoliki'
