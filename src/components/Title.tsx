@@ -1,5 +1,10 @@
-const Title = ({tag, text}) => {
-    const Tag = tag || 'h1';
-    return <Tag>{text}</Tag>
+interface TitleProps {
+  tag?: keyof JSX.IntrinsicElements
+  text: string
 }
-export default Title;
+
+const Title = ({ tag, text }: TitleProps) => {
+  const Tag = tag || 'h1'
+  return <Tag>{text}</Tag>
+}
+export default Title

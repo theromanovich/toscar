@@ -1,11 +1,11 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import { Logo } from '../SideBarMenu/SideBarIcons'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { BurgerMenu } from '../SideBarMenu/SideBarMenu'
-import Link from 'next/link'
 
 const ToseiHeader = () => {
-  const [burgerMenu, setBurgerMenu] = useState(false)
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
 
   return (
     <div className='header'>

@@ -1,7 +1,7 @@
 import { LocationIcon, EmailIcon, TelIcon } from './ToseiFooterIcons'
 
 const ToseiFooter = () => {
-  const footerYear = new Date().getFullYear()
+  const footerYear: number = new Date().getFullYear()
   return (
     <div className='footer'>
       <div className='footer__container'>
