@@ -116,7 +116,8 @@ input {
   border-radius: 2px;
   font-size: 16px;
   color: #2b2b2a;
-  background: url('/chevron.svg') no-repeat center right 4px;
+  background: url('data:image/svg+xml;charset=utf-8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 9L12 15L18 9" stroke="#{$colorPrimary}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>')
+    no-repeat center right 4px;
   background-size: 24px;
   background-color: #f1f1f1;
 }
