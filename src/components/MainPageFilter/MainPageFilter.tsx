@@ -4,7 +4,7 @@ interface FilterProps {
   findCars: number
   onFilter: (
     make: string,
-    engine: string | number,
+    engine: string,
     body: string,
     yearFrom: string,
     yearTo: string

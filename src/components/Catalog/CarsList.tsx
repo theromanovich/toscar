@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import { Car } from '@prisma/client'
 
-const CarsList = ({ cars }) => {
+const CarsList = ({ cars }: { cars: Car[] }) => {
   return (
     <>
       {cars.map(car => {

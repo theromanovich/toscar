@@ -26,10 +26,10 @@
       width: 300px;
       margin-left: 40px;
       height: 520px;
-      border-top: 10px solid #cd0000;
-      border-left: 10px solid #cd0000;
-      border-bottom: 10px solid #cd0000;
-      border-right: 10px solid #cd0000;
+      border-top: 10px solid $colorPrimary;
+      border-left: 10px solid $colorPrimary;
+      border-bottom: 10px solid $colorPrimary;
+      border-right: 10px solid $colorPrimary;
     }
     .content {
       padding: 60px;
@@ -47,12 +47,12 @@
           height: 50px;
           margin-right: 10px;
           background: white;
-          color: #cd0000;
+          color: $colorPrimary;
           border-radius: 100%;
-          border: 1px solid #cd0000;
+          border: 1px solid $colorPrimary;
           transition: 0.3 all;
           &:hover {
-            background: #cd0000;
+            background: $colorPrimary;
             color: white;
           }
         }
@@ -96,7 +96,7 @@
             content: '';
             width: 30px;
             height: 30px;
-            background: #cd0000;
+            background: $colorPrimary;
             position: absolute;
             top: 0px;
             left: -75px;
@@ -131,9 +131,9 @@
             display: block;
             width: 360px;
             height: 360px;
-            border-top: 10px solid #cd0000;
-            border-right: 10px solid #cd0000;
-            border-bottom: 10px solid #cd0000;
+            border-top: 10px solid $colorPrimary;
+            border-right: 10px solid $colorPrimary;
+            border-bottom: 10px solid $colorPrimary;
           }
         }
       }
@@ -158,7 +158,7 @@
           &:nth-child(1) {
             &::after {
               border-right: none;
-              border-left: 10px solid #cd0000;
+              border-left: 10px solid $colorPrimary;
               left: -30px;
             }
           }
@@ -193,7 +193,7 @@
           &:nth-child(1) {
             &::after {
               border-right: none;
-              border-left: 10px solid #cd0000;
+              border-left: 10px solid $colorPrimary;
               left: -30px;
               max-width: 105%;
             }

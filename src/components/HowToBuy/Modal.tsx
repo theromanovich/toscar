@@ -9,18 +9,18 @@ const Modal = ({ modalStatus, onClose }) => {
   const phoneModalInput = useRef<HTMLInputElement>()
   const checkbox = useRef<HTMLInputElement>()
 
-  const setDynamicBtn = () => {
-    if (submitModal) {
-      return (
-        <button disabled style={{ background: 'green' }}>
-          Оформлено
-        </button>
-      )
-    } else {
-      return <button>Оформити заявку</button>
-    }
+  const setDynamicBtn = (): JSX.Element => {
+    return submitModal ? (
+      <button disabled style={{ background: 'green' }}>
+        Оформлено
+      </button>
+    ) : (
+      <button>Оформити заявку</button>
+    )
   }
+
   let dynamicModalBtn = setDynamicBtn()
+
   useEffect(() => {
     if (modalStatus) {
       setIsModalOpen(true)
@@ -32,17 +32,16 @@ const Modal = ({ modalStatus, onClose }) => {
   }, [modalStatus, modalRef])
 
   const closeModal = () => {
-    // e.preventDefault()
     setIsModalOpen(false)
     onClose()
     document.body.style.overflow = 'auto'
   }
 
-  const stopBubbling = e => {
+  const stopBubbling = (e: React.MouseEvent) => {
     e.stopPropagation()
   }
 
-  const onSubmitModal = e => {
+  const onSubmitModal = (e: React.FormEvent) => {
     e.preventDefault()
     if (
       nameModalInput.current.value.trim() &&

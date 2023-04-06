@@ -16,8 +16,8 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-  background-color: red;
-  border: 2px solid red;
+  background-color: $colorPrimary;
+  border: 2px solid $colorPrimary;
   opacity: 1;
 }
 

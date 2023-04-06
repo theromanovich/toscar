@@ -1,8 +1,9 @@
 import Head from 'next/head'
+import { Car } from '@prisma/client'
 import Catalog from '../../components/Catalog/Catalog'
 import { PrismaClient } from '@prisma/client'
 
-const catalogPage = ({ cars }: { cars: [] }) => {
+const catalogPage = ({ cars }: { cars: Car[] }) => {
   return (
     <>
       <Head>

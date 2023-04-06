@@ -64,8 +64,8 @@ function Catalog({ cars }: { cars: Car[] }) {
     make: string,
     engine: string,
     body: string,
-    yearFrom: string | number,
-    yearTo: string | number
+    yearFrom: string,
+    yearTo: string
   ) => {
     setMake(make)
     setEngine(engine)

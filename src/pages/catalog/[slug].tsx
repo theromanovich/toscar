@@ -31,12 +31,12 @@ export default function CarPage({ car, cars }: CarPageProps) {
 }
 
 export async function getServerSideProps({ params }) {
-  const car = await prisma.car.findUnique({
+  const car: Car = await prisma.car.findUnique({
     where: {
       slug: params.slug
     }
   })
-  const cars = await prisma.car.findMany({})
+  const cars: Car[] = await prisma.car.findMany({})
 
   return {
     props: {

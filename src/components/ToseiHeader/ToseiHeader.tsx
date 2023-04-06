@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Logo } from '../SideBarMenu/SideBarIcons'
-import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import { BurgerMenu } from '../SideBarMenu/SideBarMenu'
 
 const ToseiHeader = () => {

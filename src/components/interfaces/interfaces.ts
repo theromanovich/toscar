@@ -4,8 +4,8 @@ export interface Car {
   main_image: string
   make: string
   model: string
-  engine: string | number
-  year: number | string
+  engine: string
+  year: number
   body: string
   mileage: number
   drive: string

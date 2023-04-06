@@ -4,9 +4,9 @@ const ContactsForm = () => {
   const nameInput = useRef<HTMLInputElement>(null)
   const phoneInput = useRef<HTMLInputElement>(null)
   const messageInput = useRef<HTMLTextAreaElement>(null)
-  const [submitState, setSubmitState] = useState(false)
+  const [submitState, setSubmitState] = useState<boolean>(false)
 
-  const submitHandler = e => {
+  const submitHandler = (e: React.FormEvent) => {
     e.preventDefault()
     if (
       nameInput.current.value.trim() &&
@@ -19,6 +19,7 @@ const ContactsForm = () => {
       messageInput.current.value = ''
     }
   }
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (submitState) setSubmitState(false)
@@ -27,19 +28,19 @@ const ContactsForm = () => {
       clearTimeout(timer)
     }
   }, [submitState])
-  const setDynamicBtn = () => {
-    if (submitState) {
-      return (
-        <button disabled style={{ background: 'green' }}>
-          Відправлено
-        </button>
-      )
-    } else {
-      return <button>Надіслати</button>
-    }
+
+  const setDynamicBtn = (): JSX.Element => {
+    return submitState ? (
+      <button disabled style={{ background: 'green' }}>
+        Відправлено
+      </button>
+    ) : (
+      <button>Надіслати</button>
+    )
   }
 
   const dynamicBtn = setDynamicBtn()
+
   return (
     <form className='contacts-form' onSubmit={submitHandler}>
       <div className='contacts-form__title'>Напишіть нам</div>

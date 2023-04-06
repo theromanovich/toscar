@@ -33,11 +33,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px dotted red;
+        border: 2px dotted $colorPrimary;
         font-size: 22px;
         font-weight: bold;
         height: 210px;
-        border: 1px dashed #cd0000;
+        border: 1px dashed $colorPrimary;
         border-radius: 9px;
       }
       .title {

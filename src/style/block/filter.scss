@@ -32,7 +32,7 @@
       .search-result {
         color: #808080;
         span {
-          color: #cd0000;
+          color: $colorPrimary;
         }
       }
       .btns {
@@ -45,9 +45,9 @@
             width: 120px;
             max-width: 100%;
             background: transparent;
-            color: #cd0000;
+            color: $colorPrimary;
             border-radius: 4px;
-            border: 1px solid #cd0000;
+            border: 1px solid $colorPrimary;
           }
         }
       }
@@ -57,7 +57,7 @@
         width: 120px;
         max-width: 100%;
         color: white;
-        background: #cd0000;
+        background: $colorPrimary;
         border-radius: 4px;
         border: none;
       }

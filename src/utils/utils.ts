@@ -1,11 +1,11 @@
 import { Car } from '@prisma/client'
 
 const paginate = (cars: Car[]) => {
-  const itemsPerPage = 8
-  const pages = Math.ceil(cars.length / itemsPerPage)
+  const itemsPerPage: number = 8
+  const pages: number = Math.ceil(cars.length / itemsPerPage)
 
-  const newCars = Array.from({ length: pages }, (_, index) => {
-    const start = index * itemsPerPage
+  const newCars: Car[][] = Array.from({ length: pages }, (_, index) => {
+    const start: number = index * itemsPerPage
     return cars.slice(start, start + itemsPerPage)
   })
 
