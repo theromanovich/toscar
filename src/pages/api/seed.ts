@@ -579,7 +579,11 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://s.auto.drom.ru/i24257/c/photos/fullsize/mercedes-benz/s-class/mercedes-benz_s-class_1007774.jpg',
+          'https://cars.ua/thumb/upload/w933/h622/q80/637656987e9f57_53740301.jpeg',
+          'https://www.platinumautohaus.com/imagetag/12927/4/l/Used-2014-Mercedes-Benz-S-Class-S550--***-Power-Rear-Seats-***.jpg'
+        ],
         price: '$28,000',
         slug: 'mercedes-benz-s-class-2014'
       },
@@ -595,7 +599,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://www.tampabay.com/resizer//tC2K8zlp61SSrKSLgE_fycNE7_0=/900x506/smart/arc-anglerfish-arc2-prod-tbt.s3.amazonaws.com/public/U5LSH2GG64I6TBKNIBWI6S7HAY.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://cdn4.riastatic.com/photosnew/auto/photo/cadillac_cts__346806564f.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2015-cadillac-cts-sedan-dashboard-carbuzz-465255-1600.jpg',
+          'https://hips.hearstapps.com/autoweek/assets/s3fs-public/2015-cts-sedan-vsport-image2-960x540.jpg'
+        ],
         price: '$18,000',
         slug: 'cadillac-cts-2015'
       },
@@ -611,7 +619,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://images.hgmsites.net/hug/2014-chrysler-300_100446116_h.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/dp/images/uploads/Chrysler-300S--W.jpg',
+          'https://cars.usnews.com/static/images/Auto/izmo/i4532/2014_chrysler_300_0_dashboard.jpg',
+          'https://cdn2.riastatic.com/photosnew/auto/photo/chrysler_300-c__447103662f.webp'
+        ],
         price: '$10,000',
         slug: 'chrysler-300-2014'
       },
@@ -626,7 +638,11 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.infocar.ua/i/12/6224/1200x630.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://cdn2.riastatic.com/photosnew/auto/photo/bmw_5-series__426957507f.jpg',
+          'https://di-uploads-pod24.dealerinspire.com/unitedbmw/uploads/2019/08/BMW-MY19-5Series-Sedan-Gallery-10.jpg',
+          'https://cdn.carbuzz.com/gallery-images/840x560/609000/300/609324.jpg'
+        ],
         price: '$41,800',
         slug: 'bmw-5-2020'
       },
@@ -641,7 +657,11 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.ytimg.com/vi/lqPQdIWmIR4/maxresdefault.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://media.ed.edmunds-media.com/lexus/es-350/2013/oem/2013_lexus_es-350_sedan_base_fq_oem_1_1600.jpg',
+          'https://hips.hearstapps.com/autoweek/assets/s3fs-public/140439981-2.jpg',
+          'https://carsandcelebrities.files.wordpress.com/2014/02/lexus-es-350-ri_6531.jpg'
+        ],
         price: '$16,500',
         slug: 'lexus-es-2014'
       },
@@ -657,7 +677,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/4/4f/2015_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282015-11-11%29_01.jpg',
-        images: ['', '', ''],
+        images: [
+          'https://bidfax.info/uploads/posts/2020-10/27/toyota-corolla-l-2015-5yfburhe5fp182486-img1.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2015-toyota-corolla-sedan-infotainment-system-carbuzz-511760-1600.jpg',
+          'https://cdn2.riastatic.com/photosnew/auto/photo/toyota_corolla__479476412f.jpg'
+        ],
         price: '$9000',
         slug: 'toyota-corolla-2015'
       }
