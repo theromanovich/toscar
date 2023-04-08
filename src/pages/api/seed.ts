@@ -23,6 +23,11 @@ export default async function handler(
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/2/21/BMW_X5_(E53%2C_Facelift)_–_Frontansicht%2C_12._Juni_2011%2C_Düsseldorf.jpg',
         price: '$10,000 ',
+        images: [
+          'https://cdn0.riastatic.com/photos/ir/new/auto/photo/bmw_x5__485051110-620x415x70.jpg',
+          'https://s.drom.ru/1/reviews/photos/bmw/x5/big_66696_6.jpeg',
+          'https://cars.ua/thumb/car/20171127/w933/h622/q80/kupit-bmw-x5-chernovcy-513008.jpg'
+        ],
         slug: 'bmw-x5-2005'
       },
       {
@@ -37,6 +42,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://media.ed.edmunds-media.com/honda/fit/2015/oem/2015_honda_fit_4dr-hatchback_ex-l_fq_oem_1_1600.jpg',
+        images: [
+          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/598264/2015-honda-fit-ex-photo-598298-s-986x603.jpg',
+          'https://photos.prnewswire.com/prnfull/20140113/LA45140-b',
+          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/598264/2015-honda-fit-ex-photo-598298-s-986x603.jpg?fill=2:1&resize=640:*'
+        ],
         price: '$14,000',
         slug: 'honda-fit-2015'
       },
@@ -52,6 +62,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://cdn3.riastatic.com/photosnew/auto/photo/toyota_camry__486174418f.jpg',
+        images: [
+          'https://www.carscoops.com/wp-content/uploads/2020/08/2020-Toyota-Camry-Black-Edition-JDM-spec-0.jpg',
+          'https://i.pinimg.com/originals/82/6e/66/826e665d1d5e3e4ae41f620a1f66faa0.jpg',
+          'https://media.ed.edmunds-media.com/toyota/camry/2021/oem/2021_toyota_camry_sedan_xle_rq_oem_1_815.jpg'
+        ],
         price: '$25,000',
         slug: 'toyota-camry-2021'
       },
@@ -67,6 +82,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://motormart.ua/media/transport/gallery/images/test_image_AOAOY14.jpg',
+        images: [
+          'https://www.mustangspecs.com/wp-content/uploads/2022/01/Carbonized-Gray-2022-Ford-Mustang-7-scaled.jpeg',
+          'https://cdn.carbuzz.com/gallery-images/2022-ford-mustang-convertible-dashboard-carbuzz-555048-1600.jpg',
+          'https://preview.redd.it/dyluwxm2i4p81.jpg?auto=webp&s=6b84181e0ce214ce1d268229091f163ed5126b2b'
+        ],
         price: '$40,000',
         slug: 'ford-mustang-2022'
       },
@@ -82,6 +102,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://cdn.jdpower.com/JDPA_2020-Honda-Civic-Sport-Touring-Hatchback-White-Front-Quarter.jpg',
+        images: [
+          'https://1830262577.rsc.cdn77.org/files/2HGFC2F69LH506839/COPART/54020371/photo/1077e933-e0e6-4c8b-8acf-e24387ae0543.JPG',
+          'https://cdn.carbuzz.com/gallery-images/2020-honda-civic-sedan-dashboard-carbuzz-849498-1600.jpg',
+          'https://res.cloudinary.com/caradvice/image/private/q_auto/v1582686904/t0n6jpuyort5pv4uwfei.jpg'
+        ],
         price: '$20,000',
         slug: 'honda-civic-2020'
       },
@@ -97,6 +122,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://www.autocentre.ua/wp-content/uploads/2020/05/2020-chevrolet-corvette-first-drive-1.jpg',
+        images: [
+          'https://cdn.motor1.com/images/mgl/VopbK/s1/2020-corvette-stingray-in-black.jpg',
+          'https://cars.usnews.com/static/images/Auto/izmo/i159614411/2021_chevrolet_corvette_stingray_dashboard.jpg',
+          'https://cars.ua/thumb/upload/w933/h622/q80/608986577a17b6_66625841.jpg'
+        ],
         price: '$65,000',
         slug: 'chevrolet-corvette-2021'
       },
@@ -112,6 +142,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://s.auto.drom.ru/i24271/c/photos/fullsize/bmw/3-series/bmw_3-series_1084231.jpg',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/BMW_G20%2C_Paris_Motor_Show_2018%2C_IMG_0492.jpg/1200px-BMW_G20%2C_Paris_Motor_Show_2018%2C_IMG_0492.jpg',
+          'https://all-test-drives.com/wp-content/uploads/posts/2018-10/1538664290_55_result.jpg',
+          'https://cdn.motor1.com/images/mgl/pbb3Bo/s1/2022-bmw-3er-limousine.jpg'
+        ],
         price: '$30,000',
         slug: 'bmw-3-2019'
       },
@@ -127,6 +162,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://cdn.motor1.com/images/mgl/brOzk/s1/2020-audi-a4.jpg',
+        images: [
+          'https://img.plc.ua/medium/img3/15/2020/24/2844/69dff559bb3210e3fd9c20233f0e32c9/6e21150341e738bec287d4375d1b6284.jpg',
+          'https://www.autocentre.ua/wp-content/uploads/2019/05/2020-audi-a4.jpg',
+          'https://i.infocar.ua/i/2/5872/115759/1920x.jpg'
+        ],
         price: '$35,000',
         slug: 'audi-a4-2020'
       },
@@ -142,6 +182,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://www.ixbt.com/img/n1/news/2021/11/5/mercedes-c-klasse-limousine-2021_large.jpg',
+        images: [
+          'https://img.sm360.ca/images/article/mercedes-benz-ottawa/90430//mbcan-2021-c-sedan-hero-dr1627706395947.jpg',
+          'https://motor.ru/imgs/2021/04/03/11/4594219/9c9233cb6e758f20c316c79cdcd54332ca70811b.jpg',
+          'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20210223072553_Mercedes_Benz_C_class_2021_rear.jpg'
+        ],
         price: '$45,000',
         slug: 'mercedes-cclass-2021'
       },

@@ -23,5 +23,7 @@ model Car {
   body String
   status Boolean
   main_image String
+  images String[]
   slug String @unique
   }
+
