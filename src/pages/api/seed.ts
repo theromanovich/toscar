@@ -202,6 +202,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/is8rDPGsGlcg/v1/-1x-1.jpg',
+        images: [
+          'https://www.autocentre.ua/wp-content/uploads/2018/11/623e175c-n8mew-porsche-911-992-1.jpg',
+          'https://hips.hearstapps.com/hmg-prod/images/2020-porsche-911-106-1543337534.jpg',
+          'https://ca-times.brightspotcdn.com/dims4/default/e4d89ce/2147483647/strip/true/crop/5040x3360+0+0/resize/1440x960!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ffd%2F9b%2F0aae15e24f5e91e12b0eee458fe8%2Ffi-hy-porsche-911-carrera-4s-03.jpg'
+        ],
         price: '$90,000',
         slug: 'porsche-911-2021'
       },
@@ -217,6 +222,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://hips.hearstapps.com/hmg-prod/images/2019-nissan-altima-102-1538074559.jpg',
+        images: [
+          'https://bidfax.info/uploads/posts/2021-05/01/nissan-altima-sr-2020-1n4bl4cw3lc275622-img1.jpg',
+          'https://cars.usnews.com/static/images/Auto/izmo/i157546817/2020_nissan_altima_dashboard.jpg',
+          'https://media.ed.edmunds-media.com/nissan/altima/2020/oem/2020_nissan_altima_sedan_vc-t-sr_rq_oem_1_815.jpg'
+        ],
         price: '$20,000',
         slug: 'nissan-altima-2020'
       },
@@ -232,6 +242,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://bossauto-images.s3.eu-central-1.amazonaws.com/images/image_1604308116990.jpg',
+        images: [
+          'https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/da4b9237bacccdf19c0760cab7aec4a8359010b0/photos/rLL8wLWWL2-2.peTf6yCjW.jpg?t=160859120021',
+          'https://cars.usnews.com/static/images/Auto/izmo/i159613929/2018_tesla_model_3_dashboard.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2018-tesla-model-3-rear-angle-view-carbuzz-440342.jpg'
+        ],
         price: '$20,000',
         slug: 'tesla-model3-2018'
       },
@@ -247,6 +262,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://img.automoto.ua/overview/lexus-rx-2021-4db-huge-1949.jpg',
+        images: [
+          'https://s.auto.drom.ru/i24238/c/photos/fullsize/lexus/rx300/lexus_rx300_919784.jpg',
+          'https://editorials.autotrader.ca/media/190255/2021-lexus-rx-350-17-jm.jpg?anchor=center&mode=crop&width=1920&height=1080&rnd=132522186723300000',
+          'https://hips.hearstapps.com/hmg-prod/images/2021-lexus-rx-mmp-2-1597340414.jpg'
+        ],
         price: '$50,000',
         slug: 'lexus-rx-2021'
       },
@@ -261,6 +281,11 @@ export default async function handler(
         body: 'coupe',
         status: false,
         main_image: 'https://i.infocar.ua/i/2/3212/102461/1920x.jpg',
+        images: [
+          'https://www.conceptcarz.com/images/Chevrolet/2013-Chevrolet-Camaro-Coupe-01-800.jpg',
+          'https://cars.usnews.com/static/images/Auto/izmo/i307829/2015_chevrolet_camaro_dashboard.jpg',
+          'https://cdn3.riastatic.com/photosnew/auto/photo/chevrolet_camaro__475107348f.jpg'
+        ],
         price: '$15,000',
         slug: 'chevrolet-camaro-2013'
       },
@@ -276,6 +301,12 @@ export default async function handler(
         status: false,
         main_image:
           'https://www.motortrend.com/uploads/sites/5/2016/02/2016-Jaguar-F-Type-AWD-R-Coupe-front-three-quarter-in-motion.jpg',
+        images: [
+          'https://i.ytimg.com/vi/ydvJm83xlWk/maxresdefault.jpg',
+          ,
+          'https://blog.consumerguide.com/wp-content/uploads/sites/2/2015/11/Screen-shot-2015-11-30-at-2.50.42-PM-1024x660.png',
+          'https://ca-times.brightspotcdn.com/dims4/default/39f9507/2147483647/strip/true/crop/2000x1125+0+0/resize/1440x810!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F5d%2F73%2F14ee5de851e09569b6f676cdc270%2Fla-fi-0718-hy-jaguar-f-type-pictures-002'
+        ],
         price: '$45,000',
         slug: 'jaguar-ftype-2016'
       },
