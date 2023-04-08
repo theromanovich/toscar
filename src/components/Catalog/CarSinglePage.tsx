@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import CarsList from './CarsList'
+// import CarsList from './YouMayAlsoLikeCars'
 import Modal from '../HowToBuy/Modal'
 import { Car } from '@prisma/client'
 import { useState, useEffect } from 'react'
+import YouMayAlsoLikeCars from './YouMayAlsoLikeCars'
 
 interface CarSinglePageProps {
   car: Car
@@ -102,7 +103,7 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
       </div>
       <div className='youmaylike'>
         <p>Можливо вас зацікавить: </p>
-        <CarsList cars={cars} />
+        <YouMayAlsoLikeCars cars={cars} />
       </div>
       <Modal modalStatus={modalOpen} onClose={handleCloseModal} />
     </div>

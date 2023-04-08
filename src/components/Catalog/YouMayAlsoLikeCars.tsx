@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Car } from '@prisma/client'
 
-const CarsList = ({ cars }: { cars: Car[] }) => {
+const YouMayAlsoLikeCars = ({ cars }: { cars: Car[] }) => {
   return (
     <>
       {cars.map(car => {
@@ -56,4 +56,4 @@ const CarsList = ({ cars }: { cars: Car[] }) => {
     </>
   )
 }
-export default CarsList
+export default YouMayAlsoLikeCars
