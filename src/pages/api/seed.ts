@@ -322,6 +322,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://cdn3.riastatic.com/photosnew/auto/photo/ford_f-150__431292938fx.jpg',
+        images: [
+          'https://carfast.express/storage/422502/2017_ford_f-150_extended-cab-pickup_raptor_fq_oem_1_1600x1067.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2020-ford-f-150-dashboard-carbuzz-605920.jpg',
+          'https://blogmedia.dealerfire.com/wp-content/uploads/sites/275/2020/02/rear-view-of-a-blue-2020-Ford-F-150-Raptor_o.jpg'
+        ],
         price: '$30,000',
         slug: 'ford-f150-2017'
       },
@@ -337,6 +342,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://images.ctfassets.net/c9t6u0qhbv9e/2015DodgeChargerTestDriveReviewsummary/3fa52937041643b2b128210a610435a5/2015_Dodge_Charger_Test_Drive_Review_summaryImage.jpeg',
+        images: [
+          'https://di-uploads-pod7.dealerinspire.com/rednolandpreowned/uploads/2017/05/IMG_9546-1024x683.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2015-dodge-charger-dashboard-carbuzz-341030-1600.jpg',
+          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2015/01/2015-Dodge-Charger-R-T-107.jpg'
+        ],
         price: '$20,000',
         slug: 'dodge-charger-2015'
       },
@@ -352,6 +362,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://cdn3.riastatic.com/photosnew/auto/photo/ferrari_458-italia__331683108f.jpg',
+        images: [
+          'https://bringatrailer.com/wp-content/uploads/2020/03/2012_ferrari_458_italia_15850945704c1e98621458_Inline_002.jpg?fit=940%2C627',
+          'https://media.ed.edmunds-media.com/ferrari/458-italia/2011/oem/2011_ferrari_458-italia_coupe_base_i_oem_3_815.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ferrari_458_Italia_02_China_2012-04-15.JPG/1200px-Ferrari_458_Italia_02_China_2012-04-15.JPG'
+        ],
         price: '$140,000',
         slug: 'ferrari-458-2012'
       },
@@ -367,6 +382,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://media.ed.edmunds-media.com/toyota/gr-supra/2022/oem/2022_toyota_gr-supra_coupe_20_fq_oem_1_1600.jpg',
+        images: [
+          'https://www.cnet.com/a/img/resize/a38bfd30b5830ab4725f3c2ba985d9ffed8a665c/hub/2022/05/03/c5f7542f-e695-4a32-a54c-d85629e534cb/2022-toyota-gr-supra-2-0-11.jpg?auto=webp&width=1200',
+          'https://www.autopediame.com/storage/images/Toyota/Supra/Toyota-Supra_US-Version-2021-1024-2b.jpg',
+          'https://media.evo.co.uk/image/private/s--2T-0HeRW--/v1559762083/evo/2019/05/016-toyota-supra-yellow.jpg'
+        ],
         price: '$40,000',
         slug: 'toyota-supra-2022'
       },
@@ -382,6 +402,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://cdn.motor1.com/images/mgl/YKOkW/s1/2018-volkswagen-golf-r-review.jpg',
+        images: [
+          'https://img.autobytel.com/2019/volkswagen/golf-r/2-800-oemexteriorfront1300-89608.jpg',
+          'https://www.automobilesreview.com/uploads/2018/05/2018-Volkswagen-Golf-Interior.jpg',
+          'https://w0.peakpx.com/wallpaper/43/37/HD-wallpaper-2018-volkswagen-golf-r-performance-pack-uk-spec-rear-car.jpg'
+        ],
         price: '$22,000',
         slug: 'volkswagen-golf-2018'
       },
@@ -396,6 +421,11 @@ export default async function handler(
         body: 'SUV',
         status: true,
         main_image: 'https://www.motortrend.com/uploads/f/171715639.jpg',
+        images: [
+          'https://www.cnet.com/a/img/resize/deb521de53ce6a3c840d21093607da59ce9be0b5/hub/2018/04/02/138930ce-82de-403c-b40b-1554122f34f5/2018-cadillac-escalade-esv-platinum-1.jpg?auto=webp&fit=crop&height=675&width=1200',
+          'https://cdn.carbuzz.com/gallery-images/2018-cadillac-escalade-central-console-carbuzz-971842-1600.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2018-cadillac-escalade-view-out-back-carbuzz-971831-1600.jpg'
+        ],
         price: '$50,000',
         slug: 'cadillac-escalade-2018'
       },
@@ -411,6 +441,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://car-images.bauersecure.com/wp-images/13851/01nissangtrnismocarreview.jpg',
+        images: [
+          'https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/1804aa4428eb0c37113d668ee2b2d7e8.jpg',
+          'https://i.pinimg.com/originals/bb/c8/05/bbc805a20419b5a99c12e49fe8a96e9b.jpg',
+          'https://auto.24tv.ua/resources/photos/news/202209/406868f1eae10-e929-4cbc-9476-2da164c6663b.jpg?1662622857000&fit=cover&w=1200&h=675&q=65'
+        ],
         price: '$70,000',
         slug: 'nissan-gtr-2014'
       },
@@ -426,6 +461,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/f/f4/2013_Fiat_500_Lounge_1.2.jpg',
+        images: [
+          'https://cdn.riastatic.com/photosnew/auto/photo/Fiat_500__473873521f.jpg',
+          'https://autopodium.ua/storage/product_images/big/hKAXAF9sGS1bV6436qNCZknAEFM9Px6jpkNTkjBB.JPG',
+          'https://cdn1.riastatic.com/photosnew/auto/photo/fiat_500__488990971f.jpg'
+        ],
         price: '$8,000',
         slug: 'fiat-500-2013'
       },
