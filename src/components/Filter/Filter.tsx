@@ -11,7 +11,7 @@ interface FilterProps {
   ) => void
 }
 
-const MainPageFilter = ({ findCars = 0, onFilter }: FilterProps) => {
+const Filter = ({ findCars = 0, onFilter }: FilterProps) => {
   const makeRef = useRef<HTMLSelectElement>(null)
   const engineRef = useRef<HTMLSelectElement>(null)
   const bodyRef = useRef<HTMLSelectElement>(null)
@@ -200,4 +200,4 @@ const MainPageFilter = ({ findCars = 0, onFilter }: FilterProps) => {
     </form>
   )
 }
-export default MainPageFilter
+export default Filter

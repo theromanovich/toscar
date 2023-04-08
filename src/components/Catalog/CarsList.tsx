@@ -6,8 +6,8 @@ const CarsList = ({ cars }: { cars: Car[] }) => {
     <>
       {cars.map(car => {
         return (
-          <Link href={`/catalog/${car.slug}`}>
-            <div className='catalog__item' key={car.id}>
+          <Link href={`/catalog/${car.slug}`} key={car.id}>
+            <div className='catalog__item'>
               <div className='car-photo'>
                 <img src={car.main_image} alt={car.make} />
               </div>

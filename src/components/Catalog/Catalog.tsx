@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { useRef } from 'react'
+import CarCard from './CarCard'
 import { Car } from '@prisma/client'
 import { ArrowIcon } from './ArrowIcon'
 import paginate from '../../utils/utils'
 import { useEffect, useState } from 'react'
-import MainPageFilter from '../MainPageFilter/MainPageFilter'
-import { FormEvent, HTMLInputTypeAttribute, useRef } from 'react'
+import MainPageFilter from '../Filter/Filter'
 
 function Catalog({ cars }: { cars: Car[] }) {
   const [carsState, setCarsState] = useState<Car[][]>(paginate(cars))
@@ -143,6 +144,16 @@ function Catalog({ cars }: { cars: Car[] }) {
     notFound = 'No cars found with specified parameters'
   }
 
+  const paginationPages = carsState.map((car, index) => (
+    <button
+      key={index}
+      onClick={() => handlePageClick(index)}
+      className={`${page == index && 'active'} pag-btn`}
+    >
+      {index + 1}
+    </button>
+  ))
+
   return (
     <div className='catalog'>
       <div className='catalog__filter'>
@@ -194,86 +205,18 @@ function Catalog({ cars }: { cars: Car[] }) {
         </form>
 
         <span className='notFound'>{notFound}</span>
+
         {paginateCars
           ? paginateCars.map(car => {
-              const {
-                slug,
-                id,
-                make,
-                main_image,
-                model,
-                engine,
-                year,
-                mileage,
-                drive,
-                gearbox,
-                price,
-                status
-              } = car
-              return (
-                <Link href={`catalog/${slug}`}>
-                  <div className='catalog__item' key={id}>
-                    <div className='car-photo'>
-                      <img src={main_image} alt={make} />
-                    </div>
-                    <div className='car-info'>
-                      <div className='car-info__title'>
-                        {make} {model}
-                      </div>
-
-                      <div className='car-info__characteristics'>
-                        <div>
-                          <div className='engine'>
-                            Об'єм двигуна <span>{engine}</span>
-                          </div>
-                          <div className='year'>
-                            Рік <span>{year}</span>
-                          </div>
-                          <div className='mileage'>
-                            Пробіг <span>{mileage} км</span>
-                          </div>
-                        </div>
-                        <div>
-                          <div className='car-info__drive'>
-                            Привід <span>{drive}</span>
-                          </div>
-                          <div className='car-info__gearbox'>
-                            КПП <span>{gearbox}</span>
-                          </div>
-                        </div>
-                        <div className='car-info__price'>
-                          Вартість в Україні
-                          <div className='price'>{price}</div>
-                          <button
-                            className={`status-btn ${
-                              status ? 'green' : 'orange'
-                            }`}
-                          >
-                            {status ? 'В наявності' : 'Під заказ'}
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              )
+              return <CarCard {...car} />
             })
           : ''}
+
         <div className='paginate-btns' style={{ userSelect: 'none' }}>
           <div className='prev' onClick={prevBtn}>
             {carsState.length > 0 && <ArrowIcon />}
           </div>
-          <div className='pages'>
-            {carsState.map((car, index) => (
-              <button
-                key={index}
-                onClick={() => handlePageClick(index)}
-                className={`${page == index && 'active'} pag-btn`}
-              >
-                {index + 1}
-              </button>
-            ))}
-          </div>
+          <div className='pages'>{paginationPages}</div>
           <div className='next' onClick={nextBtn}>
             {carsState.length > 0 && <ArrowIcon />}
           </div>
