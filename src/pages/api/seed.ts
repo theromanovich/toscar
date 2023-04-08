@@ -481,6 +481,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2012_Hyundai_Accent_GLS_sedan_--_12-14-2011.jpg/1200px-2012_Hyundai_Accent_GLS_sedan_--_12-14-2011.jpg',
+        images: [
+          'https://cdn.riastatic.com/photosnew/auto/photo/Hyundai_Accent__485508125f.jpg',
+          'https://s.auto.drom.ru/i24223/c/photos/fullsize/hyundai/accent/hyundai_accent_822773.jpg',
+          'https://cdn.riastatic.com/photosnew/auto/photo/Hyundai_Accent__464705295f.jpg'
+        ],
         price: '$6,000',
         slug: 'hyundai-accent-2011'
       },
@@ -496,6 +501,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/d/d4/2014_Kia_Soul_Plus_US_front_left.jpg',
+        images: [
+          'https://bidfax.info/uploads/posts/2022-10/12/kia-soul-2014-kndjp3a5xe7747423-img1.jpg',
+          'https://s.auto.drom.ru/i24230/c/photos/fullsize/kia/soul/kia_soul_879963.jpg',
+          'https://upload.wikimedia.org/wikipedia/commons/2/2e/2014_Kia_Soul_Plus_%28US%29%2C_rear_left.jpg'
+        ],
         price: '$10,000',
         slug: 'kia-soul-2014'
       },
@@ -511,6 +521,11 @@ export default async function handler(
         status: false,
         main_image:
           'https://media.ed.edmunds-media.com/volvo/s60/2016/oem/2016_volvo_s60_sedan_t5-cross-country-platinum_fq_oem_1_1600.jpg',
+        images: [
+          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2016/01/2016-Volvo-S60-T5-Cross-Country-102.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2016-volvo-s60-interior-front-view-carbuzz-355767-1600.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2016-volvo-s60-cross-country-rear-end-carbuzz-355814-1600.jpg'
+        ],
         price: '$10,000',
         slug: 'volvo-s60-2016'
       },
@@ -526,6 +541,11 @@ export default async function handler(
         status: true,
         main_image:
           'https://bidfax.info/uploads/posts/2020-03/10/hyundai-elantra-se-2014-5npdh4ae1eh477168-img1.jpg',
+        images: [
+          'https://cars.ua/img/upload/606b1e47547a95_65896265.jpg',
+          'https://cdn.carbuzz.com/gallery-images/2014-hyundai-elantra-infotainment-system-carbuzz-482100-1600.jpg',
+          'https://cdn4.riastatic.com/photosnew/auto/photo/hyundai_elantra__472559079f.webp'
+        ],
         price: '$9,000',
         slug: 'hyundai-elantra-2014'
       },
@@ -540,6 +560,11 @@ export default async function handler(
         body: 'SUV',
         status: true,
         main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/commons/0/09/2019_Mazda_CX-5_SE-L_NAV%2B_Diesel_2.2_Front.jpg',
+          'https://focus.ua/static/storage/originals/7/8c/4702523caa87eb4f75beb44086f7d8c7.jpg',
+          'https://images.cars.com/cldstatic/wp-content/uploads/03-mazda-cx-5-2019-angle--exterior--rear--red.jpg'
+        ],
         price: '$12,000',
         slug: 'mazda-cx-5-2013'
       },
@@ -554,6 +579,7 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
+        images: ['', '', ''],
         price: '$28,000',
         slug: 'mercedes-benz-s-class-2014'
       },
@@ -569,6 +595,7 @@ export default async function handler(
         status: true,
         main_image:
           'https://www.tampabay.com/resizer//tC2K8zlp61SSrKSLgE_fycNE7_0=/900x506/smart/arc-anglerfish-arc2-prod-tbt.s3.amazonaws.com/public/U5LSH2GG64I6TBKNIBWI6S7HAY.jpg',
+        images: ['', '', ''],
         price: '$18,000',
         slug: 'cadillac-cts-2015'
       },
@@ -584,6 +611,7 @@ export default async function handler(
         status: true,
         main_image:
           'https://images.hgmsites.net/hug/2014-chrysler-300_100446116_h.jpg',
+        images: ['', '', ''],
         price: '$10,000',
         slug: 'chrysler-300-2014'
       },
@@ -598,6 +626,7 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.infocar.ua/i/12/6224/1200x630.jpg',
+        images: ['', '', ''],
         price: '$41,800',
         slug: 'bmw-5-2020'
       },
@@ -612,6 +641,7 @@ export default async function handler(
         body: 'sedan',
         status: true,
         main_image: 'https://i.ytimg.com/vi/lqPQdIWmIR4/maxresdefault.jpg',
+        images: ['', '', ''],
         price: '$16,500',
         slug: 'lexus-es-2014'
       },
@@ -627,6 +657,7 @@ export default async function handler(
         status: true,
         main_image:
           'https://upload.wikimedia.org/wikipedia/commons/4/4f/2015_Toyota_Corolla_%28ZRE172R%29_Ascent_sedan_%282015-11-11%29_01.jpg',
+        images: ['', '', ''],
         price: '$9000',
         slug: 'toyota-corolla-2015'
       }
