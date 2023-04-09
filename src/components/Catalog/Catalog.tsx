@@ -58,8 +58,8 @@ function Catalog({ cars }: { cars: Car[] }) {
   const [makeState, setMake] = useState<string>()
   const [engineState, setEngine] = useState<string | number>()
   const [bodyState, setBody] = useState<string>()
-  const [yearFromState, setYearFrom] = useState<string | number>()
-  const [yearToState, setYearTo] = useState<string | number>()
+  const [yearFromState, setYearFrom] = useState<number>()
+  const [yearToState, setYearTo] = useState<number>()
 
   const filterHandler = (
     make: string,
@@ -71,14 +71,14 @@ function Catalog({ cars }: { cars: Car[] }) {
     setMake(make)
     setEngine(engine)
     setBody(body)
-    setYearFrom(yearFrom)
-    setYearTo(yearTo)
+    setYearFrom(+yearFrom)
+    setYearTo(+yearTo)
     if (radioState === 'available') {
-      filterCars(make, engine, body, yearFrom, yearTo, true)
+      filterCars(make, engine, body, +yearFrom, +yearTo, true)
     } else if (radioState === 'await') {
-      filterCars(make, engine, body, yearFrom, yearTo, false)
+      filterCars(make, engine, body, +yearFrom, +yearTo, false)
     } else {
-      filterCars(make, engine, body, yearFrom, yearTo, undefined)
+      filterCars(make, engine, body, +yearFrom, +yearTo, undefined)
     }
   }
 
@@ -86,8 +86,8 @@ function Catalog({ cars }: { cars: Car[] }) {
     make: string,
     engine: string | number,
     body: string,
-    yearFrom: string | number,
-    yearTo: string | number,
+    yearFrom: number,
+    yearTo: number,
     status: boolean | undefined
   ) {
     return setCarsState(
