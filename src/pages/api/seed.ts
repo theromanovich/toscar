@@ -578,7 +578,8 @@ export default async function handler(
         mileage: 80000,
         body: 'sedan',
         status: true,
-        main_image: 'https://i.infocar.ua/i/12/4327/1400x936.jpg',
+        main_image:
+          'https://media.ed.edmunds-media.com/mercedes-benz/s-class/2014/oem/2014_mercedes-benz_s-class_sedan_s550_fq_oem_5_1600.jpg',
         images: [
           'https://s.auto.drom.ru/i24257/c/photos/fullsize/mercedes-benz/s-class/mercedes-benz_s-class_1007774.jpg',
           'https://cars.ua/thumb/upload/w933/h622/q80/637656987e9f57_53740301.jpeg',

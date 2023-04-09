@@ -115,7 +115,7 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
         </div>
       </div>
 
-      <div className='gallery'>
+      <div className='gallery' onMouseLeave={() => setGalleryImg(0)}>
         {images.map((img, index) => {
           return (
             <img
@@ -124,7 +124,6 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
               alt='img'
               key={index}
               onMouseEnter={() => setGalleryImg(index + 1)}
-              onMouseLeave={() => setGalleryImg(0)}
             />
           )
         })}
