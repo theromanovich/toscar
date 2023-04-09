@@ -1,7 +1,7 @@
 .car-page {
   padding-left: 200px;
   &__container {
-    width: 960px;
+    width: 1100px;
     max-width: 100%;
     padding: 40px;
     margin: 0 auto;
@@ -45,21 +45,22 @@
     margin: 0 auto;
     gap: 40px;
     text-align: right;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &__img {
-    // width: 600px;
-    // height: 400px;
     max-width: 100%;
     img {
-      width: 600px;
-      height: 400px;
+      width: 750px;
+      height: 460px;
       border-radius: 10px;
       object-fit: cover;
     }
   }
   &__buy {
     color: #8b8b8b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .price {
       display: block;
       margin-top: 10px;
@@ -71,7 +72,7 @@
     .characteristics {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 14px;
       span {
         font-size: 19px;
         color: black;
@@ -112,6 +113,33 @@
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 20px;
+  }
+  .catalog {
+    &__item {
+      gap: 50px;
+      padding-left: 32px;
+      .car-photo {
+        img {
+          width: 260px;
+        }
+      }
+      .car-info {
+        &__characteristics {
+          gap: 100px;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  img {
+    width: 335px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -220,15 +248,5 @@
         width: 200px;
       }
     }
-  }
-}
-
-.gallery {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  img {
-    width: 285px;
-    object-fit: cover;
   }
 }

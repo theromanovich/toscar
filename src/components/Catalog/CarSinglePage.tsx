@@ -28,14 +28,14 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
   } = car
   const [galleryImg, setGalleryImg] = useState(0)
 
-  const translatebody = () => {
+  const translateBodyFunc = () => {
     if (body.toLowerCase() == 'sedan') return 'Седан'
     if (body.toLowerCase() == 'suv') return 'SUV'
     if (body.toLowerCase() == 'coupe') return 'Купе'
     if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
     if (body.toLowerCase() == 'truck') return 'Пікап'
   }
-  const bodyTranslate: string = translatebody()
+  const bodyTranslate: string = translateBodyFunc()
 
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   useEffect(() => {

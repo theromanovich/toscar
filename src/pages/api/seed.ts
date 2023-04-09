@@ -43,9 +43,9 @@ export default async function handler(
         main_image:
           'https://media.ed.edmunds-media.com/honda/fit/2015/oem/2015_honda_fit_4dr-hatchback_ex-l_fq_oem_1_1600.jpg',
         images: [
-          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/598264/2015-honda-fit-ex-photo-598298-s-986x603.jpg',
+          'https://s.auto.drom.ru/photo/zj5S9agKJuXROzC_3gxuZ69UhYWBE8NvVi0yp5Hy2UGqW5e8qy5zYQtuIoZRkZjljYoTAYLJfa84Es5o4U7SxfVtzNvU.jpg',
           'https://photos.prnewswire.com/prnfull/20140113/LA45140-b',
-          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/598264/2015-honda-fit-ex-photo-598298-s-986x603.jpg?fill=2:1&resize=640:*'
+          'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/598264/2015-honda-fit-ex-photo-598298-s-986x603.jpg'
         ],
         price: '$14,000',
         slug: 'honda-fit-2015'
