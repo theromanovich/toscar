@@ -223,7 +223,12 @@
   }
 }
 
-.gallery-img {
-  width: 300px;
-  object-fit: cover;
+.gallery {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  img {
+    width: 285px;
+    object-fit: cover;
+  }
 }

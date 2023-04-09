@@ -26,6 +26,8 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
     images,
     slug
   } = car
+  const [galleryImg, setGalleryImg] = useState(0)
+
   const translatebody = () => {
     if (body.toLowerCase() == 'sedan') return 'Седан'
     if (body.toLowerCase() == 'suv') return 'SUV'
@@ -50,6 +52,18 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
 
   const engineRenamed: string = engineNaming()
 
+  const showImg = () => {
+    if (galleryImg == 0) {
+      return <img src={main_image} alt={make} />
+    } else if (galleryImg == 1) {
+      return <img src={images[0]} alt={make} />
+    } else if (galleryImg == 2) {
+      return <img src={images[1]} alt={make} />
+    } else if (galleryImg == 3) {
+      return <img src={images[2]} alt={make} />
+    }
+  }
+
   return (
     <div className='car-page__container'>
       <div className='breadcrubms'>
@@ -65,16 +79,8 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
         </button>
       </div>
 
-      <div>
-        {images.map(img => {
-          return <img className='gallery-img' src={img} alt='' />
-        })}
-      </div>
-
       <div className='car-page__info'>
-        <div className='car-page__img'>
-          <img src={main_image} alt={make} />
-        </div>
+        <div className='car-page__img'>{showImg()}</div>
         <div className='car-page__buy'>
           <div className='ukrprice'>
             {' '}
@@ -108,6 +114,22 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
           </div>
         </div>
       </div>
+
+      <div className='gallery'>
+        {images.map((img, index) => {
+          return (
+            <img
+              className='gallery__img'
+              src={img}
+              alt='img'
+              key={index}
+              onMouseEnter={() => setGalleryImg(index + 1)}
+              onMouseLeave={() => setGalleryImg(0)}
+            />
+          )
+        })}
+      </div>
+
       <div className='youmaylike'>
         <p>Можливо вас зацікавить: </p>
         <YouMayAlsoLikeCars cars={cars} />
