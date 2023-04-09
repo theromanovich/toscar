@@ -23,6 +23,7 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
     main_image,
     status,
     mileage,
+    images,
     slug
   } = car
   const translatebody = () => {
@@ -62,6 +63,12 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
         <button className={`status-btn ${status ? 'green' : 'orange'}`}>
           {status ? 'В наявності' : 'Під заказ'}
         </button>
+      </div>
+
+      <div>
+        {images.map(img => {
+          return <img className='gallery-img' src={img} alt='' />
+        })}
       </div>
 
       <div className='car-page__info'>
