@@ -1,11 +1,4 @@
-import {
-  RequestIcon,
-  ContractIcon,
-  SelectionIcon,
-  ShippingIcon,
-  DeliveryItem,
-  LeaveRequestIcon
-} from './HowToBuyIcons'
+import { LeaveRequestIcon } from './HowToBuyIcons'
 import Modal from './Modal'
 import { useEffect, useState } from 'react'
 

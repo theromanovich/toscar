@@ -590,7 +590,7 @@ export default async function handler(
       },
       {
         make: 'Cadillac',
-        model: 'CS',
+        model: 'CTS',
         engine: '3.6',
         year: 2015,
         gearbox: 'Автомат',

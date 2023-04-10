@@ -11,6 +11,10 @@ const Reviews = () => {
     setReviewTabState(indexTab)
   }
 
+  const reviewVideos = reviewsData.map(review => {
+    return <Review {...review} key={review.id} />
+  })
+
   return (
     <>
       <div className='review'>
@@ -52,11 +56,7 @@ const Reviews = () => {
             </div>
           </div>
           {reviewTabState == 1 && (
-            <div className='review__videos'>
-              {reviewsData.map(review => {
-                return <Review {...review} key={review.id} />
-              })}
-            </div>
+            <div className='review__videos'>{reviewVideos}</div>
           )}
           {reviewTabState == 2 && <ReviewGoogle />}
           {reviewTabState == 3 && (
