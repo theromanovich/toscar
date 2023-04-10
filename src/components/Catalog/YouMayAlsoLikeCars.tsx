@@ -5,46 +5,58 @@ const YouMayAlsoLikeCars = ({ cars }: { cars: Car[] }) => {
   return (
     <>
       {cars.map(car => {
+        const {
+          slug,
+          id,
+          main_image,
+          make,
+          model,
+          engine,
+          year,
+          mileage,
+          drive,
+          gearbox,
+          price,
+          status
+        } = car
         return (
-          <Link href={`/catalog/${car.slug}`} key={car.id}>
+          <Link href={`/catalog/${slug}`} key={id}>
             <div className='catalog__item'>
               <div className='car-photo'>
-                <img src={car.main_image} alt={car.make} />
+                <img src={main_image} alt={make} />
               </div>
               <div className='car-info'>
                 <div className='car-info__title'>
-                  {car.make} {car.model}
+                  {make} {model}
                 </div>
 
                 <div className='car-info__characteristics'>
                   <div>
                     <div className='engine'>
-                      Об'єм двигуна <span>{car.engine}</span>
+                      Об'єм двигуна <span>{engine}</span>
                     </div>
                     <div className='year'>
-                      Рік <span>{car.year}</span>
+                      Рік <span>{year}</span>
                     </div>
                     <div className='mileage'>
-                      Пробіг <span>{car.mileage} км</span>
+                      Пробіг <span>{mileage} км</span>
                     </div>
                   </div>
                   <div>
                     <div className='car-info__drive'>
-                      Привід <span>{car.drive}</span>
+                      Привід <span>{drive}</span>
                     </div>
                     <div className='car-info__gearbox'>
-                      КПП <span>{car.gearbox}</span>
+                      КПП <span>{gearbox}</span>
                     </div>
                   </div>
                   <div className='car-info__price'>
                     Вартість в Україні
-                    <div className='price'>{car.price}</div>
+                    <div className='price'>{price}</div>
                     <button
-                      className={`status-btn ${
-                        car.status ? 'green' : 'orange'
-                      }`}
+                      className={`status-btn ${status ? 'green' : 'orange'}`}
                     >
-                      {car.status ? 'В наявності' : 'Під заказ'}
+                      {status ? 'В наявності' : 'Під заказ'}
                     </button>
                   </div>
                 </div>

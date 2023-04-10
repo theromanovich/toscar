@@ -19,6 +19,10 @@ export default function CarPage({ car, cars }: CarPageProps) {
       <Head>
         <title>
           Купити {car.make} {car.model} {car.year}
+          <meta
+            name='description'
+            content={`Купити ${car.make} ${car.model} ${car.year} зі США в Україні`}
+          />
         </title>
       </Head>
       <div className='car-page'>

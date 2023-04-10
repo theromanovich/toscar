@@ -30,10 +30,10 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
 
   const translateBodyFunc = () => {
     if (body.toLowerCase() == 'sedan') return 'Седан'
-    if (body.toLowerCase() == 'suv') return 'SUV'
-    if (body.toLowerCase() == 'coupe') return 'Купе'
-    if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
-    if (body.toLowerCase() == 'truck') return 'Пікап'
+    else if (body.toLowerCase() == 'suv') return 'SUV'
+    else if (body.toLowerCase() == 'coupe') return 'Купе'
+    else if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
+    else return 'Пікап'
   }
   const bodyTranslate: string = translateBodyFunc()
 
@@ -53,14 +53,17 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
   const engineRenamed: string = engineNaming()
 
   const showImg = () => {
-    if (galleryImg == 0) {
-      return <img src={main_image} alt={make} />
-    } else if (galleryImg == 1) {
-      return <img src={images[0]} alt={make} />
-    } else if (galleryImg == 2) {
-      return <img src={images[1]} alt={make} />
-    } else if (galleryImg == 3) {
-      return <img src={images[2]} alt={make} />
+    switch (galleryImg) {
+      case 0:
+        return <img src={main_image} alt={make} />
+      case 1:
+        return <img src={images[0]} alt={make} />
+      case 2:
+        return <img src={images[1]} alt={make} />
+      case 3:
+        return <img src={images[2]} alt={make} />
+      default:
+        break
     }
   }
 

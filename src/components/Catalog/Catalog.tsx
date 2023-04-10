@@ -43,7 +43,6 @@ function Catalog({ cars }: { cars: Car[] }) {
   useEffect(() => {
     if (carsState.length >= 1) {
       ;(document.querySelector('.pag-btn') as HTMLButtonElement).click()
-      console.log('click')
     }
   }, [carsState])
 
@@ -144,7 +143,7 @@ function Catalog({ cars }: { cars: Car[] }) {
     notFound = 'No cars found with specified parameters'
   }
 
-  const paginationPages = carsState.map((car, index) => (
+  const paginationPages = carsState.map((_, index) => (
     <button
       key={index}
       onClick={() => handlePageClick(index)}
@@ -206,11 +205,10 @@ function Catalog({ cars }: { cars: Car[] }) {
 
         <span className='notFound'>{notFound}</span>
 
-        {paginateCars
-          ? paginateCars.map(car => {
-              return <CarCard {...car} />
-            })
-          : ''}
+        {paginateCars &&
+          paginateCars.map(car => {
+            return <CarCard {...car} />
+          })}
 
         <div className='paginate-btns' style={{ userSelect: 'none' }}>
           <div className='prev' onClick={prevBtn}>
