@@ -19,11 +19,11 @@ export default function CarPage({ car, cars }: CarPageProps) {
       <Head>
         <title>
           Купити {car.make} {car.model} {car.year}
-          <meta
-            name='description'
-            content={`Купити ${car.make} ${car.model} ${car.year} зі США в Україні`}
-          />
         </title>
+        <meta
+          name='description'
+          content={`Купити ${car.make} ${car.model} ${car.year} зі США в Україні`}
+        />
       </Head>
       <div className='car-page'>
         <CarSinglePage car={car} cars={cars.slice(firstNumber, secondNumber)} />
