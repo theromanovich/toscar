@@ -358,7 +358,7 @@ export default async function handler(
         gearbox: 'Автомат',
         drive: 'Задній',
         mileage: 20000,
-        body: 'сoupe',
+        body: 'coupe',
         status: false,
         main_image:
           'https://cdn3.riastatic.com/photosnew/auto/photo/ferrari_458-italia__331683108f.jpg',

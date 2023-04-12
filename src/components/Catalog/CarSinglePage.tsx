@@ -30,10 +30,10 @@ const CarSinglePage = ({ car, cars }: CarSinglePageProps) => {
 
   const translateBodyFunc = () => {
     if (body.toLowerCase() == 'sedan') return 'Седан'
-    else if (body.toLowerCase() == 'suv') return 'SUV'
-    else if (body.toLowerCase() == 'coupe') return 'Купе'
-    else if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
-    else return 'Пікап'
+    if (body.toLowerCase() == 'suv') return 'SUV'
+    if (body.toLowerCase() == 'coupe') return 'Купе'
+    if (body.toLowerCase() == 'hatchback') return 'Хетчбек'
+    if (body.toLowerCase() == 'truck') return 'Пікап'
   }
   const bodyTranslate: string = translateBodyFunc()
 
