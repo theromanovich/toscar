@@ -1,6 +1,5 @@
 import Link from 'next/link'
-// import CarsList from './YouMayAlsoLikeCars'
-import Modal from '../HowToBuy/Modal'
+import Modal from '../Modal/Modal'
 import { Car } from '@prisma/client'
 import { useState, useEffect } from 'react'
 import YouMayAlsoLikeCars from './YouMayAlsoLikeCars'

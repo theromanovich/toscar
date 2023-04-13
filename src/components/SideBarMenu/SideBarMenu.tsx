@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { links } from './links'
-import Modal from '../HowToBuy/Modal'
+import Modal from '../Modal/Modal'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { NavElement } from '../interfaces/interfaces'

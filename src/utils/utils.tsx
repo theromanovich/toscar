@@ -15,13 +15,13 @@ const paginate = (cars: Car[]) => {
 
 export default paginate
 
-export const generateRandCars = () => {
+export const generateRandCars = (arr: Car[]) => {
   const min: number = 0
-  const max: number = 34
-  const rangeForFirstNum: number = max - min - 2
-  const firstNumber: number = Math.floor(Math.random() * rangeForFirstNum) + min
-  const secondNumber: number = firstNumber + 3
-  return { firstNumber, secondNumber }
+  const max: number = arr.length
+  const rangeForFirstNum = max - min - 2
+  const startIndex = Math.floor(Math.random() * rangeForFirstNum) + min
+  const endIndex = startIndex + 3
+  return { startIndex, endIndex }
 }
 
 export const getStars = (rating: number) => {

@@ -1,6 +1,7 @@
 import { LeaveRequestIcon } from './HowToBuyIcons'
-import Modal from './Modal'
+// import Modal from './Modal'
 import { useEffect, useState } from 'react'
+import Modal from '../Modal/Modal'
 
 const HowToBuy = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false)

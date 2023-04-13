@@ -12,7 +12,7 @@ interface CarPageProps {
 }
 
 export default function CarPage({ car, cars }: CarPageProps) {
-  const { firstNumber, secondNumber } = generateRandCars()
+  const { startIndex, endIndex } = generateRandCars(cars)
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function CarPage({ car, cars }: CarPageProps) {
         />
       </Head>
       <div className='car-page'>
-        <CarSinglePage car={car} cars={cars.slice(firstNumber, secondNumber)} />
+        <CarSinglePage car={car} cars={cars.slice(startIndex, endIndex)} />
       </div>
     </>
   )

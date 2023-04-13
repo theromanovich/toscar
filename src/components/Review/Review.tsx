@@ -1,4 +1,4 @@
-import { getStars } from './ReviewStars'
+import { getStars } from '../../utils/utils'
 
 interface ReviewVideo {
   author: string
