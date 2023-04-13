@@ -26,7 +26,7 @@ const ToseiFooter = () => {
         </div>
         <div className='footer__email'>
           <EmailIcon />
-          <a href='mailto: >theromanovich03@gmail.com'>
+          <a href='mailto: theromanovich03@gmail.com'>
             theromanovich03@gmail.com
           </a>
         </div>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Logo } from '../SideBarMenu/SideBarIcons'
-import { BurgerMenu } from '../SideBarMenu/SideBarMenu'
+import { BurgerMenu } from '../SideBarMenu/BurgerMenu'
 
 const ToseiHeader = () => {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false)

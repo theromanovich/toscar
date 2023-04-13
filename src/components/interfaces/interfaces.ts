@@ -13,3 +13,9 @@ export interface Car {
   price: number
   status: boolean
 }
+
+export interface NavElement {
+  id: number
+  title: string
+  path: string
+}
