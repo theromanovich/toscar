@@ -1,7 +1,7 @@
 import { Car } from '@prisma/client'
 import { Star, NoStar } from '../components/Review/ReviewStars'
 
-const paginate = (cars: Car[]) => {
+const paginate = (cars: Car[]): Car[][] => {
   const itemsPerPage: number = 8
   const pages: number = Math.ceil(cars.length / itemsPerPage)
 
@@ -15,7 +15,9 @@ const paginate = (cars: Car[]) => {
 
 export default paginate
 
-export const generateRandCars = (arr: Car[]) => {
+export const generateRandCars = (
+  arr: Car[]
+): { startIndex: number; endIndex: number } => {
   const min: number = 0
   const max: number = arr.length
   const rangeForFirstNum = max - min - 2
@@ -24,57 +26,10 @@ export const generateRandCars = (arr: Car[]) => {
   return { startIndex, endIndex }
 }
 
-export const getStars = (rating: number) => {
-  switch (rating) {
-    case 1:
-      return (
-        <>
-          <Star />
-          <NoStar />
-          <NoStar />
-          <NoStar />
-          <NoStar />
-        </>
-      )
-    case 2:
-      return (
-        <>
-          <Star />
-          <Star />
-          <NoStar />
-          <NoStar />
-          <NoStar />
-        </>
-      )
-    case 3:
-      return (
-        <>
-          <Star />
-          <Star />
-          <Star />
-          <NoStar />
-          <NoStar />
-        </>
-      )
-    case 4:
-      return (
-        <>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <NoStar />
-        </>
-      )
-    case 5:
-      return (
-        <>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-        </>
-      )
+export const getStars = (rating: number): JSX.Element => {
+  const stars = []
+  for (let i = 0; i < 5; i++) {
+    stars.push(i < rating ? <Star key={i} /> : <NoStar key={i} />)
   }
+  return <>{stars}</>
 }
