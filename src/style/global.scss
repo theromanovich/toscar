@@ -18,6 +18,7 @@
 @import 'block/customCheckbox.scss';
 @import 'block/carSinglePage.scss';
 @import 'block/reviewSlider.scss';
+@import 'block/pageNotFound.scss';
 
 * {
   margin: 0;
@@ -42,35 +43,7 @@ p {
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
-.container {
-  width: 1280px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-@media (max-width: 390px) {
-  .container {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
 button {
   cursor: pointer;
 }
 
-.page-not-found {
-  margin: 50px 0;
-  margin-left: 200px;
-  color: $colorPrimary;
-  font-size: 60px;
-  text-align: center;
-}
-
-@media (max-width: 1079px) {
-  .page-not-found {
-    margin-left: 0;
-  }
-}
