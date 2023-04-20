@@ -37,6 +37,10 @@ const Modal = ({ modalStatus, onClose }) => {
     document.body.style.overflow = 'auto'
   }
 
+  const closeModalByEsc = (event: React.KeyboardEvent) => {
+    event.code === 'Escape' && closeModal()
+  }
+
   const stopBubbling = (e: React.MouseEvent) => {
     e.stopPropagation()
   }
@@ -60,7 +64,11 @@ const Modal = ({ modalStatus, onClose }) => {
   }
 
   return (
-    <div ref={modalRef} className={isModalOpen ? 'modal active' : 'modal'}>
+    <div
+      onKeyDown={closeModalByEsc}
+      ref={modalRef}
+      className={isModalOpen ? 'modal active' : 'modal'}
+    >
       <div onClick={closeModal} className='modal__overlay'>
         <form
           onSubmit={onSubmitModal}
